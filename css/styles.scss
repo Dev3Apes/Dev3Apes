@@ -1,0 +1,229 @@
+import * {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.main-background {
+  background-image: url(../asset/images/welcome_to_the_server.jpg);
+  background-position: center center;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Baloo";
+  .main-content {
+    position: absolute;
+    right: 35%;
+    top: 15%;
+    background: linear-gradient(
+      105.31deg,
+      #1c2f52 -2.91%,
+      rgba(28, 47, 82, 0) 105.21%
+    );
+    border-radius: 20px;
+    height: 15rem;
+    padding: 10px;
+    text-align: center;
+    h1 {
+      color: #fff;
+      margin-top: 2rem;
+    }
+    p {
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 20px;
+    }
+    .main-links {
+      display: flex;
+      justify-content: center;
+      justify-content: space-around;
+      p {
+        font-size: 20px;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.modal-content {
+  background: linear-gradient(
+    105.31deg,
+    #1c2f52 -2.91%,
+    rgba(28, 47, 82, 0) 105.21%
+  );
+  .catgory-item-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 1rem;
+
+    .catgory-item-list {
+      padding: 2rem;
+
+      .review{
+        height: 20rem;
+        overflow: auto;
+        padding: 1rem;
+        .card{
+          height: 10rem;
+          p{
+           padding: 2rem;
+          }
+        }
+      }
+
+      .catgory-item-detail {
+        display: flex;
+        width: 85%;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+
+        p {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  h5 {
+    color: #fff;
+  }
+  .wallet-icons {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+  }
+}
+// the end of main page and the start of Explore page navigation bar
+
+.explore-background {
+  background-image: url(../asset/images/Background.png);
+  background-position: center center;
+  min-height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .explore-navbar {
+    width: 100%;
+    background-color: #1c2f52;
+    height: 5rem;
+    padding: 1rem 2rem;
+
+    .explore-nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .explore-nav-search {
+        width: 20%;
+        input {
+          width: 100%;
+          border-radius: 10px;
+        }
+      }
+
+      .explore-nav-links {
+        display: flex;
+        gap: 30px;
+        a {
+          text-decoration: none;
+        }
+        p {
+          color: #fff;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  //  Explore page Main Content
+  .explore-main {
+    width: 100%;
+    min-height: 100vh;
+    .explore-main-filters {
+      display: flex;
+      margin-top: 3rem;
+      margin-left: 1rem;
+      gap: 10px;
+      .explore-timezone {
+        width: 100%;
+        height: 20vh;
+        overflow: auto;
+        padding: 0 1rem;
+      }
+      .explore-language {
+        width: 100%;
+        height: 20vh;
+        overflow: auto;
+        padding: 0 1rem;
+      }
+      .dropdown {
+        .dropdown-menu {
+          min-width: 210px;
+          padding: 10px;
+          .accordion-item {
+            width: 300px;
+            button {
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      button {
+        background-color: rgba(131, 88, 255, 1);
+      }
+    }
+    hr {
+      color: rgba(131, 88, 255, 1);
+    }
+    .explore-main-cards {
+      width: 100%;
+      .explore-main-card-list {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 0 1rem;
+        .card {
+          width: 18rem;
+          border-radius: 10px;
+          background-color: rgba(140, 138, 144, 0.5);
+
+          .card-header {
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            .card-header-ring {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: rgba(19, 23, 64, 0.7);
+              width: 5.5rem;
+              height: 5.5rem;
+              border-radius: 50%;
+            }
+            img {
+              border-radius: 50%;
+              width: 5rem;
+              height: 5rem;
+            }
+
+            .card-header-text {
+              margin-top: 1rem;
+              margin-left: 1rem;
+            }
+          }
+
+          .card-body {
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+  }
+}

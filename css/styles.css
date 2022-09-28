@@ -1,0 +1,207 @@
+import * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-background {
+  background-image: url(../asset/images/welcome_to_the_server.jpg);
+  background-position: center center;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Baloo";
+}
+.main-background .main-content {
+  position: absolute;
+  right: 35%;
+  top: 15%;
+  background: linear-gradient(105.31deg, #1c2f52 -2.91%, rgba(28, 47, 82, 0) 105.21%);
+  border-radius: 20px;
+  height: 15rem;
+  padding: 10px;
+  text-align: center;
+}
+.main-background .main-content h1 {
+  color: #fff;
+  margin-top: 2rem;
+}
+.main-background .main-content p {
+  color: #fff;
+  margin-top: 2rem;
+  font-size: 20px;
+}
+.main-background .main-content .main-links {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}
+.main-background .main-content .main-links p {
+  font-size: 20px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.modal-content {
+  background: linear-gradient(105.31deg, #1c2f52 -2.91%, rgba(28, 47, 82, 0) 105.21%);
+}
+.modal-content .catgory-item-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 1rem;
+}
+.modal-content .catgory-item-content .catgory-item-list {
+  padding: 2rem;
+}
+.modal-content .catgory-item-content .catgory-item-list .review {
+  height: 20rem;
+  overflow: auto;
+  padding: 1rem;
+}
+.modal-content .catgory-item-content .catgory-item-list .review .card {
+  height: 10rem;
+}
+.modal-content .catgory-item-content .catgory-item-list .review .card p {
+  padding: 2rem;
+}
+.modal-content .catgory-item-content .catgory-item-list .catgory-item-detail {
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+.modal-content .catgory-item-content .catgory-item-list .catgory-item-detail p {
+  color: #fff;
+}
+.modal-content h5 {
+  color: #fff;
+}
+.modal-content .wallet-icons {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.explore-background {
+  background-image: url(../asset/images/Background.png);
+  background-position: center center;
+  min-height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.explore-background .explore-navbar {
+  width: 100%;
+  background-color: #1c2f52;
+  height: 5rem;
+  padding: 1rem 2rem;
+}
+.explore-background .explore-navbar .explore-nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.explore-background .explore-navbar .explore-nav-content .explore-nav-search {
+  width: 20%;
+}
+.explore-background .explore-navbar .explore-nav-content .explore-nav-search input {
+  width: 100%;
+  border-radius: 10px;
+}
+.explore-background .explore-navbar .explore-nav-content .explore-nav-links {
+  display: flex;
+  gap: 30px;
+}
+.explore-background .explore-navbar .explore-nav-content .explore-nav-links a {
+  text-decoration: none;
+}
+.explore-background .explore-navbar .explore-nav-content .explore-nav-links p {
+  color: #fff;
+  font-size: 18px;
+}
+.explore-background .explore-main {
+  width: 100%;
+  min-height: 100vh;
+}
+.explore-background .explore-main .explore-main-filters {
+  display: flex;
+  margin-top: 3rem;
+  margin-left: 1rem;
+  gap: 10px;
+}
+.explore-background .explore-main .explore-main-filters .explore-timezone {
+  width: 100%;
+  height: 20vh;
+  overflow: auto;
+  padding: 0 1rem;
+}
+.explore-background .explore-main .explore-main-filters .explore-language {
+  width: 100%;
+  height: 20vh;
+  overflow: auto;
+  padding: 0 1rem;
+}
+.explore-background .explore-main .explore-main-filters .dropdown .dropdown-menu {
+  min-width: 210px;
+  padding: 10px;
+}
+.explore-background .explore-main .explore-main-filters .dropdown .dropdown-menu .accordion-item {
+  width: 300px;
+}
+.explore-background .explore-main .explore-main-filters .dropdown .dropdown-menu .accordion-item button {
+  color: #fff;
+}
+.explore-background .explore-main .explore-main-filters button {
+  background-color: rgb(131, 88, 255);
+}
+.explore-background .explore-main hr {
+  color: rgb(131, 88, 255);
+}
+.explore-background .explore-main .explore-main-cards {
+  width: 100%;
+}
+.explore-background .explore-main .explore-main-cards .explore-main-card-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+.explore-background .explore-main .explore-main-cards .explore-main-card-list .card {
+  width: 18rem;
+  border-radius: 10px;
+  background-color: rgba(140, 138, 144, 0.5);
+}
+.explore-background .explore-main .explore-main-cards .explore-main-card-list .card .card-header {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.explore-background .explore-main .explore-main-cards .explore-main-card-list .card .card-header .card-header-ring {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(19, 23, 64, 0.7);
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+}
+.explore-background .explore-main .explore-main-cards .explore-main-card-list .card .card-header img {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+}
+.explore-background .explore-main .explore-main-cards .explore-main-card-list .card .card-header .card-header-text {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.explore-background .explore-main .explore-main-cards .explore-main-card-list .card .card-body {
+  display: flex;
+  justify-content: space-between;
+}/*# sourceMappingURL=styles.css.map */
