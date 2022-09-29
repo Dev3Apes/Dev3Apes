@@ -54,6 +54,10 @@ body {
     #1c2f52 -2.91%,
     rgba(28, 47, 82, 0) 105.21%
   );
+  button {
+    background-color: rgba(131, 88, 255, 1) !important;
+    color: #fff;
+  }
   .catgory-item-content {
     display: flex;
     justify-content: space-between;
@@ -63,14 +67,14 @@ body {
     .catgory-item-list {
       padding: 2rem;
 
-      .review{
+      .review {
         height: 20rem;
         overflow: auto;
         padding: 1rem;
-        .card{
+        .card {
           height: 10rem;
-          p{
-           padding: 2rem;
+          p {
+            padding: 2rem;
           }
         }
       }
@@ -221,6 +225,66 @@ body {
           .card-body {
             display: flex;
             justify-content: space-between;
+          }
+        }
+      }
+    }
+  }
+  // start of blog page
+
+  .blog-header {
+    background: linear-gradient(
+      105.31deg,
+      #1c2f52 -2.91%,
+      rgba(28, 47, 82, 0) 105.21%
+    );
+    height: 20rem;
+    h1 {
+      position: absolute;
+      top: 10rem;
+      left: 10rem;
+      font-size: 4rem;
+      width: 500px;
+      color: rgba(131, 88, 255, 1);
+    }
+  }
+  .blog-container {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 1rem;
+
+    .card {
+      width: 24rem;
+      height: 20rem;
+      margin-top: 1rem;
+      background: linear-gradient(
+        105.31deg,
+        #1c2f52 -2.91%,
+        rgba(28, 47, 82, 0) 105.21%
+      );
+      color: #fff;
+      border-color: #1c2f52;
+      .card-header {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        height: 6rem;
+        border-color: #1c2f52;
+      }
+      img {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+      }
+      .card-body {
+        border-color: rgba(131, 88, 255, 1);
+        .card-footer{
+          border-color: #1c2f52;
+           .fa-twitter{
+           color: rgb(9, 97, 169);
           }
         }
       }

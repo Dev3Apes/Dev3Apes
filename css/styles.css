@@ -50,6 +50,10 @@ body {
 .modal-content {
   background: linear-gradient(105.31deg, #1c2f52 -2.91%, rgba(28, 47, 82, 0) 105.21%);
 }
+.modal-content button {
+  background-color: rgb(131, 88, 255) !important;
+  color: #fff;
+}
 .modal-content .catgory-item-content {
   display: flex;
   justify-content: space-between;
@@ -204,4 +208,53 @@ body {
 .explore-background .explore-main .explore-main-cards .explore-main-card-list .card .card-body {
   display: flex;
   justify-content: space-between;
+}
+.explore-background .blog-header {
+  background: linear-gradient(105.31deg, #1c2f52 -2.91%, rgba(28, 47, 82, 0) 105.21%);
+  height: 20rem;
+}
+.explore-background .blog-header h1 {
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+  font-size: 4rem;
+  width: 500px;
+  color: rgb(131, 88, 255);
+}
+.explore-background .blog-container {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+.explore-background .blog-container .card {
+  width: 24rem;
+  height: 20rem;
+  margin-top: 1rem;
+  background: linear-gradient(105.31deg, #1c2f52 -2.91%, rgba(28, 47, 82, 0) 105.21%);
+  color: #fff;
+  border-color: #1c2f52;
+}
+.explore-background .blog-container .card .card-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  height: 6rem;
+  border-color: #1c2f52;
+}
+.explore-background .blog-container .card img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+.explore-background .blog-container .card .card-body {
+  border-color: rgb(131, 88, 255);
+}
+.explore-background .blog-container .card .card-body .card-footer {
+  border-color: #1c2f52;
+}
+.explore-background .blog-container .card .card-body .card-footer .fa-twitter {
+  color: rgb(9, 97, 169);
 }/*# sourceMappingURL=styles.css.map */
