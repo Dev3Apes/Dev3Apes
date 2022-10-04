@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="background">
+            <nav>
+                <div class="navbars">
+                    <div class="nav-link-contents">
+                        <div class="nav-logo">
+                            <img src="../asset/images/dev3apeslogo.png" style="width: 15rem;" alt="" srcset="">
+                        </div>
+                        <div class="nav-search">
+                            <input type="search" name="" id="">
+                        </div>
+                        <div class="nav-links">
+                            <a href="Explore.html">
+                                <p>
+                                    Explore
+                                </p>
+                            </a>
+                            <a href="Blog.html">
+                                <p>
+                                    Blog
+                                </p>
+                            </a>
+                            <a href="Create.html">
+                                <p>
+                                    Create
+                                </p>
+                            </a>
+
+
+                            <div class="dropdown">
+                                <p class="dropbtn">Wallet</p>
+                                <div class="dropdown-content">
+                                    <div class="wallet-card">
+                                        <div class="wallet-header">
+                                            <img src="../asset/images/icons8-ethereum-48.png" style="width:2.5rem;"
+                                                alt="" srcset="">
+                                        </div>
+                                        <div class="wallet-ballance">
+                                            <img src="../asset/images/sim-card-chip.jpg" alt="" srcset="">
+                                            <h3>
+                                                00.001
+                                            </h3>
+                                        </div>
+                                        <div class=" wallet-id">
+                                            <p>trgsbahsu78</p>
+                                        </div>
+                                    </div>
+                                    <div class="change-wallet">
+                                        <button data-bs-toggle="modal" data-bs-target="#changewalletModal">Choose
+                                            Wallet</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dropdown">
+                                <p class="dropbtn">Settings</p>
+                                <div class="dropdown-content">
+                                    <a href="#">Profile</a>
+                                    <a href="#">Settings</a>
+                                    <a>Logout</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <section>
+                <main>
+                    <div class="create-form">
+                        <div class="create-form-content">
+                            <div>
+                                <h2>
+                                    Create products
+                                </h2>
+                            </div>
+                            <div>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, sed assumenda
+                                    voluptatibus animi placeat magnam incidunt quam quaerat possimus. Nobis eveniet,
+                                    delectus perspiciatis incidunt accusamus eligendi et error architecto est.
+                                </p>
+                            </div>
+                            <div>
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#addProduct">
+                                    Create new product
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </main>
+            </section>
+
+        </div>
+
+        <!-- Button trigger modal -->
+
+
+        <!--Add product Modal -->
+        <form>
+            <div class="modal fade" id="addProduct" tabindex="-1" role="dialog" aria-labelledby="modalTitleId"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered " role="document">
+                    <div class="modal-content ">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitleId">Add product</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+
+                                <div class="container">
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Product</label>
+                                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
+                                            placeholder="">
+                                        <small id="helpId" class="form-text text-muted">Help text</small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">File</label>
+                                        <input type="file" class="form-control" name="" id="" aria-describedby="helpId"
+                                            placeholder="">
+                                        <small id="helpId" class="form-text text-muted">Help text</small>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" data-bs-target="#addBasicProduct"
+                                        data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="addBasicProduct" tabindex="-1" role="dialog" aria-labelledby="modalTitleId"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered " role="document">
+                    <div class="modal-content ">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitleId">Basic Package</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+
+                                <div class="container">
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Description</label>
+                                        <textarea type="text" class="form-control" name="" id=""
+                                            aria-describedby="helpId" placeholder=""></textarea>
+                                        <small id="helpId" class="form-text text-muted">Help text</small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Gig</label>
+                                        <textarea type="text" class="form-control" name="" id=""
+                                            aria-describedby="helpId" placeholder=""></textarea>
+                                        <small id="helpId" class="form-text text-muted">Help text</small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Price</label>
+                                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
+                                            placeholder="">
+                                        <small id="helpId" class="form-text text-muted">Help text</small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Delivery Time</label>
+                                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
+                                            placeholder="">
+                                        <small id="helpId" class="form-text text-muted">Help text</small>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-target="#addProduct"
+                                        data-bs-toggle="modal" data-bs-dismiss="modal">Previous</button>
+                                    <button type="button" class="btn btn-primary" data-bs-target="#addAdvanceProduct"
+                                        data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="addAdvanceProduct" tabindex="-1" role="dialog" aria-labelledby="modalTitleId"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered " role="document">
+                    <div class="modal-content ">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitleId">Advance Package</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+
+                                <div class="container">
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Description</label>
+                                        <textarea type="text" class="form-control" name="" id=""
+                                            aria-describedby="helpId" placeholder=""></textarea>
+                                        <small id="helpId" class="form-text text-muted">Help text</small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Gig</label>
+                                        <textarea type="text" class="form-control" name="" id=""
+                                            aria-describedby="helpId" placeholder=""></textarea>
+                                        <small id="helpId" class="form-text text-muted">Help text</small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Price</label>
+                                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
+                                            placeholder="">
+                                        <small id="helpId" class="form-text text-muted">Help text</small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Delivery Time</label>
+                                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
+                                            placeholder="">
+                                        <small id="helpId" class="form-text text-muted">Help text</small>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-target="#addProduct"
+                                        data-bs-toggle="modal" data-bs-dismiss="modal">Previous</button>
+                                    <button type="button" class="btn btn-primary" data-bs-target="#addProProduct"
+                                        data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="addProProduct" tabindex="-1" role="dialog" aria-labelledby="modalTitleId"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered " role="document">
+                    <div class="modal-content ">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitleId">Pro Package</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+
+                                <div class="container">
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Description</label>
+                                        <textarea type="text" class="form-control" name="" id=""
+                                            aria-describedby="helpId" placeholder=""></textarea>
+                                        <small id="helpId" class="form-text text-muted">Help text</small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Gig</label>
+                                        <textarea type="text" class="form-control" name="" id=""
+                                            aria-describedby="helpId" placeholder=""></textarea>
+                                        <small id="helpId" class="form-text text-muted">Help text</small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Price</label>
+                                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
+                                            placeholder="">
+                                        <small id="helpId" class="form-text text-muted">Help text</small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Delivery Time</label>
+                                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
+                                            placeholder="">
+                                        <small id="helpId" class="form-text text-muted">Help text</small>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-target="#addProduct"
+                                        data-bs-toggle="modal" data-bs-dismiss="modal">Previous</button>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-dismiss="modal">Submit</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+
+
+
+
+        <!-- Modal Body -->
+        <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+        <div class="modal fade" id="changewalletModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+            role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered " role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitleId">Connect To Wallet</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="wallet-icons">
+                                <img src="../asset/images/icons8-ethereum-48.png" alt="" srcset="">
+                                <img src="../asset/images/icons8-polygon-64.png" alt="" srcset="">
+                                <img src="../asset/images/icons8-solana-64 (1).png" alt="" srcset="">
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script type="module" src="../Lib/js/app.js"></script>
+    </body>
+</html>

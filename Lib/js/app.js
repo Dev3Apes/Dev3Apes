@@ -15,9 +15,8 @@ for (let a = 0; a < timezone.length; a++) {
         `
   );
 }
-console.log(lang);
+
 lang.forEach((element) => {
-  console.log(element);
   $("#explore-language").append(
     `<div class="form-check">
   <input class="form-check-input" type="radio" name="explore-lang" id="${element.code}">

@@ -31,7 +31,7 @@
                                     Blog
                                 </p>
                             </a>
-                            <a href="Create.html" data-bs-toggle="modal" data-bs-target="#modalId">
+                            <a href="Create.html">
                                 <p>
                                     Create
                                 </p>
@@ -77,35 +77,69 @@
                 </div>
             </nav>
             <section>
-
-                <div class="blog-header">
-                    <div class="blog-header-content">
-                        <h1>
-                            What others are saying
-                        </h1>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="blog-container">
-
-
-                        <blockquote class="twitter-tweet">
-                            <a class="twitter-timeline" data-width="500" data-theme="dark"
-                                href="https://twitter.com/dev3apes?ref_src=twsrc%5Etfw">Tweets by dev3apes</a>
-
-                        </blockquote>
-                        <blockquote class="twitter-tweet">
-                            <a class="twitter-timeline" data-width="500" data-theme="dark"
-                                href="https://twitter.com/miguel_orfao?ref_src=twsrc%5Etfw">Tweets by miguel_orfao</a>
-                        </blockquote>
-
+                <main>
+                    <div class="profile-header">
+                        <div class="profile-picture">
+                            <img src="../asset/images/unnamed-2.webp" alt="" srcset="">
+                        </div>
 
                     </div>
+
+                </main>
+            </section>
+            <section>
+                <div class="profilt-text">
+                    <p>Miguel</p>
+                    <p>Date joined</p>
                 </div>
             </section>
+            <section>
+                <div class="profile-collection">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="collection-tab" data-bs-toggle="tab"
+                                data-bs-target="#collection" type="button" role="tab" aria-controls="collection"
+                                aria-selected="true">Collection</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="favorite-tab" data-bs-toggle="tab" data-bs-target="#favorite"
+                                type="button" role="tab" aria-controls="favorite"
+                                aria-selected="false">Favorite</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="created-tab" data-bs-toggle="tab" data-bs-target="#created"
+                                type="button" role="tab" aria-controls="created" aria-selected="false">Created</button>
+                        </li>
+                    </ul>
 
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="collection" role="tabpanel" aria-labelledby="collection-tab">
+                            <div class="profile-list-container">
+                                <div class="profile-list">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#catgory">
+
+                                        <img class="card-img-top" src="../asset/images/unnamed-2.webp" alt="Title">
+                                        <div class="card-body">
+                                            <p class="card-text">Title</p>
+                                            <p class="card-text">Price</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="favorite" role="tabpanel" aria-labelledby="favorite-tab"> profile
+                        </div>
+                        <div class="tab-pane" id="created" role="tabpanel" aria-labelledby="created-tab"> messages
+                        </div>
+                    </div>
+                </div>
+
+            </section>
         </div>
-
 
 
 
@@ -136,11 +170,12 @@
         </div>
 
 
+
         <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
 
         <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
         <script type="module" src="../Lib/js/app.js"></script>
-        <script src="https://kit.fontawesome.com/c461f95de0.js" crossorigin="anonymous"></script>
     </body>
 </html>

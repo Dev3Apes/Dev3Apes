@@ -10,17 +10,17 @@
         <title>Document</title>
     </head>
     <body>
-        <div class="explore-background">
+        <div class="background">
             <nav>
-                <div class="explore-navbar">
-                    <div class="explore-nav-content">
-                        <div class="explore-nav-logo">
+                <div class="navbars">
+                    <div class="nav-link-contents">
+                        <div class="nav-logo">
                             <img src="../asset/images/dev3apeslogo.png" style="width: 15rem;" alt="" srcset="">
                         </div>
-                        <div class="explore-nav-search">
+                        <div class="nav-search">
                             <input type="search" name="" id="">
                         </div>
-                        <div class="explore-nav-links">
+                        <div class="nav-links">
                             <a href="Explore.html">
                                 <p>
                                     Explore
@@ -36,15 +36,42 @@
                                     Create
                                 </p>
                             </a>
-                            <p>
-                                Wallet
-                            </p>
-                            <p>
-                                Settings
-                            </p>
-                            <p>
-                                Logoff
-                            </p>
+
+
+                            <div class="dropdown">
+                                <p class="dropbtn">Wallet</p>
+                                <div class="dropdown-content">
+                                    <div class="wallet-card">
+                                        <div class="wallet-header">
+                                            <img src="../asset/images/icons8-ethereum-48.png" style="width:2.5rem;"
+                                                alt="" srcset="">
+                                        </div>
+                                        <div class="wallet-ballance">
+                                            <img src="../asset/images/sim-card-chip.jpg" alt="" srcset="">
+                                            <h3>
+                                                00.001
+                                            </h3>
+                                        </div>
+                                        <div class=" wallet-id">
+                                            <p>trgsbahsu78</p>
+                                        </div>
+                                    </div>
+                                    <div class="change-wallet">
+                                        <button data-bs-toggle="modal" data-bs-target="#changewalletModal">Choose
+                                            Wallet</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dropdown">
+                                <p class="dropbtn">Settings</p>
+                                <div class="dropdown-content">
+                                    <a href="#">Profile</a>
+                                    <a href="#">Settings</a>
+                                    <a>Logout</a>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -292,14 +319,42 @@
                                             <div id="flush-collapseThree" class="accordion-collapse collapse"
                                                 aria-labelledby="flush-headingThree"
                                                 data-bs-parent="#accordionFlushExample">
-                                                <div class="accordion-body">Placeholder content for this accordion,
-                                                    which is intended to demonstrate the
-                                                    <code>.accordion-flush</code> class. This is the third item's
-                                                    accordion body. Nothing more exciting
-                                                    happening here in terms of content, but just filling up the space to
-                                                    make it look, at least at first
-                                                    glance, a bit more representative of how this would look in a
-                                                    real-world application.
+                                                <div class="accordion-body">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="ratings"
+                                                            id="five-star">
+                                                        <label class="form-check-label" for="backend-developer">
+                                                            5 Star
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="ratings"
+                                                            id="four-star">
+                                                        <label class="form-check-label" for="backend-developer">
+                                                            4 Star
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="ratings"
+                                                            id="three-star">
+                                                        <label class="form-check-label" for="backend-developer">
+                                                            3 Star
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="ratings"
+                                                            id="two-star">
+                                                        <label class="form-check-label" for="backend-developer">
+                                                            2 Star
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="ratings"
+                                                            id="one-star">
+                                                        <label class="form-check-label" for="backend-developer">
+                                                            1 Star
+                                                        </label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -420,10 +475,6 @@
 
 
 
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary btn-lg">
-            Launch
-        </button>
 
         <!-- Modal -->
         <div class="modal fade" id="catgory" tabindex="-1" role="dialog" aria-labelledby="modalTitleId"
@@ -541,7 +592,8 @@
                                                                 </h3>
                                                                 <div
                                                                     class="w-100 d-flex justify-content-center mt-4 mb-4">
-                                                                    <button class="btn w-50">Continue</button>
+                                                                    <button class="btn w-50" data-bs-toggle="modal"
+                                                                        data-bs-target="#payment">Continue</button>
                                                                 </div>
                                                             </div>
                                                             <hr>
@@ -723,6 +775,175 @@
                 </div>
             </div>
         </div>
+        <!-- Button trigger modal -->
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="payment" tabindex="-1" role="dialog" aria-labelledby="modalTitleId"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitleId">Payments</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <nav>
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <button class="nav-link active" id="nav-crypto-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-crypto" type="button" role="tab" aria-controls="nav-crypto"
+                                        aria-selected="true">Crypto</button>
+                                    <button class="nav-link" id="nav-payPal-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-payPal" type="button" role="tab" aria-controls="nav-payPal"
+                                        aria-selected="false">PayPal</button>
+                                    <button class="nav-link" id="nav-card-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-card" type="button" role="tab" aria-controls="nav-card"
+                                        aria-selected="false">Card</button>
+                                </div>
+                            </nav>
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="nav-crypto" role="tabpanel"
+                                    aria-labelledby="nav-home-tab">
+                                    <div class="container">
+                                        <div class="paymet-contents">
+                                            <div class="order-summary">
+                                                <div class="order-header">
+                                                    <h4>
+                                                        Order Summary
+                                                    </h4>
+                                                </div>
+                                                <div class="order-body">
+                                                    <div>
+                                                        <img src="../asset/images/unnamed-2.webp" style="width: 10rem;"
+                                                            alt="" srcset="">
+                                                    </div>
+                                                    <hr>
+                                                    <div>
+                                                        <p>
+                                                            Cost: 00.003
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div>
+                                                    <button>Confirm Crypto Payment</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-payPal" role="tabpanel"
+                                    aria-labelledby="nav-profile-tab">
+                                    <div class="container">
+                                        <div class="paymet-contents">
+                                            <div class="order-summary">
+                                                <div class="order-header">
+                                                    <h4>
+                                                        Order Summary
+                                                    </h4>
+                                                </div>
+                                                <div class="order-body">
+                                                    <div>
+                                                        <img src="../asset/images/unnamed-2.webp" style="width: 10rem;"
+                                                            alt="" srcset="">
+                                                    </div>
+                                                    <hr>
+                                                    <div>
+                                                        <p>
+                                                            Cost: £100
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div>
+                                                    <button>Confirm PayPal Payment</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-card" role="tabpanel"
+                                    aria-labelledby="nav-contact-tab">
+                                    <div class="container">
+                                        <div class="paymet-contents">
+                                            <div class="order-summary">
+                                                <div class="order-header">
+                                                    <h4>
+                                                        Order Summary
+                                                    </h4>
+                                                </div>
+                                                <hr>
+                                                <div class="order-body">
+                                                    <div>
+                                                        <img src="../asset/images/unnamed-2.webp" style="width: 10rem;"
+                                                            alt="" srcset="">
+                                                    </div>
+                                                    <hr>
+                                                    <div>
+                                                        <p>
+                                                            Cost: £100
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div>
+                                                    <form action="">
+                                                        <div class="mb-3">
+                                                            <label for="" class="form-label">Name on Card</label>
+                                                            <input type="text" class="form-control" name="" id=""
+                                                                aria-describedby="helpId" placeholder="">
+                                                            <small id="helpId" class="form-text text-muted">Help
+                                                                text</small>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="" class="form-label">Card Number</label>
+                                                            <input type="text" class="form-control" name="" id=""
+                                                                aria-describedby="helpId" placeholder="">
+                                                            <small id="helpId" class="form-text text-muted">Help
+                                                                text</small>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="" class="form-label">Expiry Date</label>
+                                                            <div class="d-flex gap-4">
+                                                                <input type="number" class="form-control" name="" id=""
+                                                                    aria-describedby="helpId" placeholder="">
+                                                                <input type="number" class="form-control" name="" id=""
+                                                                    aria-describedby="helpId" placeholder="">
+                                                            </div>
+
+                                                            <small id="helpId" class="form-text text-muted">Help
+                                                                text</small>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="" class="form-label">CSV</label>
+                                                            <input type="text" class="form-control" name="" id=""
+                                                                aria-describedby="helpId" placeholder="">
+                                                            <small id="helpId" class="form-text text-muted">Help
+                                                                text</small>
+                                                        </div>
+                                                    </form>
+                                                    <button>Confirm Card Payment</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
 
 
