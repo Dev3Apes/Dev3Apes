@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   cursor: pointer;
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Baloo 2', cursive !important;
 }
 .main-background {
   background-image: url(../asset/images/welcome_to_the_server.jpg);
