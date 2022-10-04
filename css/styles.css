@@ -263,14 +263,16 @@ body {
 }
 .background .explore-main .explore-main-cards .explore-main-card-list {
   display: flex;
+  justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
   padding: 0 1rem;
 }
 .background .explore-main .explore-main-cards .explore-main-card-list .card {
-  width: 18rem;
+  width: 21rem;
   border-radius: 10px;
   background-color: rgba(140, 138, 144, 0.5);
+  padding: 0 2rem;
 }
 .background .explore-main .explore-main-cards .explore-main-card-list .card .card-header {
   width: 100%;
