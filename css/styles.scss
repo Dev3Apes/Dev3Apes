@@ -65,8 +65,8 @@ body {
   }
 
   button {
-    background-color: rgba(131, 88, 255, 1) !important;
-    color: #fff;
+    background-color: rgb(254, 254, 254) !important;
+    color: #000;
   }
   .catgory-item-content {
     display: flex;
@@ -311,7 +311,8 @@ background-color: #f1f1f1;
       }
 
       button {
-        background-color: rgba(131, 88, 255, 1);
+        background-color: rgb(229, 227, 238);
+        color: #000;
       }
     }
     hr {
