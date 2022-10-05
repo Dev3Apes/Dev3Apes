@@ -66,6 +66,7 @@ body {
 
   button {
     background-color: rgb(254, 254, 254) !important;
+    box-shadow: 5px 5px 12px -5px #000000;
     color: #000;
   }
   .catgory-item-content {
@@ -76,9 +77,7 @@ body {
 
     .catgory-item-list {
       padding: 2rem;
-        -webkit-box-shadow: 0px -1px 12px 5px rgba(252, 252, 255, 1);
-          -moz-box-shadow: 0px -1px 12px 5px rgba(252, 252, 255, 1);
-          box-shadow: 0px -1px 12px 5px rgba(252, 252, 255, 1);
+    box-shadow: 5px 5px 12px -5px #000000;
         
       
 
@@ -87,6 +86,7 @@ body {
         overflow: auto;
         padding: 1rem;
         .card {
+          box-shadow: 5px 5px 12px -5px #000000;
           width: 100%;
           height: 10rem;
        background-color: #1c2f52;
@@ -111,9 +111,7 @@ body {
 
     .catgory-package{
   
-    -webkit-box-shadow: 0px -1px 12px 5px rgba(252, 252, 255, 1);
-      -moz-box-shadow: 0px -1px 12px 5px rgba(252, 252, 255, 1);
-      box-shadow: 0px -1px 12px 5px rgba(252, 252, 255, 1);
+box-shadow: 5px 5px 12px -5px #000000;
     }
   }
 
@@ -185,7 +183,7 @@ background-color: #f1f1f1;
           right: 0;
           min-width: 300px;
           padding: 1rem;
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 12px -5px #000000;
           z-index: 1;
 
           border-radius: 10px;
@@ -330,7 +328,7 @@ background-color: #f1f1f1;
         .card {
           width: 18rem;
           border-radius: 10px;
- box-shadow: 0px -1px 12px 2px rgb(255, 255, 255);;
+box-shadow: 5px 5px 12px -5px #000000;
        
 .card-img-top{
  width: 100%;
@@ -457,7 +455,7 @@ ul {
   z-index: 0;
   width: 20%;
   min-height: 70vh;
-box-shadow: 0px -1px 12px 2px rgba(186, 186, 186, 1);
+box-shadow: 5px 5px 12px -5px #000000;
   left: 1rem;
   padding: 1rem;
   color: #000000;
@@ -470,7 +468,7 @@ box-shadow: 0px -1px 12px 2px rgba(186, 186, 186, 1);
       text-align: center;
   }
   .profile-card {
-    box-shadow: 0px -1px 12px 2px rgba(186, 186, 186, 1);
+  box-shadow: 5px 5px 12px -5px #000000;
     border-radius: 20px;
     margin-top: 1rem;
     padding: 1rem;
@@ -484,12 +482,13 @@ box-shadow: 0px -1px 12px 2px rgba(186, 186, 186, 1);
 .green {
     background-color: rgb(8, 185, 50);
     color: #fff;
-    box-shadow: 0px -1px 12px 2px rgba(186, 186, 186, 1);
+
   }
   button{
     border: none;
     background-color: #f1f1f1;
-      box-shadow: 0px -1px 12px 2px rgba(186, 186, 186, 1);
+     
+        box-shadow: 5px 5px 12px -5px #000000;
     width: 10rem;
     margin-left: 1rem;
     margin-top: 1rem;
@@ -504,6 +503,7 @@ box-shadow: 0px -1px 12px 2px rgba(186, 186, 186, 1);
   flex-wrap: wrap;
 .card {
     margin-top: 1rem;
+    box-shadow: 5px 5px 12px -5px #000000;
 
     .card-headers {
       display: flex;
