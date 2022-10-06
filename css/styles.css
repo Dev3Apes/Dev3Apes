@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700&display=swap");
 import * {
   margin: 0;
   padding: 0;
@@ -11,43 +12,161 @@ body {
   font-family: "Baloo 2", cursive !important;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .main-background {
-  background-image: url(../asset/images/welcome_to_the_server.jpg);
-  background-position: center center;
+  padding: 0;
+  margin: 0;
+  background-image: url(../asset/images/mainBack.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  font-family: "Baloo" !important;
+}
+
+nav {
+  width: 100%;
+}
+nav .nav-link-contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+nav .nav-link-contents .nav-links {
+  display: flex;
+  gap: 20px;
+}
+nav .nav-link-contents .nav-links a {
+  color: #fff;
+  font-size: 23px;
+  margin-right: 1rem;
+}
+
+.container {
+  width: 100%;
+}
+
+.hero-container {
+  min-height: 100vh;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(244, 241, 241, 0.9);
+  border-radius: 20px 20px 0px 0px;
+}
+
+.hero {
   width: 100%;
   height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: "Baloo";
+  top: 141px;
 }
-.main-background .main-content {
-  position: absolute;
-  right: 35%;
-  top: 15%;
-  background: linear-gradient(105.31deg, #1c2f52 -2.91%, rgba(28, 47, 82, 0) 105.21%);
+.hero .hero-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 2rem;
+  margin-bottom: 10rem;
+}
+.hero .hero-content .hero-text {
+  padding: 1rem;
+  width: 50%;
+  color: #fff;
   border-radius: 20px;
-  height: 15rem;
-  padding: 10px;
-  text-align: center;
+  background: linear-gradient(105.31deg, #1c2f52 -0.91%, rgba(28, 47, 82, 0.8) 105.21%);
 }
-.main-background .main-content h1 {
-  color: #fff;
-  margin-top: 2rem;
-}
-.main-background .main-content p {
-  color: #fff;
-  margin-top: 2rem;
+.hero .hero-content .hero-text p {
+  margin-top: 1rem;
+  line-height: 30px;
   font-size: 20px;
 }
-.main-background .main-content .main-links {
+.hero .hero-content .hero-right img {
+  width: 25rem;
+  transform: rotateZ(10deg);
+}
+.hero logo-slider {
+  background: linear-gradient(105.31deg, #1c2f52 -0.91%, rgba(28, 47, 82, 0.8) 105.21%);
+  padding-top: 2rem;
+  right: 0;
+  transform: skewy(-6deg);
+  --image-size: 100px;
+  border-top: 1px solid #575757;
+  border-bottom: 1px solid #575757;
+  padding: 2rem 0;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
   display: flex;
-  justify-content: center;
+}
+.hero logo-slider:hover div {
+  animation-play-state: paused;
+}
+.hero logo-slider div {
+  display: flex;
+  position: relative;
+  animation: marquee 5s linear infinite;
   justify-content: space-around;
 }
-.main-background .main-content .main-links p {
-  font-size: 20px;
+.hero logo-slider img {
+  display: block;
+  min-width: var(--image-size);
+  height: var(--image-size);
+  margin: 0 1vw;
+  transform: rotate(20deg);
+  border-radius: 20px;
+}
+.hero logo-slider:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+@media (max-width: 900px) {
+  .hero logo-slider {
+    --image-size: 50px;
+    --image-size: min(max(50px, 10vw), 100px);
+  }
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#about {
+  margin-top: 10rem;
+  width: 100%;
+  min-height: 100vh;
+}
+#about h2 {
+  color: #1c1d52;
   text-decoration: underline;
-  cursor: pointer;
+  font-size: 50px;
+}
+#about p {
+  color: #1c2f52;
+}
+#about .about-hero-content {
+  display: flex;
+  align-items: center;
+}
+#about .about-hero-content img {
+  width: 20rem;
+  margin: 5rem;
+  transform: rotate(20deg);
+}
+#about p {
+  width: 80%;
+  margin-left: 2rem;
+  font-size: 20px;
+}
+#about .left img {
+  transform: rotate(-20deg);
 }
 
 .modal-content {
@@ -110,7 +229,7 @@ body {
 .background {
   background: linear-gradient(105.31deg, #1c2f52 -2.91%, rgba(28, 47, 82, 0) 105.21%);
   background-position: center center;
-  min-height: auto;
+  min-height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -118,8 +237,6 @@ body {
 .background .navbars {
   width: 100% !important;
   background-color: #1c2f52 !important;
-  height: 5rem;
-  padding: 1rem 2rem;
 }
 .background .navbars .nav-link-contents {
   display: flex !important;
@@ -369,22 +486,6 @@ body {
   display: flex;
   gap: 20px;
 }
-.profile-section .profile-main ul {
-  display: flex;
-  gap: 50px;
-  margin-top: 1rem;
-}
-.profile-section .profile-main ul li {
-  list-style: none;
-}
-.profile-section .profile-main ul li p {
-  background-color: #f1f1f1;
-  width: 10rem;
-  text-align: center;
-  border-radius: 10px;
-  font-size: 20px;
-  box-shadow: 0px -1px 12px 2px rgb(186, 186, 186);
-}
 
 .profile-details {
   z-index: 0;
@@ -428,6 +529,7 @@ body {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border-radius: 20px;
+  height: 2rem;
 }
 .profile-main .flex {
   display: flex;
@@ -448,6 +550,11 @@ body {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
+}
+.profile-main table {
+  background-color: #fff;
+  box-shadow: 5px 5px 12px -5px #000000;
+  margin-top: 1rem;
 }
 
 .card {
@@ -530,4 +637,39 @@ body {
   border: none;
   width: 100%;
   font-size: 20px;
+}
+
+.chat-box {
+  position: absolute;
+  z-index: 1;
+  margin-top: 1rem;
+  width: 50%;
+  border-radius: 20px;
+  background-color: rgb(254, 254, 254) !important;
+  box-shadow: 5px 5px 12px -5px #000000;
+  height: 80vh;
+  overflow: auto;
+}
+.chat-box .chat-message {
+  padding: 1rem;
+}
+.chat-box .chat-footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+.chat-box .chat-footer button {
+  width: 20%;
+}
+.chat-box .chat-footer input {
+  border-radius: 20px;
+  height: 2rem;
+  width: 100%;
+  box-shadow: 5px 5px 12px -5px #000000;
+  border: none;
+  padding-left: 1rem;
 }/*# sourceMappingURL=styles.css.map */

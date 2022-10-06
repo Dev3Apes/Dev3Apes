@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700&display=swap");
 
 import * {
   margin: 0;
@@ -9,59 +8,232 @@ body {
   margin: 0;
   padding: 0;
   cursor: pointer;
-  font-family: 'Baloo 2', cursive !important;
+  font-family: "Baloo 2", cursive !important;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .main-background {
-  background-image: url(../asset/images/welcome_to_the_server.jpg);
-  background-position: center center;
-  width: 100%;
-  height: 100vh;
-  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  background-image: url(../asset/images/mainBack.jpg);
   background-size: cover;
-  font-family: "Baloo";
-  .main-content {
-    position: absolute;
-    right: 35%;
-    top: 15%;
-    background: linear-gradient(
-      105.31deg,
-      #1c2f52 -2.91%,
-      rgba(28, 47, 82, 0) 105.21%
-    );
-    border-radius: 20px;
-    height: 15rem;
-    padding: 10px;
-    text-align: center;
-    h1 {
-      color: #fff;
-      margin-top: 2rem;
-    }
-    p {
-      color: #fff;
-      margin-top: 2rem;
-      font-size: 20px;
-    }
-    .main-links {
+  min-height: 100vh;
+  font-family: 'Baloo' !important;
+}
+
+nav {
+  width: 100%;
+
+  .nav-link-contents {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  
+    padding: 1rem;
+
+    .nav-links {
       display: flex;
-      justify-content: center;
-      justify-content: space-around;
-      p {
-        font-size: 20px;
-        text-decoration: underline;
-        cursor: pointer;
+      gap: 20px;
+
+      a {
+        color: #fff;
+        font-size: 23px;
+        margin-right: 1rem;
       }
     }
   }
 }
+
+.container {
+  width: 100%;
+
+}
+
+.hero-container {
+  min-height: 100vh;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(244, 241, 241, 0.9);
+  border-radius: 20px 20px 0px 0px;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  top: 141px;
+
+  .hero-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 2rem;
+    margin-bottom: 10rem;
+
+    .hero-text {
+      padding: 1rem;
+    
+  
+      width: 50%;
+   
+      color: #fff;
+      border-radius: 20px;
+      background: linear-gradient(105.31deg,
+          #1c2f52 -0.91%,
+          rgba(28, 47, 82, 0.8) 105.21%);
+
+      p {
+        margin-top: 1rem;
+        line-height: 30px;
+        font-size: 20px;
+      }
+    }
+
+    .hero-right {
+      img {
+        width: 25rem;
+     
+        transform: rotateZ(10deg);
+      }
+    }
+  }
+
+  logo-slider {
+    background: linear-gradient(105.31deg,
+        #1c2f52 -0.91%,
+        rgba(28, 47, 82, 0.8) 105.21%);
+   
+padding-top: 2rem;
+    right: 0;
+    transform: skewy(-6deg);
+    $min-image-size: 50px;
+    $max-image-size: 100px;
+
+    --image-size: #{$max-image-size};
+
+    border-top: 1px solid #575757;
+    border-bottom: 1px solid #575757;
+    padding: 2rem 0;
+    overflow: hidden;
+
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+
+    &:hover div {
+      animation-play-state: paused;
+    }
+
+    div {
+      display: flex;
+      position: relative;
+      animation: marquee 5s linear infinite;
+      justify-content: space-around;
+
+      // Debug: This is just to help see where the loop happens
+      // &:nth-of-type(1) { &, img { border:1px dashed red;  }}
+      // &:nth-of-type(2) { &, img { border:1px dashed blue; }}
+
+      // You may need this if there are too few images for the banner width
+      //min-width:100%;
+    }
+
+    img {
+      display: block;
+      min-width: var(--image-size);
+      height: var(--image-size);
+      margin: 0 1vw;
+      transform: rotate(20deg);
+      border-radius: 20px;
+    }
+
+    &:after {
+      content: "";
+      // position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+
+      // background: linear-gradient(to right, white, rgba(white, 0) 80px, rgba(white, 0) calc(100% - 80px), white);
+    }
+
+    @media (max-width: 900px) {
+      --image-size: #{$min-image-size};
+      --image-size: min(max(#{$min-image-size}, 10vw), #{$max-image-size});
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+// about page
+
+#about {
+  margin-top: 10rem;
+  width: 100%;
+  min-height: 100vh;
+  h2{
+    color: #1c1d52;
+    text-decoration: underline;
+    font-size: 50px;
+  }
+  p{
+    color: #1c2f52;
+  }
+
+  .about-hero-content {
+    display: flex;
+    align-items: center;
+
+ 
+
+    img {
+      width: 20rem;
+      margin: 5rem;
+      transform: rotate(20deg);
+
+
+    }
+
+  }
+
+
+  p {
+    width: 80%;
+    margin-left: 2rem;
+    font-size: 20px;
+  }
+
+  .left {
+    img {
+      transform: rotate(-20deg);
+    }
+  }
+
+}
+
 .modal-content {
   background: linear-gradient(
     105.31deg,
     #1c2f52 -2.91%,
     rgba(28, 47, 82, 0) 105.21%
-
   );
-  form label{
-  color: #fff;
+  form label {
+    color: #fff;
   }
 
   button {
@@ -77,9 +249,7 @@ body {
 
     .catgory-item-list {
       padding: 2rem;
-    box-shadow: 5px 5px 12px -5px #000000;
-        
-      
+      box-shadow: 5px 5px 12px -5px #000000;
 
       .review {
         height: 20rem;
@@ -89,7 +259,7 @@ body {
           box-shadow: 5px 5px 12px -5px #000000;
           width: 100%;
           height: 10rem;
-       background-color: #1c2f52;
+          background-color: #1c2f52;
           color: #fff;
           p {
             padding: 2rem;
@@ -109,9 +279,8 @@ body {
       }
     }
 
-    .catgory-package{
-  
-box-shadow: 5px 5px 12px -5px #000000;
+    .catgory-package {
+      box-shadow: 5px 5px 12px -5px #000000;
     }
   }
 
@@ -127,11 +296,13 @@ box-shadow: 5px 5px 12px -5px #000000;
 // the end of main page and the start of Explore page navigation bar
 
 .background {
-  background: linear-gradient(105.31deg,
-        #1c2f52 -2.91%,
-        rgba(28, 47, 82, 0) 105.21%);
+  background: linear-gradient(
+    105.31deg,
+    #1c2f52 -2.91%,
+    rgba(28, 47, 82, 0) 105.21%
+  );
   background-position: center center;
-  min-height: auto;
+  min-height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -139,8 +310,7 @@ box-shadow: 5px 5px 12px -5px #000000;
   .navbars {
     width: 100% !important;
     background-color: #1c2f52 !important;
-    height: 5rem;
-    padding: 1rem 2rem;
+
 
     .nav-link-contents {
       display: flex !important;
@@ -165,7 +335,7 @@ box-shadow: 5px 5px 12px -5px #000000;
           height: 2rem;
           width: 2rem;
           border-radius: 50%;
-background-color: #f1f1f1;
+          background-color: #f1f1f1;
           border: none;
         }
 
@@ -328,12 +498,12 @@ background-color: #f1f1f1;
         .card {
           width: 18rem;
           border-radius: 10px;
-box-shadow: 5px 5px 12px -5px #000000;
-       
-.card-img-top{
- width: 100%;
- height: 15rem;
-}
+          box-shadow: 5px 5px 12px -5px #000000;
+
+          .card-img-top {
+            width: 100%;
+            height: 15rem;
+          }
           .card-headers {
             width: 100%;
             padding: 10px;
@@ -343,7 +513,7 @@ box-shadow: 5px 5px 12px -5px #000000;
               display: flex;
               justify-content: center;
               align-items: center;
-           
+
               width: 5.5rem;
               height: 5.5rem;
               border-radius: 50%;
@@ -424,116 +594,87 @@ box-shadow: 5px 5px 12px -5px #000000;
     }
   }
 }
-.profile-section{
+.profile-section {
   display: flex;
   gap: 20px;
-  .profile-main{
-ul {
-    display: flex;
-    gap: 50px;
-    margin-top: 1rem;
-
-    li {
-      list-style: none;
-
-      p {
-        background-color: #f1f1f1;
-        width: 10rem;
-        text-align: center;
-        border-radius: 10px;
-        font-size: 20px;
-        box-shadow: 0px -1px 12px 2px rgba(186, 186, 186, 1);
-      }
-
-    }
-  }
-  }
-
 }
-.profile-details{
-
+.profile-details {
   z-index: 0;
   width: 20%;
   min-height: 70vh;
-box-shadow: 5px 5px 12px -5px #000000;
+  box-shadow: 5px 5px 12px -5px #000000;
   left: 1rem;
   padding: 1rem;
   color: #000000;
   background-color: #f1f1f1;
 
-  .profile-details-name{
+  .profile-details-name {
     margin-top: 3rem;
     margin-bottom: 1rem;
     color: #000;
-      text-align: center;
+    text-align: center;
   }
   .profile-card {
-  box-shadow: 5px 5px 12px -5px #000000;
+    box-shadow: 5px 5px 12px -5px #000000;
     border-radius: 20px;
     margin-top: 1rem;
     padding: 1rem;
-    h4{
+    h4 {
       text-align: center;
     }
   }
 }
-.profile-main{
+.profile-main {
   width: 70%;
-.green {
+  .green {
     background-color: rgb(8, 185, 50);
     color: #fff;
-
   }
-  button{
+  button {
     border: none;
     background-color: #f1f1f1;
-     
-        box-shadow: 5px 5px 12px -5px #000000;
+
+    box-shadow: 5px 5px 12px -5px #000000;
     width: 10rem;
     margin-left: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     border-radius: 20px;
+    height: 2rem;
   }
 
+  .flex {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    .card {
+      margin-top: 1rem;
+      box-shadow: 5px 5px 12px -5px #000000;
 
-.flex{
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-.card {
-    margin-top: 1rem;
-    box-shadow: 5px 5px 12px -5px #000000;
+      .card-headers {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 1rem 0;
 
-    .card-headers {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      margin: 1rem 0;
-
-      img {
-        width: 5rem;
-        height: 5rem;
-        border-radius: 50%;
+        img {
+          width: 5rem;
+          height: 5rem;
+          border-radius: 50%;
+        }
       }
     }
   }
+  table {
+    background-color: #fff;
+    box-shadow: 5px 5px 12px -5px #000000;
+    margin-top: 1rem;
+  }
 }
-
- 
-}
-
-
-
-
-
-
 
 .card {
   width: 18rem;
   border-radius: 20px !important;
-
-
 
   .card-header {
     width: 100%;
@@ -545,7 +686,7 @@ box-shadow: 5px 5px 12px -5px #000000;
       display: flex;
       justify-content: center;
       align-items: center;
-    
+
       width: 5.5rem;
       height: 5.5rem;
       border-radius: 50%;
@@ -568,37 +709,34 @@ box-shadow: 5px 5px 12px -5px #000000;
     justify-content: space-between;
   }
 }
-.create-form{
+.create-form {
   width: 100%;
   height: 90vh;
-padding: 0 1rem;
+  padding: 0 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   text-align: center;
-    font-family: 'Baloo';
-  p{
+  font-family: "Baloo";
+  p {
     margin: 0 auto;
     line-height: 30px;
     width: 50%;
     text-align: center;
     margin-top: 1rem;
     font-size: 20px;
- 
   }
   button {
     background-color: #1c2f52;
     width: 30%;
     border: none;
     height: 2rem;
-    font-size:20px;
+    font-size: 20px;
     color: #fff;
     margin-top: 1rem;
     border-radius: 10px;
   }
-
-
 }
 .paymet-contents {
   display: flex;
@@ -609,14 +747,49 @@ padding: 0 1rem;
   width: 100%;
   border-radius: 5%;
 
-  .order-summary{
-border: #1c2f52 solid 1px;
-padding: 2rem;
-border-radius: 5%;
+  .order-summary {
+    border: #1c2f52 solid 1px;
+    padding: 2rem;
+    border-radius: 5%;
   }
   button {
     border: none;
     width: 100%;
     font-size: 20px;
+  }
+}
+.chat-box {
+  position: absolute;
+  z-index: 1;
+  margin-top: 1rem;
+  width: 50%;
+  border-radius: 20px;
+  background-color: rgb(254, 254, 254) !important;
+  box-shadow: 5px 5px 12px -5px #000000;
+  height: 80vh;
+  overflow: auto;
+  .chat-message {
+    padding: 1rem;
+  }
+  .chat-footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+
+    button {
+      width: 20%;
+    }
+    input {
+      border-radius: 20px;
+      height: 2rem;
+      width: 100%;
+      box-shadow: 5px 5px 12px -5px #000000;
+      border: none;
+      padding-left: 1rem;
+    }
   }
 }

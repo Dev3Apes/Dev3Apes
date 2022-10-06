@@ -98,7 +98,7 @@
                                 Date Joined
                             </h5>
                         </div>
-                        <hr>
+
                         <div class="profile-card">
                             <h4>
                                 Description
@@ -110,7 +110,7 @@
                                 illum velit laudantium doloremque perspiciatis vero cum unde?
                             </p>
                         </div>
-                        <hr>
+
                         <div class="profile-card">
                             <h4>
                                 Languages
@@ -135,7 +135,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <hr>
+
 
                         <div class="profile-card">
                             <h4>
@@ -146,7 +146,7 @@
                                 user timezone
                             </p>
                         </div>
-                        <hr>
+
                         <div class="profile-card">
                             <h4>
                                 Skills
@@ -367,9 +367,7 @@
                                                 <button id="nav-profile-tab" data-bs-toggle="tab"
                                                     data-bs-target="#nav-sales" type="button" role="tab"
                                                     aria-controls="nav-sales" aria-selected="false">Sales</button>
-                                                <button id="nav-contact-tab" data-bs-toggle="tab"
-                                                    data-bs-target="#nav-chats" type="button" role="tab"
-                                                    aria-controls="nav-chats" aria-selected="false">Chats</button>
+
                                             </div>
                                         </nav>
                                         <div class="tab-content" id="nav-tabContent">
@@ -453,14 +451,29 @@
                                                     </table>
                                                 </div>
                                             </div>
-                                            <div class="tab-pane fade" id="nav-chats" role="tabpanel"
-                                                aria-labelledby="nav-chats-tab">...</div>
+
                                         </div>
 
                                     </div+>
                                 </div>
                                 <div class="tab-pane fade" id="nav-contact" role="tabpanel"
-                                    aria-labelledby="nav-contact-tab">contact</div>
+                                    aria-labelledby="nav-contact-tab">
+                                    <div class="chat-box">
+                                        <div class="chat-message">
+                                            <div class="list-group" id="log"></div>
+                                        </div>
+
+                                        <div class="chat-footer">
+                                            <hr>
+                                            <input type="text" class="form-control" id="message"
+                                                placeholder="Your message here...">
+                                            <button type="button" id="buttonSubmit">send</button>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
                                 <div class="tab-pane fade" id="nav-quote" role="tabpanel"
                                     aria-labelledby="nav-quote-tab">quote</div>
                             </div>
@@ -508,6 +521,10 @@
 
         <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/c461f95de0.js" crossorigin="anonymous"></script>
+
+        <script src="../node_modules/pubnub/dist/web/pubnub.js"></script>
         <script type="module" src="../Lib/js/app.js"></script>
+        <script src="../node_modules/chat-engine//dist/chat-engine.js"></script>
+        <script src="../Lib/js/chatEngin.js"></script>
     </body>
 </html>

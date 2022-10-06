@@ -13,11 +13,15 @@
   "license": "ISC",
   "devDependencies": {
     "bootstrap": "^5.2.1",
+    "chat-engine": "^0.8.4",
     "country-language": "^0.1.7",
     "jquery": "^3.6.1",
     "language": "^0.4.0",
     "scss": "^0.2.4",
     "timezone": "^1.0.23",
     "timezones.json": "^1.6.1"
+  },
+  "dependencies": {
+    "pubnub": "^7.2.0"
   }
 }
