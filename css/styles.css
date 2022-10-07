@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700&display=swap");
 import * {
   margin: 0;
@@ -18,12 +18,11 @@ body {
 }
 
 .main-background {
-  padding: 0;
-  margin: 0;
-  background-image: url(../asset/images/mainBack.jpg);
+  background: url(../asset/images/mainBack.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  min-height: 100vh;
-  font-family: "Baloo" !important;
 }
 
 nav {
@@ -50,9 +49,8 @@ nav .nav-link-contents .nav-links a {
 }
 
 .hero-container {
-  min-height: 100vh;
   background: #ffffff;
-  box-shadow: 0px 4px 4px rgba(244, 241, 241, 0.9);
+  box-shadow: -1px 5px 4px rgba(244, 241, 241, 0.9);
   border-radius: 20px 20px 0px 0px;
 }
 
@@ -67,14 +65,13 @@ nav .nav-link-contents .nav-links a {
   align-items: center;
   justify-content: space-around;
   padding-top: 2rem;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 .hero .hero-content .hero-text {
   padding: 1rem;
+  text-align: center;
   width: 50%;
-  color: #fff;
   border-radius: 20px;
-  background: linear-gradient(105.31deg, #1c2f52 -0.91%, rgba(28, 47, 82, 0.8) 105.21%);
 }
 .hero .hero-content .hero-text p {
   margin-top: 1rem;
@@ -82,11 +79,12 @@ nav .nav-link-contents .nav-links a {
   font-size: 20px;
 }
 .hero .hero-content .hero-right img {
-  width: 25rem;
-  transform: rotateZ(10deg);
+  width: 30rem;
 }
 .hero logo-slider {
   background: linear-gradient(105.31deg, #1c2f52 -0.91%, rgba(28, 47, 82, 0.8) 105.21%);
+  position: absolute;
+  bottom: 3rem;
   padding-top: 2rem;
   right: 0;
   transform: skewy(-6deg);
@@ -139,14 +137,15 @@ nav .nav-link-contents .nav-links a {
 }
 
 #about {
-  margin-top: 10rem;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
 }
 #about h2 {
   color: #1c1d52;
   text-decoration: underline;
   font-size: 50px;
+  width: 500px;
+  padding: 2rem;
 }
 #about p {
   color: #1c2f52;
@@ -154,19 +153,27 @@ nav .nav-link-contents .nav-links a {
 #about .about-hero-content {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  align-items: center;
 }
-#about .about-hero-content img {
-  width: 20rem;
-  margin: 5rem;
+#about .about-hero-content .background-grey {
+  width: 15rem;
+  height: 15rem;
+  background-color: #575757;
+  border-radius: 20px;
+  margin-right: 6rem;
+  transform: rotate(-20deg);
+  -webkit-box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 12px -5px rgba(0, 0, 0, 0);
+  box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 12px -5px rgba(0, 0, 0, 0);
+}
+#about .about-hero-content .left .background-grey {
   transform: rotate(20deg);
+  margin-left: 6rem;
 }
 #about p {
   width: 80%;
   margin-left: 2rem;
   font-size: 20px;
-}
-#about .left img {
-  transform: rotate(-20deg);
 }
 
 .modal-content {
