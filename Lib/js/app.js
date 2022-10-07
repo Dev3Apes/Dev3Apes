@@ -1,7 +1,7 @@
 import timezone from "./timezones.js";
 import lang from "./language.js";
-// import AOS from "aos";
-AOS.init();
+// import AOS from "./aos";
+
 for (let a = 0; a < timezone.length; a++) {
   const element = timezone[a].text;
   const abbr = timezone[a].abbr;

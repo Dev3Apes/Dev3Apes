@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&display=swap");
 import * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   cursor: pointer;
-  font-family: 'Baloo 2', cursive !important;
+  font-family: "Baloo 2", cursive !important;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700&display=swap");
@@ -18,15 +18,12 @@ body {
 }
 
 .main-background {
-
   background: url(../asset/images/mainBack.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   // background-repeat: repeat-y;
-
-  
 }
 
 nav {
@@ -36,7 +33,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-  
+
     padding: 1rem;
 
     .nav-links {
@@ -54,17 +51,14 @@ nav {
 
 .container {
   width: 100%;
-
 }
 
 .hero-container {
-
   background: #ffffff;
-  
-// -webkit-box-shadow: 5px 5px 17px 0px rgba(0, 0, 0, 0.58);
+
+  // -webkit-box-shadow: 5px 5px 17px 0px rgba(0, 0, 0, 0.58);
   box-shadow: 0px 0px 17px 2px rgba(255, 255, 255, 0.58);
   border-radius: 20px 20px 0px 0px;
- 
 }
 
 .hero {
@@ -82,13 +76,11 @@ nav {
 
     .hero-text {
       padding: 1rem;
-    text-align: center;
-  
+      text-align: center;
+
       width: 50%;
-   
-     
+
       border-radius: 20px;
-   
 
       p {
         margin-top: 1rem;
@@ -101,18 +93,19 @@ nav {
     .hero-right {
       img {
         width: 30rem;
-     
-             }
+      }
     }
   }
 
   logo-slider {
-    background: linear-gradient(105.31deg,
-        #1c2f52 -0.91%,
-        rgba(28, 47, 82, 0.8) 105.21%);
-   position: absolute;
-   bottom: 3rem;
-padding-top: 2rem;
+    background: linear-gradient(
+      105.31deg,
+      #1c2f52 -0.91%,
+      rgba(28, 47, 82, 0.8) 105.21%
+    );
+    position: absolute;
+    bottom: 3rem;
+    padding-top: 2rem;
     right: 0;
     transform: skewy(-6deg);
     $min-image-size: 50px;
@@ -187,19 +180,16 @@ padding-top: 2rem;
 // about page
 
 #about {
-
   width: 100%;
   height: 100vh;
-  h2{
+  h2 {
     color: #1c1d52;
     text-decoration: underline;
-    font-size: 50px;
-    width: 500px;
+    font-size: 60px;
+    width: 600px;
     padding: 2rem;
-   
-    
   }
-  p{
+  p {
     color: #1c2f52;
   }
 
@@ -209,38 +199,83 @@ padding-top: 2rem;
     justify-content: space-around;
     align-items: center;
 
- 
-
-     .background-grey{
+    .background-grey {
       width: 15rem;
       height: 15rem;
       background-color: #575757;
       border-radius: 20px;
       margin-right: 6rem;
-    
-  transform: rotate(-20deg);
-  -webkit-box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 12px -5px rgba(0, 0, 0, 0);
-    box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 12px -5px rgba(0, 0, 0, 0);
 
-     }
-         .left {
-           .background-grey {
-             transform: rotate(20deg);
-             margin-left: 6rem;
-           }
-    
-         }
+      transform: rotate(-20deg);
+      -webkit-box-shadow: 5px 5px 0px 0px #289fed, 10px 10px 0px 0px #5fb8ff,
+        15px 15px 0px 0px #a1d8ff, 20px 20px 0px 0px #cae6ff,
+        25px 25px 0px 0px #e1eeff, 5px 5px 12px -5px rgba(0, 0, 0, 0);
+      box-shadow: 5px 5px 0px 0px #289fed, 10px 10px 0px 0px #5fb8ff,
+        15px 15px 0px 0px #a1d8ff, 20px 20px 0px 0px #cae6ff,
+        25px 25px 0px 0px #e1eeff, 5px 5px 12px -5px rgba(0, 0, 0, 0);
+    }
+    .left {
+      .background-grey {
+        transform: rotate(20deg);
+        margin-left: 6rem;
+      }
+    }
   }
-
 
   p {
     width: 80%;
     margin-left: 2rem;
     font-size: 20px;
   }
+}
+#theTeam{
+  padding: 2rem;
+}
+.team-header{
+  width: 100%;
+  text-align: center;
+  h2{
+    text-decoration: underline;
+    font-size: 60px;
+  }
 
-
-
+  p{
+    width: 70%;
+    text-align: center;
+   font-size: 20px;
+    margin: 2rem auto;
+  }
+}
+.team-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+  gap: 20px;
+  .team-item {
+    width: 18rem;
+    height: 23rem;
+    text-align: center;
+    box-shadow: 0px 0px 17px 2px rgba(106, 103, 103, 0.58);
+    padding: 2rem;
+    border-radius: 20px;
+    img {
+      width: 10rem;
+      border-radius: 50%;
+      box-shadow: 0px 0px 17px 2px rgba(106, 103, 103, 0.58);
+    }
+    .team-text{
+      margin-top: 2rem;
+      h3{
+        font-size: 40px;
+      }
+      p{
+        font-size: 20px;
+      }
+    }
+  }
 }
 
 .modal-content {
@@ -257,6 +292,7 @@ padding-top: 2rem;
     background-color: rgb(254, 254, 254) !important;
     box-shadow: 5px 5px 12px -5px #000000;
     color: #000;
+    border-radius: 10px;
   }
   .catgory-item-content {
     display: flex;
@@ -268,6 +304,15 @@ padding-top: 2rem;
       padding: 2rem;
       box-shadow: 5px 5px 12px -5px #000000;
 
+      button {
+        background-color: rgb(254, 254, 254) !important;
+        box-shadow: 5px 5px 12px -5px #000000;
+        color: #000;
+        border: none;
+        width: 90%;
+        border-radius: 10px;
+        height: 2rem;
+      }
       .review {
         height: 20rem;
         overflow: auto;
@@ -298,6 +343,34 @@ padding-top: 2rem;
 
     .catgory-package {
       box-shadow: 5px 5px 12px -5px #000000;
+      ul {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3rem;
+        li {
+          width: 30%;
+          button {
+            background-color: rgb(254, 254, 254) !important;
+            box-shadow: 5px 5px 12px -5px #000000;
+            color: #000;
+            border: none;
+            width: 90%;
+            border-radius: 10px;
+            height: 2rem;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+      button {
+        background-color: rgb(254, 254, 254) !important;
+        box-shadow: 5px 5px 12px -5px #000000;
+        color: #000;
+        border: none;
+        width: 90%;
+        border-radius: 10px;
+        height: 2rem;
+      }
     }
   }
 
@@ -311,7 +384,26 @@ padding-top: 2rem;
   }
 }
 // the end of main page and the start of Explore page navigation bar
-
+#payment {
+  nav {
+    width: 100%;
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+  button {
+    background-color: rgb(254, 254, 254) !important;
+    box-shadow: 5px 5px 12px -5px #000000;
+    color: #000;
+    border: none;
+    width: 30%;
+    border-radius: 10px;
+    height: 2rem;
+    margin-bottom: 2rem;
+  }
+}
 .background {
   background: linear-gradient(
     105.31deg,
@@ -327,7 +419,6 @@ padding-top: 2rem;
   .navbars {
     width: 100% !important;
     background-color: #1c2f52 !important;
-
 
     .nav-link-contents {
       display: flex !important;
@@ -416,14 +507,15 @@ padding-top: 2rem;
             text-align: center;
 
             button {
-              margin-top: 1rem;
-              width: 90%;
-              margin-left: auto;
-              margin-right: auto;
+              background-color: rgb(254, 254, 254) !important;
+              box-shadow: 5px 5px 12px -5px #000000;
+              color: #000;
               border: none;
-              background-color: #1c2f52;
-              color: #fff;
-              border-radius: 5px;
+              width: 90%;
+              border-radius: 10px;
+              height: 2rem;
+              margin-bottom: 2rem;
+              margin-top: 1rem;
             }
           }
         }
@@ -431,7 +523,7 @@ padding-top: 2rem;
         /* Links inside the dropdown */
         .dropdown-content a {
           color: black;
-          padding: 12px 16px;
+          padding: 10px 16px;
           text-decoration: none;
           display: block;
         }
@@ -756,8 +848,6 @@ padding-top: 2rem;
   }
 }
 .paymet-contents {
-  display: flex;
-  justify-content: center;
   border: #1c2f52 solid 1px;
   margin-top: 1rem;
   padding: 1rem;
@@ -768,11 +858,17 @@ padding-top: 2rem;
     border: #1c2f52 solid 1px;
     padding: 2rem;
     border-radius: 5%;
-  }
-  button {
-    border: none;
     width: 100%;
-    font-size: 20px;
+    button {
+      background-color: rgb(254, 254, 254) !important;
+      box-shadow: 5px 5px 12px -5px #000000;
+      color: #000;
+      border: none;
+      width: 90%;
+      border-radius: 10px;
+      height: 2rem;
+      margin-bottom: 2rem;
+    }
   }
 }
 .chat-box {
