@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="background">
+            <nav>
+                <div class="navbars">
+                    <div class="nav-link-contents">
+                        <div class="nav-logo">
+                            <img src="../asset/images/dev3apeslogo.png" style="width: 15rem;" alt="" srcset="">
+                        </div>
+                        <div class="nav-search">
+                            <input type="search" name="" id="">
+                        </div>
+                        <div class="nav-links">
+                            <a href="Explore.html">
+                                <p>
+                                    Explore
+                                </p>
+                            </a>
+                            <a href="Blog.html">
+                                <p>
+                                    Blog
+                                </p>
+                            </a>
+                            <a href="Create.html">
+                                <p>
+                                    Create
+                                </p>
+                            </a>
+
+
+                            <div class="dropdown">
+                                <i class="fa-solid fa-wallet dropbtn"></i>
+                                <div class="dropdown-content">
+                                    <div class="wallet-card">
+                                        <div class="wallet-header">
+                                            <img src="../asset/images/icons8-ethereum-48.png" style="width:2.5rem;"
+                                                alt="" srcset="">
+                                        </div>
+                                        <div class="wallet-ballance">
+                                            <img src="../asset/images/sim-card-chip.jpg" alt="" srcset="">
+                                            <h3>
+                                                00.001
+                                            </h3>
+                                        </div>
+                                        <div class=" wallet-id">
+                                            <p>trgsbahsu78</p>
+                                        </div>
+                                    </div>
+                                    <div class="change-wallet">
+                                        <button data-bs-toggle="modal" data-bs-target="#changewalletModal">Choose
+                                            Wallet</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dropdown">
+                                <i class="fa-solid fa-user dropbtn"></i>
+                                <div class="dropdown-content">
+                                    <a href="Profile.html">Profile</a>
+                                    <a href="Settings.html">Settings</a>
+                                    <a>Logout</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <section>
+                <div class="settings-nav">
+                    <div class="settings-nav-links">
+                        <nav>
+                            <div id="nav-tab" role="tablist">
+                                <button class="active" id="nav-profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                                    aria-selected="true">Profile</button>
+                                <button id="nav-collections-tab" data-bs-toggle="tab" data-bs-target="#nav-collections"
+                                    type="button" role="tab" aria-controls="nav-collections"
+                                    aria-selected="false">Collections</button>
+                                <button id="nav-activites-tab" data-bs-toggle="tab" data-bs-target="#nav-activites"
+                                    type="button" role="tab" aria-controls="nav-activites"
+                                    aria-selected="false">Activites</button>
+                                <button id="nav-stats-tab" data-bs-toggle="tab" data-bs-target="#nav-stats"
+                                    type="button" role="tab" aria-controls="nav-stats"
+                                    aria-selected="false">Stats</button>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-profile" role="tabpanel"
+                                aria-labelledby="nav-profile-tab">
+                                <div>
+                                    <form action="">
+                                        <div class="form-content">
+                                            <div class="w-100">
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">Name</label>
+                                                    <input type="text" class="form-control" name="" id=""
+                                                        aria-describedby="helpId" placeholder="">
+
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">Last Name</label>
+                                                    <input type="text" class="form-control" name="" id=""
+                                                        aria-describedby="helpId" placeholder="">
+
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">Email</label>
+                                                    <input type="text" class="form-control" name="" id=""
+                                                        aria-describedby="helpId" placeholder="">
+
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">Time Zone</label>
+                                                    <input type="text" class="form-control" name="" id=""
+                                                        aria-describedby="helpId" placeholder="">
+
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">What I do</label>
+                                                    <input type="text" class="form-control" name="" id=""
+                                                        aria-describedby="helpId" placeholder="">
+
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">Language</label>
+                                                    <input type="text" class="form-control" name="" id=""
+                                                        aria-describedby="helpId" placeholder="">
+
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">Who am I</label>
+                                                    <input type="text" class="form-control" name="" id=""
+                                                        aria-describedby="helpId" placeholder="">
+
+                                                </div>
+                                            </div>
+                                            <div class="w-100">
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">Profile Picture</label>
+                                                    <input type="file" class="form-control" name="" id=""
+                                                        aria-describedby="helpId" placeholder="">
+
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">Banner Picture</label>
+                                                    <input type="file" class="form-control" name="" id=""
+                                                        aria-describedby="helpId" placeholder="">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <button>Back</button>
+                                            <button>Update</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-collections" role="tabpanel"
+                                aria-labelledby="nav-collections-tab">Collection</div>
+                            <div class="tab-pane fade" id="nav-activites" role="tabpanel"
+                                aria-labelledby="nav-activites-tab">
+                                <div class="container">
+                                    <div class="activity-list">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        Description
+                                                    </th>
+                                                    <th>
+                                                        Date
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        Sold to buyer
+                                                    </td>
+                                                    <td>
+                                                        10/10/10
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        bought to buyer
+                                                    </td>
+                                                    <td>
+                                                        10/10/10
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        added to collections
+                                                    </td>
+                                                    <td>
+                                                        10/10/10
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-stats" role="tabpanel" aria-labelledby="nav-stats-tab">
+                                <div class="container">
+                                    <div class="stats-container">
+                                        <h2>
+                                            Collection Items
+                                        </h2>
+                                        <div class="stats-header">
+                                            <div class="stats-header-content">
+                                                <h3>
+                                                    Collections
+                                                </h3>
+                                                <p>
+                                                    20
+                                                </p>
+                                            </div>
+                                            <div class="stats-header-content">
+                                                <h3>
+                                                    Sold Items
+                                                </h3>
+                                                <p>
+                                                    20
+                                                </p>
+                                            </div>
+                                            <div class="stats-header-content">
+                                                <h3>
+                                                    Items Bought
+                                                </h3>
+                                                <p>
+                                                    20
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <h2>
+                                            Connected Wallets
+                                        </h2>
+                                        <div class="stats-revenue">
+                                            <div class="stats-header-content">
+                                                <h3>
+                                                    Solana
+                                                </h3>
+                                                <p>
+                                                    0.22 Sol
+                                                </p>
+                                            </div>
+                                            <div class="stats-header-content">
+                                                <h3>
+                                                    Ethereum
+                                                </h3>
+                                                <p>
+                                                    0.22 Eth
+                                                </p>
+                                            </div>
+                                            <div class="stats-header-content">
+                                                <h3>
+                                                    Polygon
+                                                </h3>
+                                                <p>
+                                                    0.22 Pol
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <h2>
+                                            Revenue
+                                        </h2>
+                                        <div class="stats-revenue">
+                                            <div class="stats-header-content">
+                                                <h3>
+                                                    Total Revenue
+                                                </h3>
+                                                <p>
+                                                    0.22
+                                                </p>
+                                            </div>
+                                            <div class="stats-header-content">
+                                                <h3>
+                                                    Total Sold
+                                                </h3>
+                                                <p>
+                                                    0.22
+                                                </p>
+                                            </div>
+                                            <div class="stats-header-content">
+                                                <h3>
+                                                    Total Bought
+                                                </h3>
+                                                <p>
+                                                    0.22
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+        </div>
+        </section>
+
+        </div>
+
+
+
+
+
+
+
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <script type="module" src="../Lib/js/app.js"></script>
+        <script src="https://kit.fontawesome.com/c461f95de0.js" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -164,8 +164,7 @@ nav .nav-link-contents .nav-links a {
   border-radius: 20px;
   margin-right: 6rem;
   transform: rotate(-20deg);
-  -webkit-box-shadow: 5px 5px 0px 0px #289fed, 10px 10px 0px 0px #5fb8ff, 15px 15px 0px 0px #a1d8ff, 20px 20px 0px 0px #cae6ff, 25px 25px 0px 0px #e1eeff, 5px 5px 12px -5px rgba(0, 0, 0, 0);
-  box-shadow: 5px 5px 0px 0px #289fed, 10px 10px 0px 0px #5fb8ff, 15px 15px 0px 0px #a1d8ff, 20px 20px 0px 0px #cae6ff, 25px 25px 0px 0px #e1eeff, 5px 5px 12px -5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 3px 0px 2px rgba(0, 0, 0, 0.1), 0px 6px 0px 4px rgba(0, 0, 0, 0.1), 0px 9px 0px 6px rgba(0, 0, 0, 0.1), 0px 12px 0px 8px rgba(0, 0, 0, 0.1);
 }
 #about .about-hero-content .left .background-grey {
   transform: rotate(20deg);
@@ -792,4 +791,91 @@ nav .nav-link-contents .nav-links a {
   box-shadow: 5px 5px 12px -5px #000000;
   border: none;
   padding-left: 1rem;
+}
+
+.settings-nav {
+  height: 90vh;
+}
+.settings-nav .settings-nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+.settings-nav .settings-nav-links nav {
+  background-color: #f1f1f1;
+  width: 15%;
+  height: 92vh;
+}
+.settings-nav .settings-nav-links nav button {
+  background-color: rgb(254, 254, 254) !important;
+  box-shadow: 5px 5px 12px -5px #000000;
+  color: #000;
+  border: none;
+  width: 100%;
+  height: 2rem;
+  margin-top: 1rem;
+}
+.settings-nav .settings-nav-links .tab-content {
+  width: 70%;
+  margin: 1rem auto;
+}
+.settings-nav .settings-nav-links .tab-content button {
+  background-color: rgb(254, 254, 254) !important;
+  box-shadow: 5px 5px 12px -5px #000000;
+  color: #000;
+  border: none;
+  width: 50%;
+  height: 2rem;
+  margin-top: 1rem;
+}
+.settings-nav .settings-nav-links .tab-content form {
+  margin-top: 1rem;
+  width: 100%;
+  box-shadow: 5px 5px 12px -5px #000000;
+  padding: 2rem;
+}
+.settings-nav .settings-nav-links .tab-content form .form-content {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.settings-nav .settings-nav-links .tab-content form label {
+  font-size: 20px;
+  color: #f1f1f1;
+}
+.settings-nav .settings-nav-links .tab-content form input {
+  width: 100%;
+}
+.settings-nav .settings-nav-links .tab-content .activity-list {
+  width: 100%;
+  background-color: #f1f1f1;
+  box-shadow: 5px 5px 12px -5px #000000;
+  padding: 1rem;
+}
+.settings-nav .settings-nav-links .tab-content table {
+  border: #000 solid 1px;
+}
+.settings-nav .settings-nav-links .tab-content table th {
+  border: #000 solid 1px;
+}
+.settings-nav .settings-nav-links .tab-content table td {
+  border: #000 solid 1px;
+}
+.settings-nav .settings-nav-links .stats-container h2 {
+  margin-top: 2rem;
+}
+.settings-nav .settings-nav-links .stats-header, .settings-nav .settings-nav-links .stats-revenue {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+.settings-nav .settings-nav-links .stats-header .stats-header-content, .settings-nav .settings-nav-links .stats-revenue .stats-header-content {
+  background-color: rgb(254, 254, 254) !important;
+  box-shadow: 5px 5px 12px -5px #000000;
+  color: #000;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+.settings-nav .settings-nav-links .stats-header .stats-header-content p, .settings-nav .settings-nav-links .stats-revenue .stats-header-content p {
+  font-size: 20px;
 }/*# sourceMappingURL=styles.css.map */
