@@ -93,6 +93,9 @@
                                 <button id="nav-stats-tab" data-bs-toggle="tab" data-bs-target="#nav-stats"
                                     type="button" role="tab" aria-controls="nav-stats"
                                     aria-selected="false">Stats</button>
+                                <button id="nav-orders-tab" data-bs-toggle="tab" data-bs-target="#nav-orders"
+                                    type="button" role="tab" aria-controls="nav-orders"
+                                    aria-selected="false">Orders</button>
                             </div>
                         </nav>
                         <div class="tab-content" id="nav-tabContent">
@@ -170,7 +173,48 @@
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="nav-collections" role="tabpanel"
-                                aria-labelledby="nav-collections-tab">Collection</div>
+                                aria-labelledby="nav-collections-tab">
+                                <div class="container">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    Description
+                                                </th>
+                                                <th>
+                                                    Product
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    Sold to buyer
+                                                </td>
+                                                <td>
+                                                    10/10/10
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    bought to buyer
+                                                </td>
+                                                <td>
+                                                    10/10/10
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    added to collections
+                                                </td>
+                                                <td>
+                                                    10/10/10
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                             <div class="tab-pane fade" id="nav-activites" role="tabpanel"
                                 aria-labelledby="nav-activites-tab">
                                 <div class="container">
@@ -180,6 +224,9 @@
                                                 <tr>
                                                     <th>
                                                         Description
+                                                    </th>
+                                                    <th>
+                                                        Price
                                                     </th>
                                                     <th>
                                                         Date
@@ -192,12 +239,7 @@
                                                         Sold to buyer
                                                     </td>
                                                     <td>
-                                                        10/10/10
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        bought to buyer
+                                                        0.02 sol
                                                     </td>
                                                     <td>
                                                         10/10/10
@@ -205,7 +247,21 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        added to collections
+                                                        Sold to buyer
+                                                    </td>
+                                                    <td>
+                                                        0.02 sol
+                                                    </td>
+                                                    <td>
+                                                        10/10/10
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Sold to buyer
+                                                    </td>
+                                                    <td>
+                                                        0.02 sol
                                                     </td>
                                                     <td>
                                                         10/10/10
@@ -307,6 +363,178 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-orders" role="tabpanel" aria-labelledby="nav-orders-tab">
+                                <div class="container">
+                                    <h2>
+                                        New Orders
+                                    </h2>
+                                    <div class="orders">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        Order#
+                                                    </th>
+                                                    <th>
+                                                        Description
+                                                    </th>
+                                                    <th>
+                                                        Purchased date
+                                                    </th>
+                                                    <th>
+                                                        Delivery date
+                                                    </th>
+                                                    <th>
+                                                        Price
+                                                    </th>
+                                                    <th>
+                                                        Action
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        #1234
+                                                    </td>
+                                                    <td>
+                                                        Web3 design
+                                                    </td>
+                                                    <td>
+                                                        10/10/10
+                                                    </td>
+                                                    <td>
+                                                        10/10/10
+                                                    </td>
+                                                    <td>
+                                                        0.001 sol
+                                                    </td>
+                                                    <td>
+                                                        <div class="action-btn">
+                                                            <button class="success">Accept</button>
+                                                            <button class="danger">Decline</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <h2>
+                                        Orders in progress
+                                    </h2>
+                                    <div class="orders">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        Order#
+                                                    </th>
+                                                    <th>
+                                                        Description
+                                                    </th>
+                                                    <th>
+                                                        Purchased date
+                                                    </th>
+                                                    <th>
+                                                        Delivery date
+                                                    </th>
+                                                    <th>
+                                                        Price
+                                                    </th>
+                                                    <th>
+                                                        Action
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        #1234
+                                                    </td>
+                                                    <td>
+                                                        Web3 design
+                                                    </td>
+                                                    <td>
+                                                        10/10/10
+                                                    </td>
+                                                    <td>
+                                                        10/10/10
+                                                    </td>
+                                                    <td>
+                                                        0.001 sol
+                                                    </td>
+                                                    <td>
+                                                        <div class="action-btn">
+                                                            <button class="success">Completed</button>
+                                                            <button class="danger">Delete</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <h2>
+                                        Completed Orders
+                                    </h2>
+                                    <div class="orders">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        Order#
+                                                    </th>
+                                                    <th>
+                                                        Description
+                                                    </th>
+                                                    <th>
+                                                        Purchased date
+                                                    </th>
+                                                    <th>
+                                                        Delivery date
+                                                    </th>
+                                                    <th>
+                                                        Price
+                                                    </th>
+                                                    <th>
+                                                        Status
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        #1234
+                                                    </td>
+                                                    <td>
+                                                        Web3 design
+                                                    </td>
+                                                    <td>
+                                                        10/10/10
+                                                    </td>
+                                                    <td>
+                                                        10/10/10
+                                                    </td>
+                                                    <td>
+                                                        0.001 sol
+                                                    </td>
+                                                    <td>
+                                                        <div class="action-btn">
+                                                            <span class="success">Completed</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+
                                 </div>
                             </div>
 
