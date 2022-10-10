@@ -18,6 +18,7 @@ body {
 }
 
 .main-background {
+  position: relative;
   background: url(../asset/images/mainBack.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -25,8 +26,23 @@ body {
   background-size: cover;
 }
 
+.main-background:before {
+  content: "";
+  background: linear-gradient(175.09deg, #192846 3.95%, rgba(25, 40, 70, 0.75) 78.38%);
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0.75;
+}
+
+img {
+  position: relative;
+}
+
 nav {
   width: 100%;
+  position: relative;
 }
 nav .nav-link-contents {
   display: flex;
@@ -50,6 +66,7 @@ nav .nav-link-contents .nav-links a {
 
 .hero-container {
   background: #ffffff;
+  position: relative;
   box-shadow: 0px 0px 17px 2px rgba(255, 255, 255, 0.58);
   border-radius: 20px 20px 0px 0px;
 }
@@ -85,7 +102,7 @@ nav .nav-link-contents .nav-links a {
 .hero logo-slider {
   background: linear-gradient(187.89deg, rgba(21, 91, 225, 0.75) 6.08%, rgba(21, 91, 225, 0) 162.19%);
   position: absolute;
-  bottom: 4rem;
+  bottom: rem;
   padding-top: 2rem;
   right: 0;
   transform: skewy(-6deg);
