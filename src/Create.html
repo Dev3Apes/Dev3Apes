@@ -10,12 +10,14 @@
         <title>Document</title>
     </head>
     <body>
-        <div class="background">
+        <div class="background-image">
             <nav>
                 <div class="navbars">
                     <div class="nav-link-contents">
                         <div class="nav-logo">
-                            <img src="../asset/images/dev3apeslogo.png" style="width: 15rem;" alt="" srcset="">
+                            <a href="../index.html"> <img src="../asset/images/dev3apeslogo.png" style="width: 15rem;"
+                                    alt="" srcset="">
+                            </a>
                         </div>
                         <div class="nav-search">
                             <input type="search" name="" id="">
@@ -77,272 +79,488 @@
                 </div>
             </nav>
             <section>
-                <main>
-                    <div class="create-form">
-                        <div class="create-form-content">
-                            <div>
-                                <h2>
-                                    Create products
-                                </h2>
+                <div class="settings-nav">
+                    <div class="settings-nav-links">
+                        <nav>
+                            <div id="nav-tab" role="tablist">
+                                <button class="active" id="nav-profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                                    aria-selected="true">Profile</button>
+                                <button id="nav-collections-tab" data-bs-toggle="tab" data-bs-target="#nav-collections"
+                                    type="button" role="tab" aria-controls="nav-collections"
+                                    aria-selected="false">Collections</button>
+                                <button id="nav-activites-tab" data-bs-toggle="tab" data-bs-target="#nav-activites"
+                                    type="button" role="tab" aria-controls="nav-activites"
+                                    aria-selected="false">Activites</button>
+                                <button id="nav-stats-tab" data-bs-toggle="tab" data-bs-target="#nav-stats"
+                                    type="button" role="tab" aria-controls="nav-stats"
+                                    aria-selected="false">Stats</button>
+                                <button id="nav-orders-tab" data-bs-toggle="tab" data-bs-target="#nav-orders"
+                                    type="button" role="tab" aria-controls="nav-orders"
+                                    aria-selected="false">Orders</button>
                             </div>
-                            <div>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, sed assumenda
-                                    voluptatibus animi placeat magnam incidunt quam quaerat possimus. Nobis eveniet,
-                                    delectus perspiciatis incidunt accusamus eligendi et error architecto est.
-                                </p>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-profile" role="tabpanel"
+                                aria-labelledby="nav-profile-tab">
+                                <div class="container">
+                                    <form action="">
+                                        <div class="form-content">
+                                            <div class="w-100">
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">Name</label>
+                                                    <input type="text" class="form-control" name="" id=""
+                                                        aria-describedby="helpId" placeholder="">
+
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">Last Name</label>
+                                                    <input type="text" class="form-control" name="" id=""
+                                                        aria-describedby="helpId" placeholder="">
+
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">Email</label>
+                                                    <input type="text" class="form-control" name="" id=""
+                                                        aria-describedby="helpId" placeholder="">
+
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">Time Zone</label>
+                                                    <input type="text" class="form-control" name="" id=""
+                                                        aria-describedby="helpId" placeholder="">
+
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">What I do</label>
+                                                    <input type="text" class="form-control" name="" id=""
+                                                        aria-describedby="helpId" placeholder="">
+
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">Language</label>
+                                                    <input type="text" class="form-control" name="" id=""
+                                                        aria-describedby="helpId" placeholder="">
+
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">Who am I</label>
+                                                    <input type="text" class="form-control" name="" id=""
+                                                        aria-describedby="helpId" placeholder="">
+
+                                                </div>
+                                            </div>
+                                            <div class="w-100">
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">Profile Picture</label>
+                                                    <input type="file" class="form-control" name="" id=""
+                                                        aria-describedby="helpId" placeholder="">
+
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">Banner Picture</label>
+                                                    <input type="file" class="form-control" name="" id=""
+                                                        aria-describedby="helpId" placeholder="">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn">
+                                            <button>Back</button>
+                                            <button>Update</button>
+                                        </div>
+                                    </form>
+
+                                </div>
                             </div>
-                            <div>
-                                <button type="button" data-bs-toggle="modal" data-bs-target="#addProduct">
-                                    Create new product
-                                </button>
+                            <div class="tab-pane fade" id="nav-collections" role="tabpanel"
+                                aria-labelledby="nav-collections-tab">
+                                <div class="container">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    Description
+                                                </th>
+                                                <th>
+                                                    Product
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    Sold to buyer
+                                                </td>
+                                                <td>
+                                                    10/10/10
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    bought to buyer
+                                                </td>
+                                                <td>
+                                                    10/10/10
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    added to collections
+                                                </td>
+                                                <td>
+                                                    10/10/10
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
+                            <div class="tab-pane fade" id="nav-activites" role="tabpanel"
+                                aria-labelledby="nav-activites-tab">
+                                <div class="container">
+                                    <div class="activity-list">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        Description
+                                                    </th>
+                                                    <th>
+                                                        Price
+                                                    </th>
+                                                    <th>
+                                                        Date
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        Sold to buyer
+                                                    </td>
+                                                    <td>
+                                                        0.02 sol
+                                                    </td>
+                                                    <td>
+                                                        10/10/10
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Sold to buyer
+                                                    </td>
+                                                    <td>
+                                                        0.02 sol
+                                                    </td>
+                                                    <td>
+                                                        10/10/10
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Sold to buyer
+                                                    </td>
+                                                    <td>
+                                                        0.02 sol
+                                                    </td>
+                                                    <td>
+                                                        10/10/10
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-stats" role="tabpanel" aria-labelledby="nav-stats-tab">
+                                <div class="container">
+                                    <div class="stats-container">
+                                        <h3>
+                                            Collection Items
+                                        </h3>
+                                        <div class="stats-header">
+                                            <div class="stats-header-content">
+                                                <h3>
+                                                    Collections
+                                                </h3>
+                                                <p>
+                                                    20
+                                                </p>
+                                            </div>
+                                            <div class="stats-header-content">
+                                                <h3>
+                                                    Sold Items
+                                                </h3>
+                                                <p>
+                                                    20
+                                                </p>
+                                            </div>
+                                            <div class="stats-header-content">
+                                                <h3>
+                                                    Items Bought
+                                                </h3>
+                                                <p>
+                                                    20
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <h3>
+                                            Connected Wallets
+                                        </h3>
+                                        <div class="stats-header">
+                                            <div class="stats-header-content">
+                                                <h3>
+                                                    Solana
+                                                </h3>
+                                                <p>
+                                                    0.22 Sol
+                                                </p>
+                                            </div>
+                                            <div class="stats-header-content">
+                                                <h3>
+                                                    Ethereum
+                                                </h3>
+                                                <p>
+                                                    0.22 Eth
+                                                </p>
+                                            </div>
+                                            <div class="stats-header-content">
+                                                <h3>
+                                                    Polygon
+                                                </h3>
+                                                <p>
+                                                    0.22 Pol
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <h3>
+                                            Revenue
+                                        </h3>
+                                        <div class="stats-header">
+                                            <div class="stats-header-content">
+                                                <h3>
+                                                    Total Revenue
+                                                </h3>
+                                                <p>
+                                                    0.22
+                                                </p>
+                                            </div>
+                                            <div class="stats-header-content">
+                                                <h3>
+                                                    Total Sold
+                                                </h3>
+                                                <p>
+                                                    0.22
+                                                </p>
+                                            </div>
+                                            <div class="stats-header-content">
+                                                <h3>
+                                                    Total Bought
+                                                </h3>
+                                                <p>
+                                                    0.22
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-orders" role="tabpanel" aria-labelledby="nav-orders-tab">
+                                <div class="container">
+                                    <h3>
+                                        New Orders
+                                    </h3>
+                                    <div class="orders">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        Order#
+                                                    </th>
+                                                    <th>
+                                                        Description
+                                                    </th>
+                                                    <th>
+                                                        Purchased date
+                                                    </th>
+                                                    <th>
+                                                        Delivery date
+                                                    </th>
+                                                    <th>
+                                                        Price
+                                                    </th>
+                                                    <th>
+                                                        Action
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        #1234
+                                                    </td>
+                                                    <td>
+                                                        Web3 design
+                                                    </td>
+                                                    <td>
+                                                        10/10/10
+                                                    </td>
+                                                    <td>
+                                                        10/10/10
+                                                    </td>
+                                                    <td>
+                                                        0.001 sol
+                                                    </td>
+                                                    <td>
+                                                        <div class="action-btn">
+                                                            <button class="success">Accept</button>
+                                                            <button class="danger">Decline</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <h3>
+                                        Orders in progress
+                                    </h3>
+                                    <div class="orders">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        Order#
+                                                    </th>
+                                                    <th>
+                                                        Description
+                                                    </th>
+                                                    <th>
+                                                        Purchased date
+                                                    </th>
+                                                    <th>
+                                                        Delivery date
+                                                    </th>
+                                                    <th>
+                                                        Price
+                                                    </th>
+                                                    <th>
+                                                        Action
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        #1234
+                                                    </td>
+                                                    <td>
+                                                        Web3 design
+                                                    </td>
+                                                    <td>
+                                                        10/10/10
+                                                    </td>
+                                                    <td>
+                                                        10/10/10
+                                                    </td>
+                                                    <td>
+                                                        0.001 sol
+                                                    </td>
+                                                    <td>
+                                                        <div class="action-btn">
+                                                            <button class="success">Completed</button>
+                                                            <button class="danger">Delete</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <h3>
+                                        Completed Orders
+                                    </h3>
+                                    <div class="orders">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        Order#
+                                                    </th>
+                                                    <th>
+                                                        Description
+                                                    </th>
+                                                    <th>
+                                                        Purchased date
+                                                    </th>
+                                                    <th>
+                                                        Delivery date
+                                                    </th>
+                                                    <th>
+                                                        Price
+                                                    </th>
+                                                    <th>
+                                                        Status
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        #1234
+                                                    </td>
+                                                    <td>
+                                                        Web3 design
+                                                    </td>
+                                                    <td>
+                                                        10/10/10
+                                                    </td>
+                                                    <td>
+                                                        10/10/10
+                                                    </td>
+                                                    <td>
+                                                        0.001 sol
+                                                    </td>
+                                                    <td>
+                                                        <div class="action-btn">
+                                                            <span>Completed</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
+                </div>
 
-
-                </main>
-            </section>
+        </div>
+        </section>
 
         </div>
 
-        <!-- Button trigger modal -->
-
-
-        <!--Add product Modal -->
-        <form>
-            <div class="modal fade" id="addProduct" tabindex="-1" role="dialog" aria-labelledby="modalTitleId"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered " role="document">
-                    <div class="modal-content ">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalTitleId">Add product</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="container-fluid">
-
-                                <div class="container">
-                                    <div class="mb-3">
-                                        <label for="" class="form-label">Product</label>
-                                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
-                                            placeholder="">
-                                        <small id="helpId" class="form-text text-muted">Help text</small>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="" class="form-label">File</label>
-                                        <input type="file" class="form-control" name="" id="" aria-describedby="helpId"
-                                            placeholder="">
-                                        <small id="helpId" class="form-text text-muted">Help text</small>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary" data-bs-target="#addBasicProduct"
-                                        data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="modal fade" id="addBasicProduct" tabindex="-1" role="dialog" aria-labelledby="modalTitleId"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered " role="document">
-                    <div class="modal-content ">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalTitleId">Basic Package</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="container-fluid">
-
-                                <div class="container">
-                                    <div class="mb-3">
-                                        <label for="" class="form-label">Description</label>
-                                        <textarea type="text" class="form-control" name="" id=""
-                                            aria-describedby="helpId" placeholder=""></textarea>
-                                        <small id="helpId" class="form-text text-muted">Help text</small>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="" class="form-label">Gig</label>
-                                        <textarea type="text" class="form-control" name="" id=""
-                                            aria-describedby="helpId" placeholder=""></textarea>
-                                        <small id="helpId" class="form-text text-muted">Help text</small>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="" class="form-label">Price</label>
-                                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
-                                            placeholder="">
-                                        <small id="helpId" class="form-text text-muted">Help text</small>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="" class="form-label">Delivery Time</label>
-                                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
-                                            placeholder="">
-                                        <small id="helpId" class="form-text text-muted">Help text</small>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-secondary" data-bs-target="#addProduct"
-                                        data-bs-toggle="modal" data-bs-dismiss="modal">Previous</button>
-                                    <button type="button" class="btn btn-primary" data-bs-target="#addAdvanceProduct"
-                                        data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="modal fade" id="addAdvanceProduct" tabindex="-1" role="dialog" aria-labelledby="modalTitleId"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered " role="document">
-                    <div class="modal-content ">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalTitleId">Advance Package</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="container-fluid">
-
-                                <div class="container">
-                                    <div class="mb-3">
-                                        <label for="" class="form-label">Description</label>
-                                        <textarea type="text" class="form-control" name="" id=""
-                                            aria-describedby="helpId" placeholder=""></textarea>
-                                        <small id="helpId" class="form-text text-muted">Help text</small>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="" class="form-label">Gig</label>
-                                        <textarea type="text" class="form-control" name="" id=""
-                                            aria-describedby="helpId" placeholder=""></textarea>
-                                        <small id="helpId" class="form-text text-muted">Help text</small>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="" class="form-label">Price</label>
-                                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
-                                            placeholder="">
-                                        <small id="helpId" class="form-text text-muted">Help text</small>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="" class="form-label">Delivery Time</label>
-                                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
-                                            placeholder="">
-                                        <small id="helpId" class="form-text text-muted">Help text</small>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-secondary" data-bs-target="#addProduct"
-                                        data-bs-toggle="modal" data-bs-dismiss="modal">Previous</button>
-                                    <button type="button" class="btn btn-primary" data-bs-target="#addProProduct"
-                                        data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="modal fade" id="addProProduct" tabindex="-1" role="dialog" aria-labelledby="modalTitleId"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered " role="document">
-                    <div class="modal-content ">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalTitleId">Pro Package</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="container-fluid">
-
-                                <div class="container">
-                                    <div class="mb-3">
-                                        <label for="" class="form-label">Description</label>
-                                        <textarea type="text" class="form-control" name="" id=""
-                                            aria-describedby="helpId" placeholder=""></textarea>
-                                        <small id="helpId" class="form-text text-muted">Help text</small>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="" class="form-label">Gig</label>
-                                        <textarea type="text" class="form-control" name="" id=""
-                                            aria-describedby="helpId" placeholder=""></textarea>
-                                        <small id="helpId" class="form-text text-muted">Help text</small>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="" class="form-label">Price</label>
-                                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
-                                            placeholder="">
-                                        <small id="helpId" class="form-text text-muted">Help text</small>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="" class="form-label">Delivery Time</label>
-                                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
-                                            placeholder="">
-                                        <small id="helpId" class="form-text text-muted">Help text</small>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-secondary" data-bs-target="#addProduct"
-                                        data-bs-toggle="modal" data-bs-dismiss="modal">Previous</button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                        data-bs-dismiss="modal">Submit</button>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </form>
 
 
 
-
-        <!-- Modal Body -->
-        <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
-        <div class="modal fade" id="changewalletModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
-            role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered " role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalTitleId">Connect To Wallet</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container">
-                            <div class="wallet-icons">
-                                <img src="../asset/images/icons8-ethereum-48.png" alt="" srcset="">
-                                <img src="../asset/images/icons8-polygon-64.png" alt="" srcset="">
-                                <img src="../asset/images/icons8-solana-64 (1).png" alt="" srcset="">
-                            </div>
-                        </div>
-                        <hr>
-                    </div>
-
-                </div>
-            </div>
-        </div>
 
 
 
         <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
-        <script src="https://kit.fontawesome.com/c461f95de0.js" crossorigin="anonymous"></script>
-        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <script type="module" src="../Lib/js/app.js"></script>
+        <script src="https://kit.fontawesome.com/c461f95de0.js" crossorigin="anonymous"></script>
     </body>
 </html>

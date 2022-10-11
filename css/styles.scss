@@ -1,22 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&display=swap");
-import * {
-  margin: 0;
-  padding: 0;
-}
-body {
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-  font-family: "Baloo 2", cursive !important;
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
 }
-.main-background {
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Baloo 2", cursive !important;
+}
+
+// set all backgroungs
+.background {
   position: relative;
   background: url(../asset/images/mainBack.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -25,1011 +21,660 @@ body {
   background-size: cover;
 }
 
-.main-background:before {
+.background:before {
   content: "";
-  background: linear-gradient(175.09deg, #192846 3.95%, rgba(25, 40, 70, 0.75) 78.38%);
+  background: linear-gradient(175.09deg,
+      #192846 3.95%,
+      rgba(25, 40, 70, 0.75) 78.38%);
   background-size: cover;
   position: fixed;
   width: 100%;
   height: 100%;
   opacity: 0.75;
 }
-img{
+
+.background-image {
   position: relative;
-}
-
-nav {
-  width: 100%;
-  position: relative;
-
-  .nav-link-contents {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
-    padding: 1rem;
-
-    .nav-links {
-      display: flex;
-      gap: 20px;
-
-      a {
-        color: #fff;
-        font-size: 23px;
-        margin-right: 1rem;
-      }
-    }
-  }
-}
-
-.container {
-  width: 100%;
-}
-
-.hero-container {
-  background: #ffffff;
-position: relative;
-  // -webkit-box-shadow: 5px 5px 17px 0px rgba(0, 0, 0, 0.58);
-  box-shadow: 0px 0px 17px 2px rgba(255, 255, 255, 0.58);
-  border-radius: 20px 20px 0px 0px;
-}
-
-.hero {
-  width: 100%;
-  height: 100vh;
-  top: 141px;
-
-  .hero-content {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding-top: 2rem;
-    margin-bottom: 5rem;
-
-    .hero-text {
-      padding: 1rem;
-      text-align: center;
-
-      width: 50%;
-
-      border-radius: 20px;
-
-      p {
-        margin-top: 1rem;
-        line-height: 30px;
-        font-size: 20px;
-        color: #1c2f52;
-      }
-    }
-
-    .hero-right {
-      img {
-        width: 30rem;
-      }
-    }
-  }
-
-  logo-slider {
-    background: linear-gradient(187.89deg, rgba(21, 91, 225, 0.75) 6.08%, rgba(21, 91, 225, 0) 162.19%);
-    position: absolute;
-    bottom: rem;
-    padding-top: 2rem;
-    right: 0;
-    transform: skewy(-6deg);
-    padding: 2rem 0;
-    overflow: hidden;
-    margin: 0 auto;
-    position: relative;
-    display: flex;
-
-    &:hover div {
-      animation-play-state: paused;
-    }
-
-    div {
-      display: flex;
-      position: relative;
-      animation: marquee 5s linear infinite;
-      justify-content: space-around;
-
-      // Debug: This is just to help see where the loop happens
-      // &:nth-of-type(1) { &, img { border:1px dashed red;  }}
-      // &:nth-of-type(2) { &, img { border:1px dashed blue; }}
-
-      // You may need this if there are too few images for the banner width
-      //min-width:100%;
-    }
-
-    img {
-      display: block;
-      margin: 0 1vw;
-      transform: rotate(0deg);
-      border-radius: 20px;
-      width: 200px;
-      height: 200px;
-    }
-
-    &:after {
-      content: "";
-      // position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-
-      // background: linear-gradient(to right, white, rgba(white, 0) 80px, rgba(white, 0) calc(100% - 80px), white);
-    }
-
-
-  }
-
-  @keyframes marquee {
-    0% {
-      transform: translateX(0%);
-    }
-
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-}
-
-// about page
-
-#about {
-  width: 100%;
-  height: 100vh;
-  h2 {
-    color: #1c1d52;
-    text-decoration: underline;
-    font-size: 60px;
-    width: 600px;
-    padding: 2rem;
-  }
-  p {
-    color: #1c2f52;
-  }
-
-  .about-hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    align-items: center;
-
-    .background-grey {
-      width: 15rem;
-      height: 15rem;
-      background-color: #575757;
-      border-radius: 20px;
-      margin-right: 6rem;
-
-      transform: rotate(-20deg);
-
-      box-shadow: 0px 3px 0px 2px rgba(0, 0, 0, 0.1),
-        0px 6px 0px 4px rgba(0, 0, 0, 0.1), 0px 9px 0px 6px rgba(0, 0, 0, 0.1),
-        0px 12px 0px 8px rgba(0, 0, 0, 0.1);
-    }
-    .left {
-      .background-grey {
-        transform: rotate(20deg);
-        margin-left: 6rem;
-      }
-    }
-  }
-
-  p {
-    width: 80%;
-    margin-left: 2rem;
-    font-size: 20px;
-  }
-}
-#theTeam {
-  padding: 2rem;
-}
-.team-header {
-  width: 100%;
-  text-align: center;
-  h2 {
-    text-decoration: underline;
-    font-size: 60px;
-  }
-
-  p {
-    width: 70%;
-    text-align: center;
-    font-size: 20px;
-    margin: 2rem auto;
-  }
-}
-.team-container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
-  gap: 20px;
-  .team-item {
-    width: 18rem;
-    height: 23rem;
-    text-align: center;
-    box-shadow: 0px 0px 17px 2px rgba(106, 103, 103, 0.58);
-    padding: 2rem;
-    border-radius: 20px;
-    img {
-      width: 10rem;
-      border-radius: 50%;
-      box-shadow: 0px 0px 17px 2px rgba(106, 103, 103, 0.58);
-    }
-    .team-text {
-      margin-top: 2rem;
-      h3 {
-        font-size: 40px;
-      }
-      p {
-        font-size: 20px;
-      }
-    }
-  }
-}
-
-.modal-content {
-  background: linear-gradient(
-    105.31deg,
-    #1c2f52 -2.91%,
-    rgba(28, 47, 82, 0) 105.21%
-  );
-  form label {
-    color: #fff;
-  }
-
-  button {
-    background-color: rgb(254, 254, 254) !important;
-    box-shadow: 5px 5px 12px -5px #000000;
-    color: #000;
-    border-radius: 10px;
-  }
-  .catgory-item-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 1rem;
-
-    .catgory-item-list {
-      padding: 2rem;
-      box-shadow: 5px 5px 12px -5px #000000;
-
-      button {
-        background-color: rgb(254, 254, 254) !important;
-        box-shadow: 5px 5px 12px -5px #000000;
-        color: #000;
-        border: none;
-        width: 90%;
-        border-radius: 10px;
-        height: 2rem;
-      }
-      .review {
-        height: 20rem;
-        overflow: auto;
-        padding: 1rem;
-        .card {
-          box-shadow: 5px 5px 12px -5px #000000;
-          width: 100%;
-          height: 10rem;
-          background-color: #1c2f52;
-          color: #fff;
-          p {
-            padding: 2rem;
-          }
-        }
-      }
-
-      .catgory-item-detail {
-        display: flex;
-        width: 85%;
-        justify-content: space-between;
-        padding: 1rem 2rem;
-
-        p {
-          color: #fff;
-        }
-      }
-    }
-
-    .catgory-package {
-      box-shadow: 5px 5px 12px -5px #000000;
-      ul {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 3rem;
-        li {
-          width: 30%;
-          button {
-            background-color: rgb(254, 254, 254) !important;
-            box-shadow: 5px 5px 12px -5px #000000;
-            color: #000;
-            border: none;
-            width: 90%;
-            border-radius: 10px;
-            height: 2rem;
-            margin-bottom: 2rem;
-          }
-        }
-      }
-      button {
-        background-color: rgb(254, 254, 254) !important;
-        box-shadow: 5px 5px 12px -5px #000000;
-        color: #000;
-        border: none;
-        width: 90%;
-        border-radius: 10px;
-        height: 2rem;
-      }
-    }
-  }
-
-  h5 {
-    color: #fff;
-  }
-  .wallet-icons {
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-  }
-}
-// the end of main page and the start of Explore page navigation bar
-#payment {
-  nav {
-    width: 100%;
-    .nav {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-    }
-  }
-  button {
-    background-color: rgb(254, 254, 254) !important;
-    box-shadow: 5px 5px 12px -5px #000000;
-    color: #000;
-    border: none;
-    width: 30%;
-    border-radius: 10px;
-    height: 2rem;
-    margin-bottom: 2rem;
-  }
-}
-.background {
-  background: linear-gradient(
-    105.31deg,
-    #1c2f52 -2.91%,
-    rgba(28, 47, 82, 0) 105.21%
-  );
+  background: linear-gradient(175.09deg,
+      #192846 3.95%,
+      rgba(25, 40, 70, 0) 78.38%);
   background-position: center center;
   min-height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-
-  .navbars {
-    width: 100% !important;
-    background-color: #1c2f52 !important;
-
-    .nav-link-contents {
-      display: flex !important;
-      justify-content: space-between !important;
-      align-items: center !important;
-      .nav-search {
-        width: 20%;
-        input {
-          width: 100%;
-          border-radius: 10px;
-        }
-      }
-
-      .nav-links {
-        display: flex;
-        gap: 30px;
-        .dropbtn {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: black;
-          height: 2rem;
-          width: 2rem;
-          border-radius: 50%;
-          background-color: #f1f1f1;
-          border: none;
-        }
-
-        /* The container <div> - needed to position the dropdown content */
-        .dropdown {
-          position: relative;
-          display: inline-block;
-        }
-
-        /* Dropdown Content (Hidden by Default) */
-        .dropdown-content {
-          display: none;
-          position: absolute;
-          background-color: #f1f1f1;
-          right: 0;
-          min-width: 300px;
-          padding: 1rem;
-          box-shadow: 5px 5px 12px -5px #000000;
-          z-index: 1;
-
-          border-radius: 10px;
-          color: #fff;
-          .wallet-card {
-            border: #1c2f52 solid 1px;
-            border-radius: 20px;
-            min-height: 10rem;
-            width: 300px;
-            background: linear-gradient(
-              105.31deg,
-              #1c2f52 -2.91%,
-              rgba(28, 47, 82, 0) 105.21%
-            );
-            padding: 1rem;
-
-            .wallet-header {
-              display: flex;
-              justify-content: center;
-              margin-bottom: 10px;
-            }
-            .wallet-ballance {
-              display: flex;
-              justify-content: center;
-              justify-content: space-around;
-              align-items: center;
-
-              margin-bottom: 10px;
-              img {
-                width: 2.3rem;
-                height: 1.5rem;
-                border-radius: 5px;
-              }
-            }
-            .wallet-id {
-              display: flex;
-              justify-content: center;
-              color: #fff;
-            }
-          }
-          .change-wallet {
-            width: 100%;
-            text-align: center;
-
-            button {
-              background-color: rgb(254, 254, 254) !important;
-              box-shadow: 5px 5px 12px -5px #000000;
-              color: #000;
-              border: none;
-              width: 90%;
-              border-radius: 10px;
-              height: 2rem;
-              margin-bottom: 2rem;
-              margin-top: 1rem;
-            }
-          }
-        }
-
-        /* Links inside the dropdown */
-        .dropdown-content a {
-          color: black;
-          padding: 10px 16px;
-          text-decoration: none;
-          display: block;
-        }
-
-        /* Change color of dropdown links on hover */
-        .dropdown-content a:hover {
-          background-color: #1c2f52;
-          color: #fff;
-          border-radius: 10px;
-        }
-
-        /* Show the dropdown menu on hover */
-        .dropdown:hover .dropdown-content {
-          display: block;
-        }
-
-        /* Change the background color of the dropdown button when the dropdown content is shown */
-
-        a {
-          text-decoration: none;
-        }
-        p {
-          color: #fff;
-          font-size: 18px;
-        }
-      }
-    }
-  }
-
-  //  Explore page Main Content
-  .explore-main {
-    width: 100%;
-    min-height: 100vh;
-    .explore-main-filters {
-      display: flex;
-      margin-top: 3rem;
-      margin-left: 1rem;
-      gap: 10px;
-      .explore-timezone {
-        width: 100%;
-        height: 20vh;
-        overflow: auto;
-        padding: 0 1rem;
-      }
-      .explore-language {
-        width: 100%;
-        height: 20vh;
-        overflow: auto;
-        padding: 0 1rem;
-      }
-      .dropdown {
-        .dropdown-menu {
-          min-width: 210px;
-          padding: 10px;
-          .accordion-item {
-            width: 300px;
-            button {
-              color: #fff;
-              background-color: #1c2f52;
-            }
-          }
-        }
-      }
-
-      button {
-        background-color: rgb(229, 227, 238);
-        color: #000;
-      }
-    }
-    hr {
-      color: rgba(131, 88, 255, 1);
-    }
-    .explore-main-cards {
-      width: 100%;
-      .explore-main-card-list {
-        display: flex;
-        justify-content: space-evenly;
-        gap: 20px;
-        flex-wrap: wrap;
-        padding: 0 1rem;
-        .card {
-          width: 18rem;
-          border-radius: 10px;
-          box-shadow: 5px 5px 12px -5px #000000;
-
-          .card-img-top {
-            width: 100%;
-            height: 15rem;
-          }
-          .card-headers {
-            width: 100%;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            .card-header-ring {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-
-              width: 5.5rem;
-              height: 5.5rem;
-              border-radius: 50%;
-            }
-            img {
-              border-radius: 50%;
-              width: 5rem;
-              height: 5rem;
-            }
-
-            .card-header-text {
-              margin-top: 1rem;
-              margin-left: 1rem;
-            }
-          }
-
-          .card-body {
-            display: flex;
-            justify-content: space-between;
-          }
-        }
-      }
-    }
-  }
-  // start of blog page
-
-  .blog-header {
-    background: linear-gradient(
-      105.31deg,
-      #1c2f52 -2.91%,
-      rgba(28, 47, 82, 0) 105.21%
-    );
-    height: 20rem;
-    h1 {
-      position: absolute;
-      top: 10rem;
-      left: 10rem;
-      font-size: 4rem;
-      width: 500px;
-      color: rgb(232, 239, 21);
-    }
-  }
-  .blog-container {
-    width: 100%;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 1rem;
-    .card-body {
-      p {
-        line-height: 24px;
-      }
-
-      .fa-twitter {
-        color: #2267e7;
-      }
-    }
-  }
 }
 
-// beginning of the profile page
-.profile-header {
-  background-image: url(../asset/images/8a7e72c13d4029637e245385a84c0315.jpg);
+// set navigation bar
+nav {
   width: 100%;
-  height: 200px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  .profile-picture {
-    img {
-      position: absolute;
-      border-radius: 50%;
-      top: 10rem;
-      left: 2rem;
-      width: 10rem;
-      height: 10rem;
-      z-index: 1;
-    }
-  }
-}
-.profile-section {
-  display: flex;
-  gap: 20px;
-}
-.profile-details {
-  z-index: 0;
-  width: 20%;
-  min-height: 70vh;
-  box-shadow: 5px 5px 12px -5px #000000;
-  left: 1rem;
-  padding: 1rem;
-  color: #000000;
-  background-color: #f1f1f1;
+  padding: 1rem 0;
 
-  .profile-details-name {
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    color: #000;
-    text-align: center;
-  }
-  .profile-card {
-    box-shadow: 5px 5px 12px -5px #000000;
-    border-radius: 20px;
-    margin-top: 1rem;
-    padding: 1rem;
-    h4 {
-      text-align: center;
-    }
-  }
-}
-.profile-main {
-  width: 70%;
-  .green {
-    background-color: rgb(8, 185, 50);
-    color: #fff;
-  }
-  button {
-    border: none;
-    background-color: #f1f1f1;
-
-    box-shadow: 5px 5px 12px -5px #000000;
-    width: 10rem;
-    margin-left: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 20px;
-    height: 2rem;
+  img {
+    position: relative;
+    height: 4rem;
   }
 
-  .flex {
+  .nav-link-contents {
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    .card {
-      margin-top: 1rem;
-      box-shadow: 5px 5px 12px -5px #000000;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+  }
 
-      .card-headers {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin: 1rem 0;
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 5rem;
 
-        img {
-          width: 5rem;
-          height: 5rem;
-          border-radius: 50%;
-        }
+    a {
+      padding-top: 1rem;
+      position: relative;
+
+      P {
+        font-size: 20px;
       }
     }
   }
-  table {
-    background-color: #fff;
-    box-shadow: 5px 5px 12px -5px #000000;
+
+  .nav-link-contents {
+    align-items: center !important;
+
+    .nav-search {
+      width: 20%;
+      position: relative;
+
+      input {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+
+    .dropbtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      background-color: #f1f1f1;
+      border: none;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      right: 0;
+      min-width: 300px;
+      padding: 1rem;
+      box-shadow: 5px 5px 12px -5px #000000;
+      z-index: 1;
+
+      border-radius: 10px;
+      color: #fff;
+
+      .wallet-card {
+        border: #1c2f52 solid 1px;
+        border-radius: 20px;
+        min-height: 10rem;
+        width: 300px;
+        background: linear-gradient(105.31deg,
+            #1c2f52 -2.91%,
+            rgba(28, 47, 82, 0) 105.21%);
+        padding: 1rem;
+
+        .wallet-header {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 10px;
+          align-items: center;
+        }
+
+        .wallet-ballance {
+          display: flex;
+          justify-content: center;
+          justify-content: space-around;
+          align-items: center;
+
+          margin-bottom: 10px;
+
+          img {
+            width: 2.3rem;
+            height: 1.5rem;
+            border-radius: 5px;
+          }
+        }
+
+        .wallet-id {
+          display: flex;
+          justify-content: center;
+          color: #fff;
+          align-items: center;
+        }
+      }
+
+      .change-wallet {
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+      }
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+      background-color: #1c2f52;
+      color: #fff;
+      border-radius: 10px;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+
+    a {
+      text-decoration: none;
+    }
+
+    p {
+      color: #fff;
+      font-size: 18px;
+    }
+  }
+}
+
+// set fonts and buttons{
+button {
+  background-color: rgb(254, 254, 254) !important;
+  box-shadow: 5px 5px 12px -5px #000000;
+  color: #000 !important;
+  border: none;
+  width: 90%;
+  border-radius: 20px !important;
+  height: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+p {
+  color: #fff;
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 70px !important;
+}
+
+// set hero page main page
+.hero-container {
+  background: #ffffff;
+  width: 100%;
+
+  // -webkit-box-shadow: 5px 5px 17px 0px rgba(0, 0, 0, 0.58);
+  box-shadow: 0px 0px 17px 2px rgba(255, 255, 255, 0.58);
+  border-radius: 20px 20px 0px 0px;
+  position: relative;
+}
+
+.hero {
+  width: 100%;
+  height: 36rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+
+  p {
+    color: #1c2f52;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  img {
+    width: 32rem;
+    position: relative;
+  }
+}
+
+logo-slider {
+  background: linear-gradient(187.89deg,
+      rgba(21, 91, 225, 0.75) 6.08%,
+      rgba(21, 91, 225, 0) 162.19%);
+  position: absolute;
+  bottom: 4rem;
+  padding-top: 2rem;
+  right: 0;
+  transform: skewy(-6deg);
+  padding: 2rem 0;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+
+  &:hover div {
+    animation-play-state: paused;
+  }
+
+  div {
+    display: flex;
+    position: relative;
+    animation: marquee 5s linear infinite;
+    justify-content: space-around;
+
+    // Debug: This is just to help see where the loop happens
+    // &:nth-of-type(1) { &, img { border:1px dashed red;  }}
+    // &:nth-of-type(2) { &, img { border:1px dashed blue; }}
+
+    // You may need this if there are too few images for the banner width
+    //min-width:100%;
+  }
+
+  img {
+    display: block;
+    margin: 0 1vw;
+    transform: rotate(0deg);
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+  }
+
+  &:after {
+    content: "";
+    // position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    // background: linear-gradient(to right, white, rgba(white, 0) 80px, rgba(white, 0) calc(100% - 80px), white);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+// set about page
+
+.about-page {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 5rem;
+  padding: 0 3rem;
+
+  p {
+    color: #1c2f52;
+  }
+
+  h2 {
+    color: #1c2f52;
+    margin-bottom: 4rem;
+    text-decoration: underline;
+  }
+
+  .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+    p {
+      text-align: center;
+      margin-right: 3rem;
+      width: 90%;
+    }
+  }
+}
+
+.box {
+  width: 15rem;
+  height: 15rem;
+  background-color: #575757;
+  border-radius: 20px;
+  margin-right: 6rem;
+
+  transform: rotate(-20deg);
+
+  box-shadow: 0px 3px 0px 2px rgba(0, 0, 0, 0.1),
+    0px 6px 0px 4px rgba(0, 0, 0, 0.1), 0px 9px 0px 6px rgba(0, 0, 0, 0.1),
+    0px 12px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team {
+  width: 100%;
+  padding: 2rem 2rem;
+  text-align: center;
+
+  .teams {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  p {
+    color: #1c2f52;
+  }
+
+  h2 {
+    text-decoration: underline;
+    margin-bottom: 4rem;
+  }
+}
+
+// main page completed start of explore page
+// setting up catagory buttons
+.filer-links {
+  width: 50%;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
     margin-top: 1rem;
   }
+
+  .accordion-button {
+    width: 100%;
+  }
+}
+
+.dropdown-menu {
+  padding: 1rem;
+  width: 20rem;
+}
+
+.explore-timezone,
+.explore-language {
+  height: 20rem;
+  overflow: auto;
 }
 
 .card {
-  width: 18rem;
-  border-radius: 20px !important;
-
-  .card-header {
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-
-    .card-header-ring {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      width: 5.5rem;
-      height: 5.5rem;
-      border-radius: 50%;
-    }
-
-    img {
-      border-radius: 50%;
-      width: 5rem;
-      height: 5rem;
-    }
-
-    .card-header-text {
-      margin-top: 1rem;
-      margin-left: 1rem;
-    }
-  }
+  box-shadow: 5px 5px 12px -5px #000000;
 
   .card-body {
     display: flex;
     justify-content: space-between;
   }
 }
-.create-form {
-  width: 100%;
-  height: 90vh;
-  padding: 0 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  text-align: center;
-  font-family: "Baloo";
-  p {
-    margin: 0 auto;
-    line-height: 30px;
-    width: 50%;
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 20px;
-  }
-  button {
-    background-color: #1c2f52;
-    width: 30%;
-    border: none;
-    height: 2rem;
-    font-size: 20px;
-    color: #fff;
-    margin-top: 1rem;
-    border-radius: 10px;
-  }
-}
-.paymet-contents {
-  border: #1c2f52 solid 1px;
-  margin-top: 1rem;
-  padding: 1rem;
-  width: 100%;
-  border-radius: 5%;
 
-  .order-summary {
-    border: #1c2f52 solid 1px;
-    padding: 2rem;
-    border-radius: 5%;
+.main-container {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+
+  .main-content {
     width: 100%;
-    button {
-      background-color: rgb(254, 254, 254) !important;
-      box-shadow: 5px 5px 12px -5px #000000;
-      color: #000;
-      border: none;
-      width: 90%;
-      border-radius: 10px;
-      height: 2rem;
-      margin-bottom: 2rem;
+    margin-right: 6px;
+  }
+
+  .main-content-items {
+    display: flex;
+    height: 75vh;
+    overflow: auto;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 2rem;
+  }
+
+  p {
+    color: #1c2f52;
+    font-size: 16px;
+  }
+
+  .card-headers {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 1rem;
+
+    img {
+      border-radius: 50%;
+      width: 6rem;
+      height: 6rem;
     }
   }
 }
-.chat-box {
-  position: absolute;
-  z-index: 1;
-  margin-top: 1rem;
+
+.main-content-info {
   width: 50%;
-  border-radius: 20px;
-  background-color: rgb(254, 254, 254) !important;
   box-shadow: 5px 5px 12px -5px #000000;
-  height: 80vh;
-  overflow: auto;
-  .chat-message {
-    padding: 1rem;
-  }
-  .chat-footer {
+  height: auto;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  margin-top: 2rem;
+
+  nav {
     width: 100%;
-    position: absolute;
-    bottom: 0%;
+
+    button {
+      width: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+    }
+  }
+}
+
+// end of explore page
+// start of profile page
+.banner {
+  background-image: url(../asset/images/8a7e72c13d4029637e245385a84c0315.jpg);
+  width: 100%;
+  height: 15rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.profile-container {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.profile-details {
+  width: 20%;
+  height: auto;
+  box-shadow: 5px 5px 12px -5px #000000;
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 0 20px;
+
+  p {
+    color: #1c2f52;
+  }
+
+  img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    box-shadow: 5px 5px 12px -5px #000000;
+    margin-top: -6rem;
+  }
+
+  .profile-description {
+    box-shadow: 5px 5px 12px -5px #000000;
+    padding: 1rem;
+    margin-bottom: 3rem;
+    border-radius: 20px;
+  }
+}
+
+.profile-tabs {
+  width: 70%;
+
+  button {
+    width: 18%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 1rem;
-
-    button {
-      width: 20%;
-    }
-    input {
-      border-radius: 20px;
-      height: 2rem;
-      width: 100%;
-      box-shadow: 5px 5px 12px -5px #000000;
-      border: none;
-      padding-left: 1rem;
-    }
+    margin-bottom: 1rem;
   }
 }
 
+.testimonials {
+  width: 100%;
+
+  .testimonials-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 90vh;
+    overflow: auto;
+    padding: 2rem;
+
+    .card {
+      padding: 1rem;
+    }
+  }
+
+  p {
+    color: #1c2f52;
+  }
+
+  .testimonials-clients {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+  }
+}
+
+// end of testimonials
 // settings
 .settings-nav {
-  height: 90vh;
-  .settings-nav-links {
-    display: flex;
-    justify-content: space-between;
-    nav {
-      background-color: #f1f1f1;
-      width: 15%;
-      height: 92vh;
+  width: 100%;
+}
 
-      button {
-        background-color: rgb(254, 254, 254) !important;
-        box-shadow: 5px 5px 12px -5px #000000;
-        color: #000;
-        border: none;
-        width: 100%;
-        height: 2rem;
-        margin-top: 1rem;
-      }
+.settings-nav-links {
+  border: #000 solid 1px;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+
+  nav {
+    width: 20%;
+    height: 90vh;
+    background-color: #f1f1f1;
+    box-shadow: 5px 5px 12px -5px #000000;
+
+    button {
+      width: 100%;
+      margin-bottom: 1rem;
+      border-radius: 0% !important;
     }
-    .tab-content {
-      width: 70%;
-
-      margin: 1rem auto;
-      button {
-        background-color: rgb(254, 254, 254) !important;
-        box-shadow: 5px 5px 12px -5px #000000;
-        color: #000;
-        border: none;
-        width: 50%;
-        height: 2rem;
-        margin-top: 1rem;
-      }
-      form {
-        margin-top: 1rem;
-
-        width: 100%;
-        box-shadow: 5px 5px 12px -5px #000000;
-        padding: 2rem;
-
-        .form-content {
-          display: flex;
-          justify-content: space-evenly;
-          gap: 20px;
-        }
-
-        label {
-          font-size: 20px;
-          color: #f1f1f1;
-        }
-
-        input {
-          width: 100%;
-        }
-      }
-  .orders{
-    height: 10rem;
-        overflow: auto;
   }
-      table {
+
+  .tab-content {
+    width: 50% !important;
+
+    form {
+      width: 100%;
+
+      .btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      button {
+        width: 40%;
+      }
+    }
+
+    table {
+      background-color: #f1f1f1;
+      box-shadow: 5px 5px 12px -5px #000000;
+    }
+
+
+    .stats-header {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+
+      .stats-header-content {
         background-color: #f1f1f1;
-          box-shadow: 5px 5px 12px -5px #000000;
-        border: #000 solid 1px;
-  
-        th {
-          border: #000 solid 1px;
+        box-shadow: 5px 5px 12px -5px #000000;
+        text-align: center;
+        padding: 1rem;
+        width: 300px;
+        margin-bottom: 1rem;
+
+        p {
+          color: #000;
         }
-        td {
-          border: #000 solid 1px;
-        
-        }
-   
-        .action-btn{
+      }
+    }
+
+    .container {
+      margin-top: 1rem;
+      background-color: #f1f1f1;
+      box-shadow: 5px 5px 12px -5px #000000;
+      width: 100%;
+      padding: 1rem;
+
+      .orders {
+        width: 100%;
+
+        .action-btn {
+          width: 100%;
           display: flex;
           gap: 20px;
-          align-items: center;
-          button{
-            margin-top: -0.1rem;
-            color: #ffffff;
-          }
-          .success{
+
+          .success {
             background-color: green !important;
-            color: #fff;
+            width: 100px !important;
+            color: #f1f1f1 !important;
           }
-          .danger{
+
+          .danger {
             background-color: red !important;
-          }
-          span{
-            width: 90%;
-            text-align: center;
-                  box-shadow: 5px 5px 12px -5px #000000;
-                  height: 2rem;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-
-
+            width: 100px !important;
+            color: #f1f1f1 !important;
           }
         }
       }
-   
-    }
-    .stats-container{
 
-        h2 {
-            margin-top: 2rem;
-          }
     }
-             .stats-header,.stats-revenue {
-               width: 100%;
-               display: flex;
-               gap: 20px;
-      
-               .stats-header-content {
-                 background-color: rgb(254, 254, 254) !important;
-                 box-shadow: 5px 5px 12px -5px #000000;
-                 color: #000;
-                 width: 100%;
-    
-                 text-align: center;
-                 padding: 1rem;
-   
-                 p {
-                   font-size: 20px;
-                 }
-               }
-             }
+
   }
 }
