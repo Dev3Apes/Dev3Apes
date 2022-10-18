@@ -1,905 +1,904 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/styles.css">
-        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet"
+            href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
         <title>Document</title>
     </head>
     <body>
+        <div id="preloader"></div>
         <div class="background-image">
-            <nav>
-                <div class="nav-link-contents">
-                    <div class="nav-logo">
-                        <a href="../index.html"><img src="../asset/images/dev3apeslogo.png" alt="" srcset=""></a>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
 
-                    </div>
-                    <div class="nav-search">
-                        <input type="search" name="" id="">
-                    </div>
+                    <a class="navbar-brand" href="#"><img src="../asset/images/dev3apeslogo.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon "></span>
+                    </button>
 
-                    <div class="nav-links">
-                        <a href="Explore.html">
-                            <p>
-                                Explore
-                            </p>
-                        </a>
-                        <a href="Blog.html">
-                            <p>
-                                Blog
-                            </p>
-                        </a>
-                        <a href="Jobs.html"></a>
-                        <a href="Create.html">
-                            <p>
-                                Create
-                            </p>
-                        </a>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <input type="search" />
+                        <div class="navbar">
 
-
-                        <div class="dropdown">
-                            <i class="fa-solid fa-wallet dropbtn"></i>
-                            <div class="dropdown-content">
-                                <div class="wallet-card">
-                                    <div class="wallet-header">
-                                        <img src="../asset/images/icons8-ethereum-48.png" style="width:2.5rem;" alt=""
-                                            srcset="">
+                            <a class="nav-link active" aria-current="page" href="Explore.html">Explore</a>
+                            <a class="nav-link" href="Create.html" id="create-tag">Create</a>
+                            <div class="dropdown">
+                                <i class="fa-solid fa-wallet dropbtn"></i>
+                                <div class="dropdown-content">
+                                    <div class="wallet-card">
+                                        <div class="wallet-header">
+                                            <img src="../asset/images/icons8-ethereum-48.png" style="width: 2.5rem"
+                                                alt="" srcset="" />
+                                        </div>
+                                        <div class="wallet-ballance">
+                                            <img src="../asset/images/sim-card-chip.jpg" alt="" srcset="" />
+                                            <p>00.001</p>
+                                        </div>
+                                        <div class="wallet-id">
+                                            <p>trgsbahsu78</p>
+                                        </div>
                                     </div>
-                                    <div class="wallet-ballance">
-                                        <img src="../asset/images/sim-card-chip.jpg" alt="" srcset="">
-                                        <h3>
-                                            00.001
-                                        </h3>
-                                    </div>
-                                    <div class=" wallet-id">
-                                        <p>trgsbahsu78</p>
-                                    </div>
+
                                 </div>
-                                <div class="change-wallet">
-                                    <button data-bs-toggle="modal" data-bs-target="#changewalletModal">Choose
-                                        Wallet</button>
+                            </div>
+
+                            <div class="dropdown">
+                                <i class="fa-solid fa-user dropbtn"></i>
+                                <div class="dropdown-content" id="dropdown-content">
+                                    <a href="Profile.html" id="profile">
+                                        <p>Profile</p>
+                                    </a>
+                                    <a href="Settings.html" id="settings">
+                                        <p>Settings</p>
+                                    </a>
+                                    <p id="loginUser" data-bs-target="#login" data-bs-toggle="modal">
+                                        Login
+                                    </p>
+                                    <p id="logoutUser">
+                                        Logout
+                                    </p>
+
+
+
+
                                 </div>
                             </div>
                         </div>
-
-                        <div class="dropdown">
-                            <i class="fa-solid fa-user dropbtn"></i>
-                            <div class="dropdown-content">
-                                <a href="Profile.html">Profile</a>
-                                <a href="Settings.html">Settings</a>
-                                <a>Logout</a>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
-
             </nav>
-            <section>
-                <div class="filer-links">
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickableInside"
-                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                            Catgory
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="triggerId">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="all-categories" id="all-categories">
-                                <label class="form-check-label" for="all-categories">
-                                    All Categories
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="all-categories" id="other">
-                                <label class="form-check-label" for="other">
-                                    Other
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="all-categories" id="NFT-Artist">
-                                <label class="form-check-label" for="NFT-Artist">
-                                    NFT Artist
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="all-categories"
-                                    id="graphics-designer">
-                                <label class="form-check-label" for="graphics-designer">
-                                    Graphics Designer
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="all-categories"
-                                    id="community-manager">
-                                <label class="form-check-label" for="community-manager">
-                                    Community Manager
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="all-categories"
-                                    id="fronend-developer">
-                                <label class="form-check-label" for="fronend-developer">
-                                    Frontend Developer
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="all-categories"
-                                    id="backend-developer">
-                                <label class="form-check-label" for="backend-developer">
-                                    Backend Developer
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="all-categories" id="blockchain">
-                                <label class="form-check-label" for="blockchain">
-                                    Blockchain
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="all-categories" id="alpha">
-                                <label class="form-check-label" for="alpha">
-                                    Alpha
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="all-categories" id="discord-mod">
-                                <label class="form-check-label" for="discord-mod">
-                                    Discord Mod
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="all-categories" id="discord-creater">
-                                <label class="form-check-label" for="discord-creater">
-                                    Discord Creater
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="all-categories"
-                                    id="social-media-manager">
-                                <label class="form-check-label" for="social-media-manager">
-                                    Social Media Manager
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="all-categories" id="marketing">
-                                <label class="form-check-label" for="marketing">
-                                    Marketing
-                                </label>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickableInside"
-                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                            Budget
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="triggerId">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="budget" id="budget-0-15">
-                                <label class="form-check-label" for="budget-0-15">
-                                    0-15
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="budget" id="budget-15-50">
-                                <label class="form-check-label" for="budget-15-50">
-                                    15-50
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="budget" id="budget-50-150">
-                                <label class="form-check-label" for="budget-50-150">
-                                    50-150
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="budget" id="budget-150-500">
-                                <label class="form-check-label" for="budget-150-500">
-                                    150-500
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="budget" id="budget-500-above">
-                                <label class="form-check-label" for="budget-500-above">
-                                    500 & Above
-                                </label>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickableInside"
-                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                            Delivery
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="triggerId">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="delivery" id="deliery-express">
-                                <label class="form-check-label" for="deliery-express">
-                                    Express 24HRS
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="delivery" id="deliery-3-days">
-                                <label class="form-check-label" for="deliery-3-days">
-                                    Up to 3 days
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="delivery" id="deliery-7-days">
-                                <label class="form-check-label" for="deliery-7-days">
-                                    Up to 7 days
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="delivery" id="deliery-15-days">
-                                <label class="form-check-label" for="deliery-15-days">
-                                    Up to 15 days
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="delivery" id="deliery-anytime">
-                                <label class="form-check-label" for="deliery-anytime">
-                                    Anytime
-                                </label>
+            <div class="container">
+                <section>
+                    <div class="filer-links">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                aria-expanded="false">
+                                Catgory
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="triggerId">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="all-categories"
+                                        id="all-categories" />
+                                    <label class="form-check-label" for="all-categories">
+                                        All Categories
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="all-categories" id="other" />
+                                    <label class="form-check-label" for="other"> Other </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="all-categories"
+                                        id="NFT-Artist" />
+                                    <label class="form-check-label" for="NFT-Artist">
+                                        NFT Artist
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="all-categories"
+                                        id="graphics-designer" />
+                                    <label class="form-check-label" for="graphics-designer">
+                                        Graphics Designer
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="all-categories"
+                                        id="community-manager" />
+                                    <label class="form-check-label" for="community-manager">
+                                        Community Manager
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="all-categories"
+                                        id="fronend-developer" />
+                                    <label class="form-check-label" for="fronend-developer">
+                                        Frontend Developer
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="all-categories"
+                                        id="backend-developer" />
+                                    <label class="form-check-label" for="backend-developer">
+                                        Backend Developer
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="all-categories"
+                                        id="blockchain" />
+                                    <label class="form-check-label" for="blockchain">
+                                        Blockchain
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="all-categories" id="alpha" />
+                                    <label class="form-check-label" for="alpha"> Alpha </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="all-categories"
+                                        id="discord-mod" />
+                                    <label class="form-check-label" for="discord-mod">
+                                        Discord Mod
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="all-categories"
+                                        id="discord-creater" />
+                                    <label class="form-check-label" for="discord-creater">
+                                        Discord Creater
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="all-categories"
+                                        id="social-media-manager" />
+                                    <label class="form-check-label" for="social-media-manager">
+                                        Social Media Manager
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="all-categories" id="marketing" />
+                                    <label class="form-check-label" for="marketing">
+                                        Marketing
+                                    </label>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickableInside"
-                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                            Seller Details
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="triggerId">
-                            <div class="accordion accordion-flush" id="accordionFlushExample">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="flush-headingOne">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-                                            aria-expanded="false" aria-controls="flush-collapseOne">
-                                            Language
-                                        </button>
-                                    </h2>
-                                    <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                        <div class="accordion-body">
-                                            <div class="explore-language">
-                                                <div id="explore-language"></div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                aria-expanded="false">
+                                Budget
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="triggerId">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="budget" id="budget-0-15" />
+                                    <label class="form-check-label" for="budget-0-15"> 0-15 </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="budget" id="budget-15-50" />
+                                    <label class="form-check-label" for="budget-15-50">
+                                        15-50
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="budget" id="budget-50-150" />
+                                    <label class="form-check-label" for="budget-50-150">
+                                        50-150
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="budget" id="budget-150-500" />
+                                    <label class="form-check-label" for="budget-150-500">
+                                        150-500
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="budget" id="budget-500-above" />
+                                    <label class="form-check-label" for="budget-500-above">
+                                        500 & Above
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                aria-expanded="false">
+                                Delivery
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="triggerId">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="delivery" id="deliery-express" />
+                                    <label class="form-check-label" for="deliery-express">
+                                        Express 24HRS
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="delivery" id="deliery-3-days" />
+                                    <label class="form-check-label" for="deliery-3-days">
+                                        Up to 3 days
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="delivery" id="deliery-7-days" />
+                                    <label class="form-check-label" for="deliery-7-days">
+                                        Up to 7 days
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="delivery" id="deliery-15-days" />
+                                    <label class="form-check-label" for="deliery-15-days">
+                                        Up to 15 days
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="delivery" id="deliery-anytime" />
+                                    <label class="form-check-label" for="deliery-anytime">
+                                        Anytime
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                aria-expanded="false">
+                                Seller Details
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="triggerId">
+                                <div class="accordion accordion-flush" id="accordionFlushExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                                aria-expanded="false" aria-controls="flush-collapseOne">
+                                                Language
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                <div class="explore-language">
+                                                    <div id="explore-language"></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="flush-headingTwo">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
-                                            aria-expanded="false" aria-controls="flush-collapseTwo">
-                                            Timezone
-                                        </button>
-                                    </h2>
-                                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                                        aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                        <div class="accordion-body">
-                                            <div class="explore-timezone">
-                                                <div id="explore-timezone"></div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingTwo">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                                aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                Timezone
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                <div class="explore-timezone">
+                                                    <div id="explore-timezone"></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="flush-headingThree">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
-                                            aria-expanded="false" aria-controls="flush-collapseThree">
-                                            Rating
-                                        </button>
-                                    </h2>
-                                    <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                        <div class="accordion-body">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="ratings"
-                                                    id="five-star">
-                                                <label class="form-check-label" for="backend-developer">
-                                                    5 Star
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="ratings"
-                                                    id="four-star">
-                                                <label class="form-check-label" for="backend-developer">
-                                                    4 Star
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="ratings"
-                                                    id="three-star">
-                                                <label class="form-check-label" for="backend-developer">
-                                                    3 Star
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="ratings"
-                                                    id="two-star">
-                                                <label class="form-check-label" for="backend-developer">
-                                                    2 Star
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="ratings"
-                                                    id="one-star">
-                                                <label class="form-check-label" for="backend-developer">
-                                                    1 Star
-                                                </label>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingThree">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                                aria-expanded="false" aria-controls="flush-collapseThree">
+                                                Rating
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                            aria-labelledby="flush-headingThree"
+                                            data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="ratings"
+                                                        id="five-star" />
+                                                    <label class="form-check-label" for="backend-developer">
+                                                        5 Star
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="ratings"
+                                                        id="four-star" />
+                                                    <label class="form-check-label" for="backend-developer">
+                                                        4 Star
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="ratings"
+                                                        id="three-star" />
+                                                    <label class="form-check-label" for="backend-developer">
+                                                        3 Star
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="ratings"
+                                                        id="two-star" />
+                                                    <label class="form-check-label" for="backend-developer">
+                                                        2 Star
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="ratings"
+                                                        id="one-star" />
+                                                    <label class="form-check-label" for="backend-developer">
+                                                        1 Star
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div class="main-container">
-                    <div class="main-content">
-                        <div class="main-content-items">
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-headers">
-                                    <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                    <div>
-                                        <p>
-                                            Name: Name
-                                        </p>
-                                        <p>
-                                            Rating: Rating
-                                        </p>
-                                    </div>
-                                </div>
-                                <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">Title</p>
-                                    <p class="card-text">Price</p>
-                                </div>
-                            </div>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-headers">
-                                    <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                    <div>
-                                        <p>
-                                            Name: Name
-                                        </p>
-                                        <p>
-                                            Rating: Rating
-                                        </p>
-                                    </div>
-                                </div>
-                                <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">Title</p>
-                                    <p class="card-text">Price</p>
-                                </div>
-                            </div>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-headers">
-                                    <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                    <div>
-                                        <p>
-                                            Name: Name
-                                        </p>
-                                        <p>
-                                            Rating: Rating
-                                        </p>
-                                    </div>
-                                </div>
-                                <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">Title</p>
-                                    <p class="card-text">Price</p>
-                                </div>
-                            </div>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-headers">
-                                    <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                    <div>
-                                        <p>
-                                            Name: Name
-                                        </p>
-                                        <p>
-                                            Rating: Rating
-                                        </p>
-                                    </div>
-                                </div>
-                                <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">Title</p>
-                                    <p class="card-text">Price</p>
-                                </div>
-                            </div>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-headers">
-                                    <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                    <div>
-                                        <p>
-                                            Name: Name
-                                        </p>
-                                        <p>
-                                            Rating: Rating
-                                        </p>
-                                    </div>
-                                </div>
-                                <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">Title</p>
-                                    <p class="card-text">Price</p>
-                                </div>
-                            </div>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-headers">
-                                    <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                    <div>
-                                        <p>
-                                            Name: Name
-                                        </p>
-                                        <p>
-                                            Rating: Rating
-                                        </p>
-                                    </div>
-                                </div>
-                                <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">Title</p>
-                                    <p class="card-text">Price</p>
-                                </div>
-                            </div>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-headers">
-                                    <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                    <div>
-                                        <p>
-                                            Name: Name
-                                        </p>
-                                        <p>
-                                            Rating: Rating
-                                        </p>
-                                    </div>
-                                </div>
-                                <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">Title</p>
-                                    <p class="card-text">Price</p>
-                                </div>
-                            </div>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-headers">
-                                    <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                    <div>
-                                        <p>
-                                            Name: Name
-                                        </p>
-                                        <p>
-                                            Rating: Rating
-                                        </p>
-                                    </div>
-                                </div>
-                                <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">Title</p>
-                                    <p class="card-text">Price</p>
-                                </div>
-                            </div>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-headers">
-                                    <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                    <div>
-                                        <p>
-                                            Name: Name
-                                        </p>
-                                        <p>
-                                            Rating: Rating
-                                        </p>
-                                    </div>
-                                </div>
-                                <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">Title</p>
-                                    <p class="card-text">Price</p>
-                                </div>
-                            </div>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-headers">
-                                    <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                    <div>
-                                        <p>
-                                            Name: Name
-                                        </p>
-                                        <p>
-                                            Rating: Rating
-                                        </p>
-                                    </div>
-                                </div>
-                                <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">Title</p>
-                                    <p class="card-text">Price</p>
-                                </div>
-                            </div>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-headers">
-                                    <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                    <div>
-                                        <p>
-                                            Name: Name
-                                        </p>
-                                        <p>
-                                            Rating: Rating
-                                        </p>
-                                    </div>
-                                </div>
-                                <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">Title</p>
-                                    <p class="card-text">Price</p>
-                                </div>
-                            </div>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-headers">
-                                    <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                    <div>
-                                        <p>
-                                            Name: Name
-                                        </p>
-                                        <p>
-                                            Rating: Rating
-                                        </p>
-                                    </div>
-                                </div>
-                                <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">Title</p>
-                                    <p class="card-text">Price</p>
-                                </div>
-                            </div>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-headers">
-                                    <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                    <div>
-                                        <p>
-                                            Name: Name
-                                        </p>
-                                        <p>
-                                            Rating: Rating
-                                        </p>
-                                    </div>
-                                </div>
-                                <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">Title</p>
-                                    <p class="card-text">Price</p>
-                                </div>
-                            </div>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-headers">
-                                    <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                    <div>
-                                        <p>
-                                            Name: Name
-                                        </p>
-                                        <p>
-                                            Rating: Rating
-                                        </p>
-                                    </div>
-                                </div>
-                                <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">Title</p>
-                                    <p class="card-text">Price</p>
-                                </div>
-                            </div>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-headers">
-                                    <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                    <div>
-                                        <p>
-                                            Name: Name
-                                        </p>
-                                        <p>
-                                            Rating: Rating
-                                        </p>
-                                    </div>
-                                </div>
-                                <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">Title</p>
-                                    <p class="card-text">Price</p>
-                                </div>
-                            </div>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-headers">
-                                    <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                    <div>
-                                        <p>
-                                            Name: Name
-                                        </p>
-                                        <p>
-                                            Rating: Rating
-                                        </p>
-                                    </div>
-                                </div>
-                                <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">Title</p>
-                                    <p class="card-text">Price</p>
-                                </div>
-                            </div>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-headers">
-                                    <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                    <div>
-                                        <p>
-                                            Name: Name
-                                        </p>
-                                        <p>
-                                            Rating: Rating
-                                        </p>
-                                    </div>
-                                </div>
-                                <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">Title</p>
-                                    <p class="card-text">Price</p>
-                                </div>
-                            </div>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-headers">
-                                    <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                    <div>
-                                        <p>
-                                            Name: Name
-                                        </p>
-                                        <p>
-                                            Rating: Rating
-                                        </p>
-                                    </div>
-                                </div>
-                                <img src="../asset/images/unnamed-2.webp" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">Title</p>
-                                    <p class="card-text">Price</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="main-content-info">
-                        <nav>
-                            <div class="nav nav-tabs justify-content-around" id="nav-tab" role="tablist">
-                                <button class="active" id="nav-basic-tab" data-bs-toggle="tab"
-                                    data-bs-target="#nav-basic" type="button" role="tab" aria-controls="nav-basic"
-                                    aria-selected="true">Basic</button>
-                                <button id="nav-pro-tab" data-bs-toggle="tab" data-bs-target="#nav-pro" type="button"
-                                    role="tab" aria-controls="nav-pro" aria-selected="false">Pro</button>
-                                <button id="nav-advance-tab" data-bs-toggle="tab" data-bs-target="#nav-advance"
-                                    type="button" role="tab" aria-controls="nav-advance"
-                                    aria-selected="false">Advance</button>
-                            </div>
-                        </nav>
-                        <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="nav-basic" role="tabpanel"
-                                aria-labelledby="nav-basic-tab">
-                                <div class="container">
-                                    <div class="mt-2">
-                                        <h4>
-                                            Basic Coding $50
-                                        </h4>
-                                    </div>
-                                    <hr>
-                                    <div>
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing
-                                            elit. Suscipit nisi
-                                            pariatur quo
-                                            voluptatem explicabo sit nobis autem saepe voluptas
-                                            reiciendis libero
-                                            vel
-                                            consectetur
-                                            inventore beatae rem quaerat provident, nemo
-                                            blanditiis!</p>
-                                        <h3>
-                                            Delivery Time: 2 week
-                                        </h3>
-                                        <div class="w-100 d-flex justify-content-center mt-4 mb-4 gap-2">
-                                            <button data-bs-toggle="modal" data-bs-target="#payment">Continue</button>
-                                            <button data-bs-toggle="modal" data-bs-target="#payment">View
-                                                Profile</button>
+                </section>
+                <section>
+                    <div class="main-container">
+                        <div class="main-content">
+                            <div class="main-content-items">
+                                <div class="card" style="width: 18rem" data-bs-toggle="modal" data-bs-target="#modalId">
+                                    <div class="card-headers">
+                                        <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                        <div>
+                                            <p>Name: Name</p>
+                                            <p>Rating: Rating</p>
                                         </div>
                                     </div>
-                                    <hr>
-                                    <div>
-                                        <h4 class="text-center">
-                                            About This Gig
-                                        </h4>
+                                    <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <p class="card-text">Title</p>
+                                        <p class="card-text">Price</p>
                                     </div>
-                                    <hr>
-                                    <p class="p-3 gig-discription">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                                        elit. Vero sapiente
-                                        eligendi
-                                        voluptates
-                                        nesciunt velit deleniti tempora blanditiis deserunt
-                                        suscipit doloremque,
-                                        illum
-                                        quas? Dolor
-                                        quaerat animi at, aut nisi veniam nesciunt!Lorem ipsum
-                                        dolor, sit amet
-                                        consectetur adipisicing
-                                        elit. Vero sapiente eligendi voluptates
-                                        nesciunt velit deleniti tempora blanditiis deserunt
-                                        suscipit doloremque,
-                                        illum
-                                        quas? Dolor
-                                        quaerat animi at, aut nisi veniam nesciunt!Lorem ipsum
-                                        dolor, sit amet
-                                        consectetur adipisicing
-                                        elit. Vero sapiente eligendi voluptates
-                                        nesciunt velit deleniti tempora blanditiis deserunt
-                                        suscipit doloremque,
-                                        illum
-                                        quas? Dolor
-                                        quaerat animi at, aut nisi veniam nesciunt!
-                                    </p>
                                 </div>
-                            </div>
-                            <div class="tab-pane fade" id="nav-pro" role="tabpanel" aria-labelledby="nav-pro-tab">
-                                <div class="container">
-                                    <div class="mt-2">
-                                        <h4>
-                                            Basic Coding $50
-                                        </h4>
-                                    </div>
-                                    <hr>
-                                    <div>
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing
-                                            elit. Suscipit nisi
-                                            pariatur quo
-                                            voluptatem explicabo sit nobis autem saepe voluptas
-                                            reiciendis libero
-                                            vel
-                                            consectetur
-                                            inventore beatae rem quaerat provident, nemo
-                                            blanditiis!</p>
-                                        <h3>
-                                            Delivery Time: 2 week
-                                        </h3>
-                                        <div class="w-100 d-flex justify-content-center mt-4 mb-4">
-                                            <button data-bs-toggle="modal" data-bs-target="#payment">Continue</button>
+                                <div class="card" style="width: 18rem">
+                                    <div class="card-headers">
+                                        <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                        <div>
+                                            <p>Name: Name</p>
+                                            <p>Rating: Rating</p>
                                         </div>
                                     </div>
-                                    <hr>
-                                    <div>
-                                        <h4 class="text-center">
-                                            About This Gig
-                                        </h4>
+                                    <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <p class="card-text">Title</p>
+                                        <p class="card-text">Price</p>
                                     </div>
-                                    <hr>
-                                    <p class="p-3 gig-discription">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                                        elit. Vero sapiente
-                                        eligendi
-                                        voluptates
-                                        nesciunt velit deleniti tempora blanditiis deserunt
-                                        suscipit doloremque,
-                                        illum
-                                        quas? Dolor
-                                        quaerat animi at, aut nisi veniam nesciunt!Lorem ipsum
-                                        dolor, sit amet
-                                        consectetur adipisicing
-                                        elit. Vero sapiente eligendi voluptates
-                                        nesciunt velit deleniti tempora blanditiis deserunt
-                                        suscipit doloremque,
-                                        illum
-                                        quas? Dolor
-                                        quaerat animi at, aut nisi veniam nesciunt!Lorem ipsum
-                                        dolor, sit amet
-                                        consectetur adipisicing
-                                        elit. Vero sapiente eligendi voluptates
-                                        nesciunt velit deleniti tempora blanditiis deserunt
-                                        suscipit doloremque,
-                                        illum
-                                        quas? Dolor
-                                        quaerat animi at, aut nisi veniam nesciunt!
-                                    </p>
                                 </div>
-                            </div>
-                            <div class="tab-pane fade" id="nav-advance" role="tabpanel"
-                                aria-labelledby="nav-advance-tab">
-                                <div class="container">
-                                    <div class="mt-2">
-                                        <h4>
-                                            Basic Coding $50
-                                        </h4>
-                                    </div>
-                                    <hr>
-                                    <div>
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing
-                                            elit. Suscipit nisi
-                                            pariatur quo
-                                            voluptatem explicabo sit nobis autem saepe voluptas
-                                            reiciendis libero
-                                            vel
-                                            consectetur
-                                            inventore beatae rem quaerat provident, nemo
-                                            blanditiis!</p>
-                                        <h3>
-                                            Delivery Time: 2 week
-                                        </h3>
-                                        <div class="w-100 d-flex justify-content-center mt-4 mb-4">
-                                            <button data-bs-toggle="modal" data-bs-target="#payment">Continue</button>
+                                <div class="card" style="width: 18rem">
+                                    <div class="card-headers">
+                                        <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                        <div>
+                                            <p>Name: Name</p>
+                                            <p>Rating: Rating</p>
                                         </div>
                                     </div>
-                                    <hr>
-                                    <div>
-                                        <h4 class="text-center">
-                                            About This Gig
-                                        </h4>
+                                    <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <p class="card-text">Title</p>
+                                        <p class="card-text">Price</p>
                                     </div>
-                                    <hr>
-                                    <p class="p-3 gig-discription">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                                        elit. Vero sapiente
-                                        eligendi
-                                        voluptates
-                                        nesciunt velit deleniti tempora blanditiis deserunt
-                                        suscipit doloremque,
-                                        illum
-                                        quas? Dolor
-                                        quaerat animi at, aut nisi veniam nesciunt!Lorem ipsum
-                                        dolor, sit amet
-                                        consectetur adipisicing
-                                        elit. Vero sapiente eligendi voluptates
-                                        nesciunt velit deleniti tempora blanditiis deserunt
-                                        suscipit doloremque,
-                                        illum
-                                        quas? Dolor
-                                        quaerat animi at, aut nisi veniam nesciunt!Lorem ipsum
-                                        dolor, sit amet
-                                        consectetur adipisicing
-                                        elit. Vero sapiente eligendi voluptates
-                                        nesciunt velit deleniti tempora blanditiis deserunt
-                                        suscipit doloremque,
-                                        illum
-                                        quas? Dolor
-                                        quaerat animi at, aut nisi veniam nesciunt!
-                                    </p>
+                                </div>
+                                <div class="card" style="width: 18rem">
+                                    <div class="card-headers">
+                                        <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                        <div>
+                                            <p>Name: Name</p>
+                                            <p>Rating: Rating</p>
+                                        </div>
+                                    </div>
+                                    <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <p class="card-text">Title</p>
+                                        <p class="card-text">Price</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem">
+                                    <div class="card-headers">
+                                        <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                        <div>
+                                            <p>Name: Name</p>
+                                            <p>Rating: Rating</p>
+                                        </div>
+                                    </div>
+                                    <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <p class="card-text">Title</p>
+                                        <p class="card-text">Price</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem">
+                                    <div class="card-headers">
+                                        <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                        <div>
+                                            <p>Name: Name</p>
+                                            <p>Rating: Rating</p>
+                                        </div>
+                                    </div>
+                                    <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <p class="card-text">Title</p>
+                                        <p class="card-text">Price</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem">
+                                    <div class="card-headers">
+                                        <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                        <div>
+                                            <p>Name: Name</p>
+                                            <p>Rating: Rating</p>
+                                        </div>
+                                    </div>
+                                    <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <p class="card-text">Title</p>
+                                        <p class="card-text">Price</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem">
+                                    <div class="card-headers">
+                                        <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                        <div>
+                                            <p>Name: Name</p>
+                                            <p>Rating: Rating</p>
+                                        </div>
+                                    </div>
+                                    <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <p class="card-text">Title</p>
+                                        <p class="card-text">Price</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem">
+                                    <div class="card-headers">
+                                        <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                        <div>
+                                            <p>Name: Name</p>
+                                            <p>Rating: Rating</p>
+                                        </div>
+                                    </div>
+                                    <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <p class="card-text">Title</p>
+                                        <p class="card-text">Price</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem">
+                                    <div class="card-headers">
+                                        <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                        <div>
+                                            <p>Name: Name</p>
+                                            <p>Rating: Rating</p>
+                                        </div>
+                                    </div>
+                                    <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <p class="card-text">Title</p>
+                                        <p class="card-text">Price</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem">
+                                    <div class="card-headers">
+                                        <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                        <div>
+                                            <p>Name: Name</p>
+                                            <p>Rating: Rating</p>
+                                        </div>
+                                    </div>
+                                    <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <p class="card-text">Title</p>
+                                        <p class="card-text">Price</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem">
+                                    <div class="card-headers">
+                                        <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                        <div>
+                                            <p>Name: Name</p>
+                                            <p>Rating: Rating</p>
+                                        </div>
+                                    </div>
+                                    <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <p class="card-text">Title</p>
+                                        <p class="card-text">Price</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem">
+                                    <div class="card-headers">
+                                        <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                        <div>
+                                            <p>Name: Name</p>
+                                            <p>Rating: Rating</p>
+                                        </div>
+                                    </div>
+                                    <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <p class="card-text">Title</p>
+                                        <p class="card-text">Price</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem">
+                                    <div class="card-headers">
+                                        <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                        <div>
+                                            <p>Name: Name</p>
+                                            <p>Rating: Rating</p>
+                                        </div>
+                                    </div>
+                                    <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <p class="card-text">Title</p>
+                                        <p class="card-text">Price</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem">
+                                    <div class="card-headers">
+                                        <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                        <div>
+                                            <p>Name: Name</p>
+                                            <p>Rating: Rating</p>
+                                        </div>
+                                    </div>
+                                    <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <p class="card-text">Title</p>
+                                        <p class="card-text">Price</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem">
+                                    <div class="card-headers">
+                                        <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                        <div>
+                                            <p>Name: Name</p>
+                                            <p>Rating: Rating</p>
+                                        </div>
+                                    </div>
+                                    <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <p class="card-text">Title</p>
+                                        <p class="card-text">Price</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem">
+                                    <div class="card-headers">
+                                        <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                        <div>
+                                            <p>Name: Name</p>
+                                            <p>Rating: Rating</p>
+                                        </div>
+                                    </div>
+                                    <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <p class="card-text">Title</p>
+                                        <p class="card-text">Price</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem">
+                                    <div class="card-headers">
+                                        <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                        <div>
+                                            <p>Name: Name</p>
+                                            <p>Rating: Rating</p>
+                                        </div>
+                                    </div>
+                                    <img src="../asset/images/unnamed-2.jpg" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <p class="card-text">Title</p>
+                                        <p class="card-text">Price</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
+
         </div>
 
 
 
+        <div class="modal fade" id="login" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="loginForm">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        aria-describedby="helpId" placeholder="Email">
+
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" name="password" id="password"
+                                        aria-describedby="helpId" placeholder="Password">
+
+                                </div>
+                                <span class="errorMessage"></span>
+
+                                <div class="mb-3">
+                                    <button id="signIn">Sigin</button>
+                                </div>
+                                <div class="mb-3">
+                                    <p>Or</p>
+                                </div>
+                                <div class="mb-3">
+                                    <button data-bs-target="#register" data-bs-toggle="modal"
+                                        data-bs-dismiss="modal">Register</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="mb-3">
+                            <a href="ForgotPassword.html">Forgot Password</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="register" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="loginForm">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" name="name" id="name"
+                                        aria-describedby="helpId" placeholder="First Name">
+
+                                </div>
+                                <div class="mb-3">
+                                    <label for="last-name" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" name="last-name" id="last-name"
+                                        aria-describedby="helpId" placeholder="First Name">
+
+                                </div>
+                                <div class="mb-3">
+                                    <label for="new-email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" name="new-email" id="new-email"
+                                        aria-describedby="helpId" placeholder="Email">
+
+                                </div>
+                                <div class="mb-3">
+                                    <label for="newpassword" class="form-label">Password</label>
+                                    <input type="password" class="form-control" name="newpassword" id="new-password"
+                                        aria-describedby="helpId" placeholder="Password">
+
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="confirm-password" class="form-label">Confirm Password</label>
+                                    <input type="password" class="form-control" name="confirm-password"
+                                        id="confirm-password" aria-describedby="helpId" placeholder="Confirm Password">
+
+                                </div>
+                                <div class="mb-3">
+                                    <button id="CreateNewUser">Register</button>
+                                </div>
+                                <span class="errorMessage"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
+                            data-bs-dismiss="modal">Back to first</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="btn btn-primary" data-bs-toggle="modal" href="#" role="button">Open first modal</a>
 
 
 
-
-
-
-
-
-
+        <!-- Modal Body -->
+        <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+        <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+            role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitleId">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="main-content-info">
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                        <button class="active" id="nav-basic-tab" data-bs-toggle="tab"
+                                            data-bs-target="#nav-basic" type="button" role="tab"
+                                            aria-controls="nav-basic" aria-selected="true">
+                                            Basic
+                                        </button>
+                                        <button id="nav-pro-tab" data-bs-toggle="tab" data-bs-target="#nav-pro"
+                                            type="button" role="tab" aria-controls="nav-pro" aria-selected="false">
+                                            Pro
+                                        </button>
+                                        <button id="nav-advance-tab" data-bs-toggle="tab" data-bs-target="#nav-advance"
+                                            type="button" role="tab" aria-controls="nav-advance" aria-selected="false">
+                                            Advance
+                                        </button>
+                                    </div>
+                                </nav>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-basic" role="tabpanel"
+                                        aria-labelledby="nav-basic-tab">
+                                        <div class="container">
+                                            <div class="mt-2">
+                                                <h4>Basic Coding $50</h4>
+                                            </div>
+                                            <hr />
+                                            <div>
+                                                <p>
+                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                    Suscipit nisi pariatur quo voluptatem explicabo sit nobis
+                                                    autem saepe voluptas reiciendis libero vel consectetur
+                                                    inventore beatae rem quaerat provident, nemo blanditiis!
+                                                </p>
+                                                <h3>Delivery Time: 2 week</h3>
+                                                <div class="w-100 d-flex justify-content-center mt-4 mb-4 gap-2">
+                                                    <button data-bs-toggle="modal" data-bs-target="#payment">
+                                                        Continue
+                                                    </button>
+                                                    <button data-bs-toggle="modal" data-bs-target="#payment">
+                                                        View Profile
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div>
+                                                <h4 class="text-center">About This Gig</h4>
+                                            </div>
+                                            <hr />
+                                            <p class="p-3 gig-discription">
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                Vero sapiente eligendi voluptates nesciunt velit deleniti
+                                                tempora blanditiis deserunt suscipit doloremque, illum quas?
+                                                Dolor quaerat animi at, aut nisi veniam nesciunt!Lorem ipsum
+                                                dolor, sit amet consectetur adipisicing elit. Vero sapiente
+                                                eligendi voluptates nesciunt velit deleniti tempora
+                                                blanditiis deserunt suscipit doloremque, illum quas? Dolor
+                                                quaerat animi at, aut nisi veniam nesciunt!Lorem ipsum
+                                                dolor, sit amet consectetur adipisicing elit. Vero sapiente
+                                                eligendi voluptates nesciunt velit deleniti tempora
+                                                blanditiis deserunt suscipit doloremque, illum quas? Dolor
+                                                quaerat animi at, aut nisi veniam nesciunt!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-pro" role="tabpanel"
+                                        aria-labelledby="nav-pro-tab">
+                                        <div class="container">
+                                            <div class="mt-2">
+                                                <h4>Pro Coding $50</h4>
+                                            </div>
+                                            <hr />
+                                            <div>
+                                                <p>
+                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                    Suscipit nisi pariatur quo voluptatem explicabo sit nobis
+                                                    autem saepe voluptas reiciendis libero vel consectetur
+                                                    inventore beatae rem quaerat provident, nemo blanditiis!
+                                                </p>
+                                                <h3>Delivery Time: 2 week</h3>
+                                                <div class="w-100 d-flex justify-content-center mt-4 mb-4 gap-2">
+                                                    <button data-bs-toggle="modal" data-bs-target="#payment">
+                                                        Continue
+                                                    </button>
+                                                    <button data-bs-toggle="modal" data-bs-target="#payment">
+                                                        View Profile
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div>
+                                                <h4 class="text-center">About This Gig</h4>
+                                            </div>
+                                            <hr />
+                                            <p class="p-3 gig-discription">
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                Vero sapiente eligendi voluptates nesciunt velit deleniti
+                                                tempora blanditiis deserunt suscipit doloremque, illum quas?
+                                                Dolor quaerat animi at, aut nisi veniam nesciunt!Lorem ipsum
+                                                dolor, sit amet consectetur adipisicing elit. Vero sapiente
+                                                eligendi voluptates nesciunt velit deleniti tempora
+                                                blanditiis deserunt suscipit doloremque, illum quas? Dolor
+                                                quaerat animi at, aut nisi veniam nesciunt!Lorem ipsum
+                                                dolor, sit amet consectetur adipisicing elit. Vero sapiente
+                                                eligendi voluptates nesciunt velit deleniti tempora
+                                                blanditiis deserunt suscipit doloremque, illum quas? Dolor
+                                                quaerat animi at, aut nisi veniam nesciunt!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-advance" role="tabpanel"
+                                        aria-labelledby="nav-advance-tab">
+                                        <div class="container">
+                                            <div class="mt-2">
+                                                <h4>Advance Coding $50</h4>
+                                            </div>
+                                            <hr />
+                                            <div>
+                                                <p>
+                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                    Suscipit nisi pariatur quo voluptatem explicabo sit nobis
+                                                    autem saepe voluptas reiciendis libero vel consectetur
+                                                    inventore beatae rem quaerat provident, nemo blanditiis!
+                                                </p>
+                                                <h3>Delivery Time: 2 week</h3>
+                                                <div class="w-100 d-flex justify-content-center mt-4 mb-4 gap-2">
+                                                    <button data-bs-toggle="modal" data-bs-target="#payment">
+                                                        Continue
+                                                    </button>
+                                                    <button data-bs-toggle="modal" data-bs-target="#payment">
+                                                        View Profile
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div>
+                                                <h4 class="text-center">About This Gig</h4>
+                                            </div>
+                                            <hr />
+                                            <p class="p-3 gig-discription">
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                Vero sapiente eligendi voluptates nesciunt velit deleniti
+                                                tempora blanditiis deserunt suscipit doloremque, illum quas?
+                                                Dolor quaerat animi at, aut nisi veniam nesciunt!Lorem ipsum
+                                                dolor, sit amet consectetur adipisicing elit. Vero sapiente
+                                                eligendi voluptates nesciunt velit deleniti tempora
+                                                blanditiis deserunt suscipit doloremque, illum quas? Dolor
+                                                quaerat animi at, aut nisi veniam nesciunt!Lorem ipsum
+                                                dolor, sit amet consectetur adipisicing elit. Vero sapiente
+                                                eligendi voluptates nesciunt velit deleniti tempora
+                                                blanditiis deserunt suscipit doloremque, illum quas? Dolor
+                                                quaerat animi at, aut nisi veniam nesciunt!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <script src="../node_modules/jquery/dist/jquery.min.js"></script>
         <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
         <script src="https://kit.fontawesome.com/c461f95de0.js" crossorigin="anonymous"></script>
         <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
+        <script type="module" src="../Lib/js/firebase.js"></script>
         <script type="module" src="../Lib/js/app.js"></script>
     </body>
 </html>

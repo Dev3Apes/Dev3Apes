@@ -11,69 +11,63 @@
     </head>
     <body>
         <div class="background-image">
-            <nav>
-                <div class="navbars">
-                    <div class="nav-link-contents">
-                        <div class="nav-logo">
-                            <a href="../index.html"> <img src="../asset/images/dev3apeslogo.png" style="width: 15rem;"
-                                    alt="" srcset="">
-                            </a>
-                        </div>
-                        <div class="nav-search">
-                            <input type="search" name="" id="">
-                        </div>
-                        <div class="nav-links">
-                            <a href="Explore.html">
-                                <p>
-                                    Explore
-                                </p>
-                            </a>
-                            <a href="Blog.html">
-                                <p>
-                                    Blog
-                                </p>
-                            </a>
-                            <a href="Create.html">
-                                <p>
-                                    Create
-                                </p>
-                            </a>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
 
+                    <a class="navbar-brand" href="#"><img src="../asset/images/dev3apeslogo.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon "></span>
+                    </button>
 
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <input type="search" />
+                        <div class="navbar">
+
+                            <a class="nav-link active" aria-current="page" href="Explore.html">Explore</a>
+                            <a class="nav-link" href="Create.html" id="create-tag">Create</a>
                             <div class="dropdown">
                                 <i class="fa-solid fa-wallet dropbtn"></i>
                                 <div class="dropdown-content">
                                     <div class="wallet-card">
                                         <div class="wallet-header">
-                                            <img src="../asset/images/icons8-ethereum-48.png" style="width:2.5rem;"
-                                                alt="" srcset="">
+                                            <img src="../asset/images/icons8-ethereum-48.png" style="width: 2.5rem"
+                                                alt="" srcset="" />
                                         </div>
                                         <div class="wallet-ballance">
-                                            <img src="../asset/images/sim-card-chip.jpg" alt="" srcset="">
-                                            <h3>
-                                                00.001
-                                            </h3>
+                                            <img src="../asset/images/sim-card-chip.jpg" alt="" srcset="" />
+                                            <p>00.001</p>
                                         </div>
-                                        <div class=" wallet-id">
+                                        <div class="wallet-id">
                                             <p>trgsbahsu78</p>
                                         </div>
                                     </div>
-                                    <div class="change-wallet">
-                                        <button data-bs-toggle="modal" data-bs-target="#changewalletModal">Choose
-                                            Wallet</button>
-                                    </div>
+
                                 </div>
                             </div>
 
                             <div class="dropdown">
                                 <i class="fa-solid fa-user dropbtn"></i>
-                                <div class="dropdown-content">
-                                    <a href="Profile.html">Profile</a>
-                                    <a href="Settings.html">Settings</a>
-                                    <a>Logout</a>
+                                <div class="dropdown-content" id="dropdown-content">
+                                    <a href="Profile.html" id="profile">
+                                        <p>Profile</p>
+                                    </a>
+                                    <a href="Settings.html" id="settings">
+                                        <p>Settings</p>
+                                    </a>
+                                    <p id="loginUser" data-bs-target="#login" data-bs-toggle="modal">
+                                        Login
+                                    </p>
+                                    <p id="logout">
+                                        Logout
+                                    </p>
+
+
+
+
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -555,12 +549,11 @@
 
 
 
-
         <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-
-        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <script type="module" src="../Lib/js/app.js"></script>
+        <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
         <script src="https://kit.fontawesome.com/c461f95de0.js" crossorigin="anonymous"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="module" src="../Lib/js/firebase.js"></script>
+        <script type="module" src="../Lib/js/app.js"></script>
     </body>
 </html>

@@ -11,83 +11,80 @@
     </head>
     <body>
         <div class="background-image">
-            <nav>
-                <div class="nav-link-contents">
-                    <div class="nav-logo">
-                        <a href="../index.html"><img src="../asset/images/dev3apeslogo.png" alt="" srcset=""></a>
+            <div id="preloader"></div>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
 
-                    </div>
-                    <div class="nav-search">
-                        <input type="search" name="" id="">
-                    </div>
+                    <a class="navbar-brand" href="#"><img src="../asset/images/dev3apeslogo.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon "></span>
+                    </button>
 
-                    <div class="nav-links">
-                        <a href="Explore.html">
-                            <p>
-                                Explore
-                            </p>
-                        </a>
-                        <a href="Blog.html">
-                            <p>
-                                Blog
-                            </p>
-                        </a>
-                        <a href="Jobs.html"></a>
-                        <a href="Create.html">
-                            <p>
-                                Create
-                            </p>
-                        </a>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <input type="search" />
+                        <div class="navbar">
 
-
-                        <div class="dropdown">
-                            <i class="fa-solid fa-wallet dropbtn"></i>
-                            <div class="dropdown-content">
-                                <div class="wallet-card">
-                                    <div class="wallet-header">
-                                        <img src="../asset/images/icons8-ethereum-48.png" style="width:2.5rem;" alt=""
-                                            srcset="">
+                            <a class="nav-link active" aria-current="page" href="Explore.html">Explore</a>
+                            <a class="nav-link" href="Create.html" id="create-tag">Create</a>
+                            <div class="dropdown">
+                                <i class="fa-solid fa-wallet dropbtn"></i>
+                                <div class="dropdown-content">
+                                    <div class="wallet-card">
+                                        <div class="wallet-header">
+                                            <img src="../asset/images/icons8-ethereum-48.png" style="width: 2.5rem"
+                                                alt="" srcset="" />
+                                        </div>
+                                        <div class="wallet-ballance">
+                                            <img src="../asset/images/sim-card-chip.jpg" alt="" srcset="" />
+                                            <p>00.001</p>
+                                        </div>
+                                        <div class="wallet-id">
+                                            <p>trgsbahsu78</p>
+                                        </div>
                                     </div>
-                                    <div class="wallet-ballance">
-                                        <img src="../asset/images/sim-card-chip.jpg" alt="" srcset="">
-                                        <h3>
-                                            00.001
-                                        </h3>
-                                    </div>
-                                    <div class=" wallet-id">
-                                        <p>trgsbahsu78</p>
-                                    </div>
+
                                 </div>
-                                <div class="change-wallet">
-                                    <button data-bs-toggle="modal" data-bs-target="#changewalletModal">Choose
-                                        Wallet</button>
+                            </div>
+
+                            <div class="dropdown">
+                                <i class="fa-solid fa-user dropbtn"></i>
+                                <div class="dropdown-content" id="dropdown-content">
+                                    <a href="Profile.html" id="profile">
+                                        <p>Profile</p>
+                                    </a>
+                                    <a href="Settings.html" id="settings">
+                                        <p>Settings</p>
+                                    </a>
+                                    <p id="loginUser" data-bs-target="#login" data-bs-toggle="modal">
+                                        Login
+                                    </p>
+                                    <p id="logout">
+                                        Logout
+                                    </p>
+
+
+
+
                                 </div>
                             </div>
                         </div>
-
-                        <div class="dropdown">
-                            <i class="fa-solid fa-user dropbtn"></i>
-                            <div class="dropdown-content">
-                                <a href="Profile.html">Profile</a>
-                                <a href="Settings.html">Settings</a>
-                                <a>Logout</a>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
-
             </nav>
             <section>
                 <div class="banner">
 
                 </div>
             </section>
+
+
             <section>
                 <div class="profile-container">
                     <div class="profile-details">
                         <div class="profile-image">
-                            <img src="../asset/images/unnamed-2.webp" alt="">
+                            <img src="../asset/images/unnamed-2.jpg" alt="">
                         </div>
                         <div class="profile-text">
                             <h3>
@@ -102,7 +99,8 @@
                                 </h4>
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis maiores
-                                    laboriosam ipsam. Perferendis, ipsa nobis aut suscipit eveniet possimus amet quasi
+                                    laboriosam ipsam. Perferendis, ipsa nobis aut suscipit eveniet possimus amet
+                                    quasi
                                     sint, recusandae aliquam ipsam aliquid sit deleniti debitis neque!
                                 </p>
                             </div>
@@ -134,16 +132,18 @@
                     </div>
                     <div class="profile-tabs">
                         <nav>
-                            <div class="nav nav-tabs justify-content-around gap-1" id="nav-tab" role="tablist">
-                                <button class=" active" id="nav-gigs-tab" data-bs-toggle="tab"
-                                    data-bs-target="#nav-gigs" type="button" role="tab" aria-controls="nav-gigs"
-                                    aria-selected="true">Gigs</button>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="active" id="nav-gigs-tab" data-bs-toggle="tab" data-bs-target="#nav-gigs"
+                                    type="button" role="tab" aria-controls="nav-gigs" aria-selected="true">Gigs</button>
                                 <button id="nav-items-tab" data-bs-toggle="tab" data-bs-target="#nav-items"
                                     type="button" role="tab" aria-controls="nav-items"
                                     aria-selected="false">Items</button>
                                 <button id="nav-reviews-tab" data-bs-toggle="tab" data-bs-target="#nav-reviews"
                                     type="button" role="tab" aria-controls="nav-reviews"
                                     aria-selected="false">Reviews</button>
+                                <button id="nav-activity-tab" data-bs-toggle="tab" data-bs-target="#nav-activity"
+                                    type="button" role="tab" aria-controls="nav-activty"
+                                    aria-selected="false">Activity</button>
                                 <button id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
                                     type="button" role="tab" aria-controls="nav-contact"
                                     aria-selected="false">Contact</button>
@@ -154,440 +154,207 @@
                         </nav>
                         <div class="tab-content" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="nav-gigs" role="tabpanel"
-                                aria-labelledby="nav-gigs-tab">Gigs</div>
-
+                                aria-labelledby="nav-gigs-tab">gigs</div>
                             <div class="tab-pane fade" id="nav-items" role="tabpanel" aria-labelledby="nav-items-tab">
-                                items
-                            </div>
+                                items</div>
                             <div class="tab-pane fade" id="nav-reviews" role="tabpanel"
-                                aria-labelledby="nav-reviews-tab">
-                                <div class="container">
-                                    <h2>
-                                        Testimonials
-                                    </h2>
-                                    <div class="testimonials">
-                                        <div class="testimonials-content">
-                                            <div class="card" style="width: 18rem;">
-                                                <div class="">
-
-                                                    <q class="card-text">Some quick example text to build on the card
-                                                        title and make up the bulk of the card's
-                                                        content.
-                                                    </q>
-                                                    <hr>
-                                                    <div class="testimonials-clients">
-                                                        <p>
-                                                            Name
-                                                        </p>
-                                                        <p>
-                                                            date
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card" style="width: 18rem;">
-                                                <div class="">
-
-                                                    <q class="card-text">Some quick example text to build on the card
-                                                        title and make up the bulk of the card's
-                                                        content.
-                                                    </q>
-                                                    <hr>
-                                                    <div class="testimonials-clients">
-                                                        <p>
-                                                            Name
-                                                        </p>
-                                                        <p>
-                                                            date
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card" style="width: 18rem;">
-                                                <div class="">
-
-                                                    <q class="card-text">Some quick example text to build on the card
-                                                        title and make up the bulk of the card's
-                                                        content.
-                                                    </q>
-                                                    <hr>
-                                                    <div class="testimonials-clients">
-                                                        <p>
-                                                            Name
-                                                        </p>
-                                                        <p>
-                                                            date
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card" style="width: 18rem;">
-                                                <div class="">
-
-                                                    <q class="card-text">Some quick example text to build on the card
-                                                        title and make up the bulk of the card's
-                                                        content.
-                                                    </q>
-                                                    <hr>
-                                                    <div class="testimonials-clients">
-                                                        <p>
-                                                            Name
-                                                        </p>
-                                                        <p>
-                                                            date
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card" style="width: 18rem;">
-                                                <div class="">
-
-                                                    <q class="card-text">Some quick example text to build on the card
-                                                        title and make up the bulk of the card's
-                                                        content.
-                                                    </q>
-                                                    <hr>
-                                                    <div class="testimonials-clients">
-                                                        <p>
-                                                            Name
-                                                        </p>
-                                                        <p>
-                                                            date
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card" style="width: 18rem;">
-                                                <div class="">
-
-                                                    <q class="card-text">Some quick example text to build on the card
-                                                        title and make up the bulk of the card's
-                                                        content.
-                                                    </q>
-                                                    <hr>
-                                                    <div class="testimonials-clients">
-                                                        <p>
-                                                            Name
-                                                        </p>
-                                                        <p>
-                                                            date
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card" style="width: 18rem;">
-                                                <div class="">
-
-                                                    <q class="card-text">Some quick example text to build on the card
-                                                        title and make up the bulk of the card's
-                                                        content.
-                                                    </q>
-                                                    <hr>
-                                                    <div class="testimonials-clients">
-                                                        <p>
-                                                            Name
-                                                        </p>
-                                                        <p>
-                                                            date
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card" style="width: 18rem;">
-                                                <div class="">
-
-                                                    <q class="card-text">Some quick example text to build on the card
-                                                        title and make up the bulk of the card's
-                                                        content.
-                                                    </q>
-                                                    <hr>
-                                                    <div class="testimonials-clients">
-                                                        <p>
-                                                            Name
-                                                        </p>
-                                                        <p>
-                                                            date
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card" style="width: 18rem;">
-                                                <div class="">
-
-                                                    <q class="card-text">Some quick example text to build on the card
-                                                        title and make up the bulk of the card's
-                                                        content.
-                                                    </q>
-                                                    <hr>
-                                                    <div class="testimonials-clients">
-                                                        <p>
-                                                            Name
-                                                        </p>
-                                                        <p>
-                                                            date
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card" style="width: 18rem;">
-                                                <div class="">
-
-                                                    <q class="card-text">Some quick example text to build on the card
-                                                        title and make up the bulk of the card's
-                                                        content.
-                                                    </q>
-                                                    <hr>
-                                                    <div class="testimonials-clients">
-                                                        <p>
-                                                            Name
-                                                        </p>
-                                                        <p>
-                                                            date
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card" style="width: 18rem;">
-                                                <div class="">
-
-                                                    <q class="card-text">Some quick example text to build on the card
-                                                        title and make up the bulk of the card's
-                                                        content.
-                                                    </q>
-                                                    <hr>
-                                                    <div class="testimonials-clients">
-                                                        <p>
-                                                            Name
-                                                        </p>
-                                                        <p>
-                                                            date
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card" style="width: 18rem;">
-                                                <div class="">
-
-                                                    <q class="card-text">Some quick example text to build on the card
-                                                        title and make up the bulk of the card's
-                                                        content.
-                                                    </q>
-                                                    <hr>
-                                                    <div class="testimonials-clients">
-                                                        <p>
-                                                            Name
-                                                        </p>
-                                                        <p>
-                                                            date
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card" style="width: 18rem;">
-                                                <div class="">
-
-                                                    <q class="card-text">Some quick example text to build on the card
-                                                        title and make up the bulk of the card's
-                                                        content.
-                                                    </q>
-                                                    <hr>
-                                                    <div class="testimonials-clients">
-                                                        <p>
-                                                            Name
-                                                        </p>
-                                                        <p>
-                                                            date
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card" style="width: 18rem;">
-                                                <div class="">
-
-                                                    <q class="card-text">Some quick example text to build on the card
-                                                        title and make up the bulk of the card's
-                                                        content.
-                                                    </q>
-                                                    <hr>
-                                                    <div class="testimonials-clients">
-                                                        <p>
-                                                            Name
-                                                        </p>
-                                                        <p>
-                                                            date
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card" style="width: 18rem;">
-                                                <div class="">
-
-                                                    <q class="card-text">Some quick example text to build on the card
-                                                        title and make up the bulk of the card's
-                                                        content.
-                                                    </q>
-                                                    <hr>
-                                                    <div class="testimonials-clients">
-                                                        <p>
-                                                            Name
-                                                        </p>
-                                                        <p>
-                                                            date
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card" style="width: 18rem;">
-                                                <div class="">
-
-                                                    <q class="card-text">Some quick example text to build on the card
-                                                        title and make up the bulk of the card's
-                                                        content.
-                                                    </q>
-                                                    <hr>
-                                                    <div class="testimonials-clients">
-                                                        <p>
-                                                            Name
-                                                        </p>
-                                                        <p>
-                                                            date
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card" style="width: 18rem;">
-                                                <div class="">
-
-                                                    <q class="card-text">Some quick example text to build on the card
-                                                        title and make up the bulk of the card's
-                                                        content.
-                                                    </q>
-                                                    <hr>
-                                                    <div class="testimonials-clients">
-                                                        <p>
-                                                            Name
-                                                        </p>
-                                                        <p>
-                                                            date
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card" style="width: 18rem;">
-                                                <div class="">
-
-                                                    <q class="card-text">Some quick example text to build on the card
-                                                        title and make up the bulk of the card's
-                                                        content.
-                                                    </q>
-                                                    <hr>
-                                                    <div class="testimonials-clients">
-                                                        <p>
-                                                            Name
-                                                        </p>
-                                                        <p>
-                                                            date
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card" style="width: 18rem;">
-                                                <div class="">
-
-                                                    <q class="card-text">Some quick example text to build on the card
-                                                        title and make up the bulk of the card's
-                                                        content.
-                                                    </q>
-                                                    <hr>
-                                                    <div class="testimonials-clients">
-                                                        <p>
-                                                            Name
-                                                        </p>
-                                                        <p>
-                                                            date
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card" style="width: 18rem;">
-                                                <div class="">
-
-                                                    <q class="card-text">Some quick example text to build on the card
-                                                        title and make up the bulk of the card's
-                                                        content.
-                                                    </q>
-                                                    <hr>
-                                                    <div class="testimonials-clients">
-                                                        <p>
-                                                            Name
-                                                        </p>
-                                                        <p>
-                                                            date
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card" style="width: 18rem;">
-                                                <div class="">
-
-                                                    <q class="card-text">Some quick example text to build on the card
-                                                        title and make up the bulk of the card's
-                                                        content.
-                                                    </q>
-                                                    <hr>
-                                                    <div class="testimonials-clients">
-                                                        <p>
-                                                            Name
-                                                        </p>
-                                                        <p>
-                                                            date
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
+                                aria-labelledby="nav-reviews-tab">reviews</div>
+                            <div class="tab-pane fade" id="nav-activity" role="tabpanel"
+                                aria-labelledby="nav-activity-tab">activity</div>
                             <div class="tab-pane fade" id="nav-contact" role="tabpanel"
                                 aria-labelledby="nav-contact-tab">
-                                contact</div>
-                            <div class="tab-pane fade" id="nav-custom-quote" role="tabpanel"
-                                aria-labelledby="nav-custom-quote-tab">
-                                Custom quote
+                                <section style="background-color: #eee;">
+                                    <div class="container py-5">
+
+                                        <div class="row d-flex justify-content-center">
+                                            <div class="col-md-10 col-lg-8 col-xl-6">
+
+                                                <div class="card" id="chat2">
+                                                    <div
+                                                        class="card-header d-flex justify-content-between align-items-center p-3">
+                                                        <h5 class="mb-0">Chat</h5>
+                                                        <button type="button" class="btn btn-primary btn-sm"
+                                                            data-mdb-ripple-color="dark">Let's Chat
+                                                            App</button>
+                                                    </div>
+                                                    <div class="card-body" data-mdb-perfect-scrollbar="true"
+                                                        style="position: relative; height: 400px">
+
+                                                        <div class="d-flex flex-row justify-content-start">
+                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                                                                alt="avatar 1" style="width: 45px; height: 100%;">
+                                                            <div>
+                                                                <p class="small p-2 ms-3 mb-1 rounded-3"
+                                                                    style="background-color: #f5f6f7;">Hi</p>
+                                                                <p class="small p-2 ms-3 mb-1 rounded-3"
+                                                                    style="background-color: #f5f6f7;">How are you
+                                                                    ...???
+                                                                </p>
+                                                                <p class="small p-2 ms-3 mb-1 rounded-3"
+                                                                    style="background-color: #f5f6f7;">What are you
+                                                                    doing
+                                                                    tomorrow? Can we come up a bar?</p>
+                                                                <p class="small ms-3 mb-3 rounded-3 text-muted">23:58
+                                                                </p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="divider d-flex align-items-center mb-4">
+                                                            <p class="text-center mx-3 mb-0" style="color: #a2aab7;">
+                                                                Today</p>
+                                                        </div>
+
+                                                        <div class="d-flex flex-row justify-content-end mb-4 pt-1">
+                                                            <div>
+                                                                <p
+                                                                    class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">
+                                                                    Hiii, I'm good.</p>
+                                                                <p
+                                                                    class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">
+                                                                    How are you doing?</p>
+                                                                <p
+                                                                    class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">
+                                                                    Long time no see!
+                                                                    Tomorrow
+                                                                    office. will
+                                                                    be free on sunday.</p>
+                                                                <p
+                                                                    class="small me-3 mb-3 rounded-3 text-muted d-flex justify-content-end">
+                                                                    00:06</p>
+                                                            </div>
+                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
+                                                                alt="avatar 1" style="width: 45px; height: 100%;">
+                                                        </div>
+
+                                                        <div class="d-flex flex-row justify-content-start mb-4">
+                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                                                                alt="avatar 1" style="width: 45px; height: 100%;">
+                                                            <div>
+                                                                <p class="small p-2 ms-3 mb-1 rounded-3"
+                                                                    style="background-color: #f5f6f7;">Okay</p>
+                                                                <p class="small p-2 ms-3 mb-1 rounded-3"
+                                                                    style="background-color: #f5f6f7;">We will go
+                                                                    on
+                                                                    Sunday?</p>
+                                                                <p class="small ms-3 mb-3 rounded-3 text-muted">00:07
+                                                                </p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="d-flex flex-row justify-content-end mb-4">
+                                                            <div>
+                                                                <p
+                                                                    class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">
+                                                                    That's awesome!</p>
+                                                                <p
+                                                                    class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">
+                                                                    I will meet you Sandon
+                                                                    Square
+                                                                    sharp at
+                                                                    10 AM</p>
+                                                                <p
+                                                                    class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">
+                                                                    Is that okay?</p>
+                                                                <p
+                                                                    class="small me-3 mb-3 rounded-3 text-muted d-flex justify-content-end">
+                                                                    00:09</p>
+                                                            </div>
+                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
+                                                                alt="avatar 1" style="width: 45px; height: 100%;">
+                                                        </div>
+
+                                                        <div class="d-flex flex-row justify-content-start mb-4">
+                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                                                                alt="avatar 1" style="width: 45px; height: 100%;">
+                                                            <div>
+                                                                <p class="small p-2 ms-3 mb-1 rounded-3"
+                                                                    style="background-color: #f5f6f7;">Okay i will
+                                                                    meet
+                                                                    you on
+                                                                    Sandon Square</p>
+                                                                <p class="small ms-3 mb-3 rounded-3 text-muted">00:11
+                                                                </p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="d-flex flex-row justify-content-end mb-4">
+                                                            <div>
+                                                                <p
+                                                                    class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">
+                                                                    Do you have pictures of
+                                                                    Matley
+                                                                    Marriage?</p>
+                                                                <p
+                                                                    class="small me-3 mb-3 rounded-3 text-muted d-flex justify-content-end">
+                                                                    00:11</p>
+                                                            </div>
+                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
+                                                                alt="avatar 1" style="width: 45px; height: 100%;">
+                                                        </div>
+
+                                                        <div class="d-flex flex-row justify-content-start mb-4">
+                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                                                                alt="avatar 1" style="width: 45px; height: 100%;">
+                                                            <div>
+                                                                <p class="small p-2 ms-3 mb-1 rounded-3"
+                                                                    style="background-color: #f5f6f7;">Sorry I
+                                                                    don't
+                                                                    have. i
+                                                                    changed my phone.</p>
+                                                                <p class="small ms-3 mb-3 rounded-3 text-muted">00:13
+                                                                </p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="d-flex flex-row justify-content-end">
+                                                            <div>
+                                                                <p
+                                                                    class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">
+                                                                    Okay then see you on
+                                                                    sunday!!
+                                                                </p>
+                                                                <p
+                                                                    class="small me-3 mb-3 rounded-3 text-muted d-flex justify-content-end">
+                                                                    00:15</p>
+                                                            </div>
+                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
+                                                                alt="avatar 1" style="width: 45px; height: 100%;">
+                                                        </div>
+
+                                                    </div>
+                                                    <div
+                                                        class="card-footer text-muted d-flex justify-content-start align-items-center p-3">
+                                                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                                                            alt="avatar 3" style="width: 40px; height: 100%;">
+                                                        <input type="text" class="form-control form-control-lg"
+                                                            id="exampleFormControlInput1" placeholder="Type message">
+                                                        <a class="ms-1 text-muted" href="#!"><i
+                                                                class="fas fa-paperclip"></i></a>
+                                                        <a class="ms-3 text-muted" href="#!"><i
+                                                                class="fas fa-smile"></i></a>
+                                                        <a class="ms-3" href="#!"><i class="fas fa-paper-plane"></i></a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </section>
                             </div>
+                            <div class="tab-pane fade" id="nav-custom-quote" role="tabpanel"
+                                aria-labelledby="nav-custom-quote-tab">custom quote</div>
                         </div>
 
                     </div>
 
                 </div>
-        </div>
-        </section>
+            </section>
+
 
         </div>
+
+
 
 
 
@@ -621,13 +388,9 @@
 
         <script src="../node_modules/jquery/dist/jquery.min.js"></script>
         <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
-
-        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/c461f95de0.js" crossorigin="anonymous"></script>
-
-        <script src="../node_modules/pubnub/dist/web/pubnub.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="module" src="../Lib/js/firebase.js"></script>
         <script type="module" src="../Lib/js/app.js"></script>
-        <script src="../node_modules/chat-engine//dist/chat-engine.js"></script>
-        <script src="../Lib/js/chatEngin.js"></script>
     </body>
 </html>
