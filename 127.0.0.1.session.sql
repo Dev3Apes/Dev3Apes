@@ -15,4 +15,13 @@ CREATE TABLE if not exists `messages`(
     Messages VARCHAR(255) NOT NULL,
     Status VARCHAR(255) NOT NULL,
     PRIMARY KEY (ID)
+);
+CREATE TABLE if not exists `product`(
+    ID int (255) NOT NULL,
+    user_id VARCHAR(255) NOT NULL,
+    Description VARCHAR (255) NOT NULL,
+    gig VARCHAR(255) NOT NULL,
+    Messages VARCHAR(255) NOT NULL,
+    Status VARCHAR(255) NOT NULL,
+    PRIMARY KEY (ID)
 )

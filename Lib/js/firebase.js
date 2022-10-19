@@ -64,6 +64,8 @@ let regUser = {
   email: document.getElementById("new-email"),
   password: document.getElementById("new-password"),
   confirm_password: document.getElementById("confirm-password"),
+  fname: document.getElementById("name"),
+  lname: document.getElementById("last-name"),
 };
 
 $("#CreateNewUser").on("click", function (e) {
@@ -80,8 +82,24 @@ $("#CreateNewUser").on("click", function (e) {
         // Signed in
 
         const user = userCredential.user;
-        console.log(user);
+        console.log(user.uid);
         // ...
+        const userDetails = {
+          name: regUser.fname.value,
+          lastName: regUser.lname.value,
+          email: regUser.email.value,
+          userid: user.uid,
+        };
+
+        $.ajax({
+          type: "POST",
+          url: "../Lib/php/addMsg.php",
+          data: userDetails,
+
+          success: function (response) {
+            console.log(response);
+          },
+        });
       })
 
       .catch((error) => {
