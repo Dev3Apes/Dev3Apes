@@ -91,15 +91,15 @@ $("#CreateNewUser").on("click", function (e) {
           userid: user.uid,
         };
 
-        // $.ajax({
-        //   type: "POST",
-        //   url: "../Lib/php/addUser.php",
-        //   data: userDetails,
+        $.ajax({
+          type: "POST",
+          url: "../Lib/php/addUser.php",
+          data: userDetails,
 
-        //   success: function (response) {
-        //     console.log(response);
-        //   },
-        // });
+          success: function (response) {
+            console.log(response);
+          },
+        });
       })
 
       .catch((error) => {
