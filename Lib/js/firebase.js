@@ -80,7 +80,7 @@ $("#CreateNewUser").on("click", function (e) {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
-
+        window.location.href = "Explore.html";
         const user = userCredential.user;
         console.log(user.uid);
         // ...
@@ -93,7 +93,7 @@ $("#CreateNewUser").on("click", function (e) {
 
         $.ajax({
           type: "POST",
-          url: "../Lib/php/addMsg.php",
+          url: "../Lib/php/addUser.php",
           data: userDetails,
 
           success: function (response) {

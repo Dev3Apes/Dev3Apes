@@ -551,6 +551,7 @@ logo-slider {
 
 .modal-content {
   background-color: $backgroundColor !important;
+  
 }
 
 .main-content-info {
@@ -701,7 +702,7 @@ logo-slider {
   }
 }
 
-form {
+.form {
   padding-bottom: 5rem;
 
   .btn {
@@ -743,13 +744,61 @@ form {
 
 #chat2 .form-control {
   border-color: transparent;
+
 }
 
 #chat2 .form-control:focus {
   border-color: transparent;
   box-shadow: inset 0px 0px 0px 1px transparent;
 }
+.createCollection{
+ 
+  button {
+    border: none;
+      background-color: $buttonBackground;
+        box-shadow: $boxShadow;
+        border-radius: 20px;
+        padding: 5px;
+        color: #000000;
+  }
+  .collectionBoby{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+  }
+  .collections{
+      .card {
+          margin: 1rem auto;
+          padding: 0.5rem;
+      
+          img {
+            width: 100%;
+            height: auto;
+          }
+      
+          .card-headers {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 1rem;
+      
+            img {
+              border-radius: 50%;
+              width: 5rem;
+              height: 5rem;
+            }
+          }
+      
+          .card-body {
+            display: flex;
+      
+            justify-content: space-between;
+          }
+        }
+  }
+  
+}
 .divider:after,
 .divider:before {
   content: "";
@@ -1192,4 +1241,12 @@ form {
       }
     }
   }
+        .collections {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          flex-wrap: wrap;
+      
+        }
 }

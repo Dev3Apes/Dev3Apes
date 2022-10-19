@@ -565,14 +565,14 @@ logo-slider:after {
   box-shadow: 5px 5px 12px -5px #000000;
 }
 
-form {
+.form {
   padding-bottom: 5rem;
 }
-form .btn {
+.form .btn {
   display: flex;
   gap: 10px;
 }
-form button {
+.form button {
   border: none;
   width: 100%;
   border-radius: 20px;
@@ -606,6 +606,43 @@ form button {
 #chat2 .form-control:focus {
   border-color: transparent;
   box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+.createCollection button {
+  border: none;
+  background-color: #f1f1f1;
+  box-shadow: 5px 5px 12px -5px #000000;
+  border-radius: 20px;
+  padding: 5px;
+  color: #000000;
+}
+.createCollection .collectionBoby {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.createCollection .collections .card {
+  margin: 1rem auto;
+  padding: 0.5rem;
+}
+.createCollection .collections .card img {
+  width: 100%;
+  height: auto;
+}
+.createCollection .collections .card .card-headers {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 1rem;
+}
+.createCollection .collections .card .card-headers img {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+}
+.createCollection .collections .card .card-body {
+  display: flex;
+  justify-content: space-between;
 }
 
 .divider:after,
@@ -952,5 +989,12 @@ form button {
   }
   .f-password .form label {
     font-size: 20px;
+  }
+  .collections {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
   }
 }/*# sourceMappingURL=styles.css.map */
