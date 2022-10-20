@@ -10,8 +10,12 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Baloo", cursive !important;
+  font-family: "Baloo", " baloo 2" !important;
   cursor: pointer;
+}
+
+p {
+  font-size: 16px !important;
 }
 
 .background {
@@ -274,25 +278,44 @@ logo-slider:after {
 #about h2 {
   color: #192846;
   font-size: 40px;
+  margin-bottom: 5rem;
 }
-#about p {
-  color: #fff;
-  font-size: 14px;
-  background-color: #192846;
-  padding: 1rem;
+#about .trapezoid-2 {
+  border-top: 120px solid #192846 !important;
+  border-left: 0px solid transparent !important;
+  border-right: 0px solid transparent !important;
+  height: 0;
+  width: 100% !important;
+  color: #fff !important;
   border-radius: 20px;
-  box-shadow: 5px 5px 12px -5px #000000;
+}
+#about .trapezoid-2 p {
+  padding: 20px;
+  margin-top: -6em;
+}
+#about .trapezoid {
+  border-top: 120px solid #192846 !important;
+  border-left: 0px solid transparent !important;
+  border-right: 0px solid transparent !important;
+  height: 0;
+  width: 100% !important;
+  color: #fff !important;
+  border-radius: 10px !important;
+}
+#about .trapezoid p {
+  padding: 20px;
+  margin-top: -6em;
 }
 #about .about-page {
   width: 100%;
-  padding: 1rem;
 }
 #about .about-page .about-content {
   display: block;
+  margin-bottom: 3rem;
 }
 #about .about-page .box {
-  width: 90%;
-  height: 6rem;
+  width: 300px;
+  height: 345px;
   background-color: #575757;
   border-radius: 20px;
   margin: 3rem auto;
@@ -304,7 +327,7 @@ logo-slider:after {
   padding: 1rem;
 }
 #roadmap .roadmap-header {
-  border-bottom: 40px solid #192846;
+  border-bottom: 100px solid #192846;
   color: #fff;
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
@@ -312,9 +335,14 @@ logo-slider:after {
   width: 70%;
   margin: 0 auto;
   margin-bottom: 0.5rem;
+  padding-top: 1rem;
+}
+#roadmap .roadmap-header p {
+  margin-top: 2rem;
+  font-size: 20px !important;
 }
 #roadmap .roadmap-text {
-  border-top: 100px solid #192846;
+  border-top: 120px solid #192846;
   color: #fff;
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
@@ -324,12 +352,12 @@ logo-slider:after {
   margin-top: 0.5rem;
 }
 #roadmap .roadmap-text p {
-  margin-top: -5.6rem;
+  margin-top: -6rem;
   font-size: 12px;
 }
 #roadmap .roadmap-board {
-  height: 10rem;
-  width: 100%;
+  max-width: 1020px;
+  height: 500px;
   background-color: #575757;
   margin: 0 auto;
   border-radius: 20px;
@@ -653,7 +681,10 @@ logo-slider:after {
   background: #eee;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
+  p {
+    font-size: 18px !important;
+  }
   nav {
     display: flex !important;
     justify-content: center !important;
@@ -765,23 +796,41 @@ logo-slider:after {
     height: 200px;
   }
   #about h2 {
-    font-size: 40px;
+    font-size: 60px;
+    text-align: end !important;
+    margin-right: 10rem;
   }
   #about .about-page .about-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  #about .about-page .about-content p {
-    width: 50%;
-    border-radius: 0px;
-    font-size: 20px;
-    transform: skew(10deg);
+  #about .about-page .about-content .trapezoid {
+    border-top: 120px solid #192846 !important;
+    border-left: 0px solid transparent !important;
+    border-right: 40px solid transparent !important;
+    width: 50% !important;
+    color: #fff !important;
+    border-radius: 0 !important;
+  }
+  #about .about-page .about-content .trapezoid-2 {
+    border-left: 40px solid transparent !important;
+    border-right: 0px solid transparent !important;
+    border-top: 120px solid #192846 !important;
+    width: 50% !important;
+    color: #fff !important;
+    border-radius: 0 !important;
+  }
+  #about .about-page .about-content .trapezoid-2 p {
+    margin-top: -7rem;
   }
   #about .about-page .about-content .box {
     width: 345px;
     height: 345px;
     transform: rotate(20deg);
+  }
+  #about .about-page .about-content .box-2 {
+    transform: rotate(-20deg);
   }
   #roadmap {
     height: 100vh;
@@ -789,7 +838,7 @@ logo-slider:after {
     align-items: center;
   }
   #roadmap .roadmap-header {
-    border-bottom: 70px solid #192846;
+    border-bottom: 100px solid #192846;
     color: #fff;
     border-left: 25px solid transparent;
     border-right: 25px solid transparent;
@@ -801,8 +850,8 @@ logo-slider:after {
     font-size: 30px;
   }
   #roadmap .roadmap-board {
-    width: 70% !important;
-    height: 20rem;
+    width: 1020px !important;
+    height: 500px !important;
   }
   #roadmap .roadmap-text {
     width: 50%;

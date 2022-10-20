@@ -1,5 +1,6 @@
 import timezone from "./timezones.js";
 import lang from "./language.js";
+import productData from "./product.js";
 // import AOS from "./aos";
 $(window).on("load", function () {
   if ($("#preloader").length) {

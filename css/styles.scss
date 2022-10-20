@@ -17,10 +17,12 @@ $backgroundColor: #fff;
 body {
   margin: 0;
   padding: 0;
-  font-family: "Baloo", cursive !important;
+  font-family: "Baloo", " baloo 2" !important;
   cursor: pointer;
 }
-
+p {
+  font-size: 16px !important;
+}
 // set all backgroungs
 .background {
   position: relative;
@@ -34,9 +36,7 @@ body {
 
 .background:before {
   content: "";
-  background: linear-gradient(175.09deg,
-      #192846 3.95%,
-      rgba(25, 40, 70, 0.75) 78.38%);
+  background: linear-gradient(175.09deg, #192846 3.95%, rgba(25, 40, 70, 0.75) 78.38%);
   background-size: cover;
   position: fixed;
   width: 100%;
@@ -46,9 +46,7 @@ body {
 
 .background-image {
   position: relative;
-  background: linear-gradient(175.09deg,
-      #192846 3.95%,
-      rgba(25, 40, 70, 0) 78.38%);
+  background: linear-gradient(175.09deg, #192846 3.95%, rgba(25, 40, 70, 0) 78.38%);
   background-position: center center;
   min-height: 100vh;
   width: 100%;
@@ -64,9 +62,7 @@ body {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: linear-gradient(175.09deg,
-      #192846 3.95%,
-      rgba(25, 40, 70, 1) 78.38%);
+  background: linear-gradient(175.09deg, #192846 3.95%, rgba(25, 40, 70, 1) 78.38%);
 }
 
 #preloader:before {
@@ -134,7 +130,6 @@ nav {
   }
 
   .navbar-bar {
-
     margin-top: 1rem;
   }
 
@@ -154,7 +149,6 @@ nav {
   .dropdown {
     position: relative;
     display: inline-block;
-
   }
 
   /* Dropdown Content (Hidden by Default) */
@@ -176,9 +170,7 @@ nav {
       border-radius: 20px;
       height: 6rem;
       width: 200px;
-      background: linear-gradient(105.31deg,
-          #1c2f52 -2.91%,
-          rgba(28, 47, 82, 0) 105.21%);
+      background: linear-gradient(105.31deg, #1c2f52 -2.91%, rgba(28, 47, 82, 0) 105.21%);
       padding: 0 1rem;
 
       .wallet-header {
@@ -230,7 +222,6 @@ nav {
     color: black !important;
     text-decoration: none;
     display: block;
-
   }
 
   /* Change color of dropdown links on hover */
@@ -336,40 +327,65 @@ logo-slider {
 // About section
 #about {
   margin-top: 2rem;
-  text-align: center;
+text-align: center;
 
   h2 {
     color: $primaryColor;
     font-size: 40px;
+ margin-bottom: 5rem;
   }
 
-  p {
-    color: $secondaryCOlor;
-    font-size: 14px;
-    background-color: $primaryColor;
-    padding: 1rem;
+  .trapezoid-2 {
+    border-top: 120px solid $primaryColor !important;
+    border-left: 0px solid transparent !important;
+    border-right: 0px solid transparent !important;
+    height: 0;
+    width: 100% !important;
+    color: $secondaryCOlor !important;
     border-radius: 20px;
-    box-shadow: $boxShadow;
+
+
+    p {
+      padding: 20px;
+      margin-top: -6em;
+     
+     
+    }
+  }
+  .trapezoid {
+    border-top: 120px solid $primaryColor !important;
+    border-left: 0px solid transparent !important;
+    border-right: 0px solid transparent !important;
+    height: 0;
+    width: 100% !important;
+    color: $secondaryCOlor !important;
+    border-radius: 10px !important;
+  
+
+  
+    p {
+      padding: 20px;
+      margin-top: -6em;
+    }
   }
 
   .about-page {
     width: 100%;
-    padding: 1rem;
 
     .about-content {
       display: block;
+      margin-bottom: 3rem;
     }
 
     .box {
-      width: 90%;
-      height: 6rem;
+      width: 300px;
+      height: 345px;
       background-color: #575757;
       border-radius: 20px;
       margin: 3rem auto;
 
-      box-shadow: 0px 3px 0px 2px rgba(0, 0, 0, 0.1),
-        0px 6px 0px 4px rgba(0, 0, 0, 0.1), 0px 9px 0px 6px rgba(0, 0, 0, 0.1),
-        0px 12px 0px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 3px 0px 2px rgba(0, 0, 0, 0.1), 0px 6px 0px 4px rgba(0, 0, 0, 0.1),
+        0px 9px 0px 6px rgba(0, 0, 0, 0.1), 0px 12px 0px 8px rgba(0, 0, 0, 0.1);
     }
   }
 }
@@ -380,7 +396,7 @@ logo-slider {
   padding: 1rem;
 
   .roadmap-header {
-    border-bottom: 40px solid $primaryColor;
+    border-bottom: 100px solid $primaryColor;
     color: $secondaryCOlor;
     border-left: 25px solid transparent;
     border-right: 25px solid transparent;
@@ -388,10 +404,15 @@ logo-slider {
     width: 70%;
     margin: 0 auto;
     margin-bottom: 0.5rem;
+    padding-top: 1rem;
+    p {
+      margin-top: 2rem;
+      font-size: 20px !important;
+    }
   }
 
   .roadmap-text {
-    border-top: 100px solid $primaryColor;
+    border-top: 120px solid $primaryColor;
     color: $secondaryCOlor;
     border-left: 25px solid transparent;
     border-right: 25px solid transparent;
@@ -401,17 +422,18 @@ logo-slider {
     margin-top: 0.5rem;
 
     p {
-      margin-top: -5.6rem;
+      margin-top: -6rem;
       font-size: 12px;
     }
   }
 
   .roadmap-board {
-    height: 10rem;
-    width: 100%;
+    max-width: 1020px;
+    height: 500px;
     background-color: #575757;
     margin: 0 auto;
     border-radius: 20px;
+    
   }
 }
 
@@ -551,7 +573,6 @@ logo-slider {
 
 .modal-content {
   background-color: $backgroundColor !important;
-  
 }
 
 .main-content-info {
@@ -586,7 +607,6 @@ logo-slider {
   padding: 1rem 1rem;
 
   .profile-details {
-
     margin-bottom: 1rem;
 
     .profile-image {
@@ -655,7 +675,6 @@ logo-slider {
   }
 
   .stats-container {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -680,11 +699,9 @@ logo-slider {
         h3 {
           font-size: 16px;
         }
-
       }
     }
   }
-
 }
 
 .loginForm {
@@ -744,60 +761,56 @@ logo-slider {
 
 #chat2 .form-control {
   border-color: transparent;
-
 }
 
 #chat2 .form-control:focus {
   border-color: transparent;
   box-shadow: inset 0px 0px 0px 1px transparent;
 }
-.createCollection{
- 
+.createCollection {
   button {
     border: none;
-      background-color: $buttonBackground;
-        box-shadow: $boxShadow;
-        border-radius: 20px;
-        padding: 5px;
-        color: #000000;
+    background-color: $buttonBackground;
+    box-shadow: $boxShadow;
+    border-radius: 20px;
+    padding: 5px;
+    color: #000000;
   }
-  .collectionBoby{
+  .collectionBoby {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .collections {
+    .card {
+      margin: 1rem auto;
+      padding: 0.5rem;
 
-  }
-  .collections{
-      .card {
-          margin: 1rem auto;
-          padding: 0.5rem;
-      
-          img {
-            width: 100%;
-            height: auto;
-          }
-      
-          .card-headers {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            padding: 1rem;
-      
-            img {
-              border-radius: 50%;
-              width: 5rem;
-              height: 5rem;
-            }
-          }
-      
-          .card-body {
-            display: flex;
-      
-            justify-content: space-between;
-          }
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      .card-headers {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 1rem;
+
+        img {
+          border-radius: 50%;
+          width: 5rem;
+          height: 5rem;
         }
+      }
+
+      .card-body {
+        display: flex;
+
+        justify-content: space-between;
+      }
+    }
   }
-  
 }
 .divider:after,
 .divider:before {
@@ -807,7 +820,10 @@ logo-slider {
   background: #eee;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
+  p {
+    font-size: 18px !important;
+  }
   nav {
     display: flex !important;
     justify-content: center !important;
@@ -848,9 +864,7 @@ logo-slider {
         border-radius: 20px;
         min-height: 10rem !important;
         width: 300px !important;
-        background: linear-gradient(105.31deg,
-            #1c2f52 -2.91%,
-            rgba(28, 47, 82, 0) 105.21%);
+        background: linear-gradient(105.31deg, #1c2f52 -2.91%, rgba(28, 47, 82, 0) 105.21%);
         padding: 1rem;
 
         .wallet-header {
@@ -953,7 +967,9 @@ logo-slider {
 
   #about {
     h2 {
-      font-size: 40px;
+      font-size: 60px;
+      text-align: end !important;
+      margin-right: 10rem;
     }
 
     .about-page {
@@ -962,17 +978,34 @@ logo-slider {
         align-items: center;
         justify-content: space-between;
 
-        p {
-          width: 50%;
-          border-radius: 0px;
-          font-size: 20px;
-          transform: skew(10deg);
+        .trapezoid {
+          border-top: 120px solid $primaryColor !important;
+          border-left: 0px solid transparent !important;
+          border-right: 40px solid transparent !important;
+
+          width: 50% !important;
+          color: $secondaryCOlor !important;
+          border-radius: 0 !important;
+        }
+        .trapezoid-2 {
+          border-left: 40px solid transparent !important;
+          border-right: 0px solid transparent !important;
+          border-top: 120px solid $primaryColor !important;
+          width: 50% !important;
+          color: $secondaryCOlor !important;
+          border-radius: 0 !important;
+          p {
+            margin-top: -7rem;
+          }
         }
 
         .box {
           width: 345px;
           height: 345px;
           transform: rotate(20deg);
+        }
+        .box-2 {
+          transform: rotate(-20deg);
         }
       }
     }
@@ -984,7 +1017,7 @@ logo-slider {
     align-items: center;
 
     .roadmap-header {
-      border-bottom: 70px solid $primaryColor;
+      border-bottom: 100px solid $primaryColor;
       color: $secondaryCOlor;
       border-left: 25px solid transparent;
       border-right: 25px solid transparent;
@@ -998,8 +1031,8 @@ logo-slider {
     }
 
     .roadmap-board {
-      width: 70% !important;
-      height: 20rem;
+      width: 1020px !important;
+      height: 500px !important;
     }
 
     .roadmap-text {
@@ -1197,7 +1230,6 @@ logo-slider {
         h3 {
           font-size: 30px !important;
         }
-
       }
     }
   }
@@ -1241,12 +1273,11 @@ logo-slider {
       }
     }
   }
-        .collections {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 20px;
-          flex-wrap: wrap;
-      
-        }
+  .collections {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
 }
